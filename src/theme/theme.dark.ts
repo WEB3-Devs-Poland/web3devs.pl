@@ -1,19 +1,19 @@
 import { DefaultTheme } from 'styled-components';
 
-import { COLOR } from './theme.colors';
+import { COLOR, basicTheme } from './theme.config';
 
 const darkTheme: DefaultTheme = {
   primary: COLOR.PURPLE,
   secondary: COLOR.VIOLET,
 
   text: COLOR.WHITE,
-  background: COLOR.GREY,
+  background: COLOR.BLACK,
 
   black: COLOR.BLACK,
   white: COLOR.WHITE,
 
-  fontFamily: '',
-  contentWidth: 1250,
+  fontFamily: basicTheme.fontFamily,
+  contentWidth: basicTheme.contentWidth,
 };
 
 export default darkTheme;

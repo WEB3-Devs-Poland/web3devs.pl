@@ -5,6 +5,6 @@ export const LogoWrapper = styled.div`
   cursor: pointer;
 
   img {
-    height: 75px;
+    height: 4.5rem;
   }
 `;

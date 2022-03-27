@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 
-import { COLOR } from './theme.colors';
+import { COLOR, basicTheme } from './theme.config';
 
 const lightTheme: DefaultTheme = {
   primary: COLOR.PURPLE,
@@ -12,8 +12,8 @@ const lightTheme: DefaultTheme = {
   black: COLOR.BLACK,
   white: COLOR.WHITE,
 
-  fontFamily: "'Inter', sans-serif",
-  contentWidth: 1250,
+  fontFamily: basicTheme.fontFamily,
+  contentWidth: basicTheme.contentWidth,
 };
 
 export default lightTheme;

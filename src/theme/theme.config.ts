@@ -5,3 +5,8 @@ export enum COLOR {
   BLACK = '#010001',
   WHITE = '#FFFFFF',
 }
+
+export const basicTheme = {
+  contentWidth: 1400,
+  fontFamily: "'Inter', sans-serif",
+};

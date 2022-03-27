@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const VerticalSeparator = styled.div`
+  width: 2px;
+  height: 20px;
+  margin: 0 15px;
+  background-color: ${({ theme }) => theme.text};
+`;
+
 export const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -7,22 +14,26 @@ export const HeaderWrapper = styled.div`
 
   padding: 0 10px;
   height: 90px;
-`;
 
-export const LinksWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const Links = styled.div`
   font-size: 18px;
   font-weight: bold;
 
-  a {
-    padding: 0 10px;
-    text-decoration: none;
-    color: ${({ theme }) => theme.text};
+  svg {
     transition: 0.3s;
+    font-size: 22px;
+    color: ${({ theme }) => theme.text};
+
+    :hover {
+      color: ${({ theme }) => theme.secondary};
+    }
+  }
+
+  a {
+    text-decoration: none;
+    transition: 0.3s;
+
+    padding: 0px 15px;
+    color: ${({ theme }) => theme.text};
 
     :hover {
       color: ${({ theme }) => theme.secondary};
@@ -30,17 +41,24 @@ export const Links = styled.div`
   }
 `;
 
-export const Social = styled.div`
-  padding-left: 50px;
+export const MenuWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Settings = styled.div`
+  display: flex;
+  color: ${({ theme }) => theme.text};
 
   svg {
-    padding: 0px 10px;
-    font-size: 22px;
-    color: ${({ theme }) => theme.text};
-    transition: 0.3s;
+    padding: 0px 15px;
+  }
+`;
 
-    :hover {
-      color: ${({ theme }) => theme.secondary};
-    }
+export const Mobile = styled.div`
+  padding: 10px;
+
+  svg {
+    font-size: 32px;
   }
 `;
