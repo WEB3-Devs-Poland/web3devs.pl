@@ -4,11 +4,7 @@
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "es5",
-  "importOrder": [
-    "<THIRD_PARTY_MODULES>",
-    "^(app|assets|components|hooks|pages|theme|translations|utilities)/?",
-    "^[./]"
-  ],
+  "importOrder": ["<THIRD_PARTY_MODULES>", "^(assets|components|hooks|theme|translations|utilities)/?", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true
 }
