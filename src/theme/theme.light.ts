@@ -4,12 +4,16 @@ import { COLOR } from './theme.colors';
 
 const lightTheme: DefaultTheme = {
   primary: COLOR.PURPLE,
-  secondary: COLOR.BLUE,
+  secondary: COLOR.VIOLET,
 
-  text: COLOR.GREY,
+  text: COLOR.BLACK,
   background: COLOR.WHITE,
 
-  contentWidth: 1600,
+  black: COLOR.BLACK,
+  white: COLOR.WHITE,
+
+  fontFamily: "'Inter', sans-serif",
+  contentWidth: 1250,
 };
 
 export default lightTheme;

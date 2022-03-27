@@ -8,6 +8,10 @@ declare module 'styled-components' {
     text: string;
     background: string;
 
+    black: string;
+    white: string;
+
+    fontFamily: string;
     contentWidth: number;
   }
 }

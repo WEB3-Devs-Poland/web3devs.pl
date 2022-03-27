@@ -1,7 +1,7 @@
 export enum COLOR {
-  PURPLE = '#4e0099',
-  BLUE = '#1ccce3',
-  GREY = '#3D3D3D',
-  BLACK = '#000000',
+  VIOLET = '#9404FC',
+  PURPLE = '#6802b1',
+  GREY = '#333333',
+  BLACK = '#010001',
   WHITE = '#FFFFFF',
 }

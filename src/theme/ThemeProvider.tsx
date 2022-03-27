@@ -1,14 +1,14 @@
 import * as SC from 'styled-components';
 
 import GlobalStyle from './GlobalStyle';
-import darkTheme from './theme.dark';
+import lightTheme from './theme.light';
 
 interface Props {
   children: React.ReactNode;
 }
 
 const ThemeProvider = ({ children }: Props) => {
-  const currentTheme = darkTheme;
+  const currentTheme = lightTheme;
 
   return (
     <SC.ThemeProvider theme={currentTheme}>

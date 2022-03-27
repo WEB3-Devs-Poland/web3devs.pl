@@ -4,12 +4,16 @@ import { COLOR } from './theme.colors';
 
 const darkTheme: DefaultTheme = {
   primary: COLOR.PURPLE,
-  secondary: COLOR.BLUE,
+  secondary: COLOR.VIOLET,
 
   text: COLOR.WHITE,
-  background: COLOR.WHITE,
+  background: COLOR.GREY,
 
-  contentWidth: 1600,
+  black: COLOR.BLACK,
+  white: COLOR.WHITE,
+
+  fontFamily: '',
+  contentWidth: 1250,
 };
 
 export default darkTheme;
