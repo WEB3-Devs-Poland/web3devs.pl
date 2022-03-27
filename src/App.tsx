@@ -1,8 +1,14 @@
+import Header from 'components/Header';
+import Layout from 'components/Layout';
+import ThemeProvider from 'theme/ThemeProvider';
+
 const App = () => {
   return (
-    <div>
-      <h1>Hello web3 devs poland</h1>
-    </div>
+    <ThemeProvider>
+      <Layout>
+        <Header />
+      </Layout>
+    </ThemeProvider>
   );
 };
 
