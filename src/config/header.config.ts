@@ -1,5 +1,5 @@
 import { IconType } from 'react-icons';
-import { SiDiscord, SiGithub } from 'react-icons/si';
+import { SiDiscord, SiGithub, SiTwitter } from 'react-icons/si';
 
 type NavigationLinksModel = {
   title: string;
@@ -34,9 +34,9 @@ export const SocialLinks: SocialLinksModel[] = [
     Icon: SiGithub,
     link: 'https://github.com/WEB3-Devs-Poland',
   },
-  // {
-  //   name: 'Twitter',
-  //   Icon: SiTwitter,
-  //   link: 'https://twitter.com/home',
-  // },
+  {
+    name: 'Twitter',
+    Icon: SiTwitter,
+    link: 'https://twitter.com/home',
+  },
 ];

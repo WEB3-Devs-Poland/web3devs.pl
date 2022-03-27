@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 
-import { COLOR, basicTheme } from './theme.config';
+import { COLOR, basicTheme } from '../config/theme.config';
 
 const lightTheme: DefaultTheme = {
   primary: COLOR.PURPLE,
