@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import Logo from 'components/Logo';
 
 import { NavigationLinks, SocialLinks } from './Header.config';
@@ -7,13 +9,24 @@ const Header = () => {
   return (
     <S.HeaderWrapper>
       <Logo />
-      <S.Links>{NavigationLinks.map(({ title }) => title)}</S.Links>
 
-      <S.Social>
-        {SocialLinks.map(({ Icon, name }) => (
-          <Icon key={name} />
-        ))}
-      </S.Social>
+      <S.LinksWrapper>
+        <S.Links>
+          {NavigationLinks.map(({ title, link }) => (
+            <Link key={link} to={link}>
+              {title}
+            </Link>
+          ))}
+        </S.Links>
+
+        <S.Social>
+          {SocialLinks.map(({ Icon, name, link }) => (
+            <a key={name} href={link} target="blank">
+              <Icon />
+            </a>
+          ))}
+        </S.Social>
+      </S.LinksWrapper>
     </S.HeaderWrapper>
   );
 };

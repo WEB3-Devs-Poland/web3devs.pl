@@ -8,8 +8,12 @@ type NavigationLinksModel = {
 
 export const NavigationLinks: NavigationLinksModel[] = [
   {
-    title: 'Hello',
-    link: '',
+    title: 'Our Team',
+    link: 'ourTeam',
+  },
+  {
+    title: 'Contact Us',
+    link: 'contactUs',
   },
 ];
 
@@ -23,7 +27,7 @@ export const SocialLinks: SocialLinksModel[] = [
   {
     name: 'Discord',
     Icon: SiDiscord,
-    link: 'https://discord.gg/4JE6qHd5',
+    link: 'https://discord.gg/Na5XW75G',
   },
   {
     name: 'GitHub',
