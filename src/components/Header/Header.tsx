@@ -2,6 +2,7 @@ import { useCallback, useContext, useState } from 'react';
 import { RiMenuFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
+import ChangeLocale from 'components/ChangeLocale';
 import ChangeTheme from 'components/ChangeTheme';
 import Logo from 'components/Logo';
 import {
@@ -11,14 +12,11 @@ import {
 import RenderIf from 'components/RenderIf';
 import { NavigationLinks, SocialLinks } from 'config/header.config';
 import useWindowChangeEvent from 'hooks/useWindowChangeEvent';
-import useLocale from 'translations/hooks';
 
 import * as S from './Header.styles';
 
 const Header = () => {
-  const { region } = useLocale();
   const [windowWidth, setWindowWidth] = useState(0);
-
   const { changeMenuVisibility } = useContext(MobileMenuContext) as MobileMenuContextStateType;
 
   const updateWindowWidth = useCallback(() => setWindowWidth(window.innerWidth), []);
@@ -48,7 +46,7 @@ const Header = () => {
           <S.VerticalSeparator />
 
           <S.Settings>
-            {region}
+            <ChangeLocale />
             <ChangeTheme />
           </S.Settings>
         </S.MenuWrapper>

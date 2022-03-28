@@ -1,6 +1,6 @@
 export enum LOCALE {
-  PL = 'pl_PL',
-  EN = 'en_GB',
+  PL = 'pl-PL',
+  EN = 'en-EN',
 }
 
 export const localeName = {

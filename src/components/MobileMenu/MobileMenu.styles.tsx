@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const Background = styled.div`
+  max-width: ${({ theme }) => theme.contentWidth}px;
   position: absolute;
 
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 
   background-color: ${({ theme }) => theme.background};
 `;
@@ -16,6 +17,7 @@ export const HorizontalSeparator = styled.div`
 `;
 
 export const MobileMenuWrapper = styled.div`
+  margin: auto;
   align-items: center;
 
   padding: 0 10px;

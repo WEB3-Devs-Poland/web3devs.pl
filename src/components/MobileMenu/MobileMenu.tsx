@@ -2,17 +2,15 @@ import { useContext } from 'react';
 import { RiCloseFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
+import ChangeLocale from 'components/ChangeLocale';
 import ChangeTheme from 'components/ChangeTheme';
 import RenderIf from 'components/RenderIf';
 import { NavigationLinks, SocialLinks } from 'config/header.config';
-import useLocale from 'translations/hooks';
 
 import * as S from './MobileMenu.styles';
 import { MobileMenuContext, MobileMenuContextStateType } from './MobileMenuProvider';
 
 const MobileMenu = () => {
-  const { region } = useLocale();
-
   const { isMenuOpen, changeMenuVisibility } = useContext(
     MobileMenuContext
   ) as MobileMenuContextStateType;
@@ -24,7 +22,7 @@ const MobileMenu = () => {
           <S.Settings>
             <ChangeTheme />
 
-            {region}
+            <ChangeLocale />
 
             <RiCloseFill onClick={changeMenuVisibility} />
           </S.Settings>
