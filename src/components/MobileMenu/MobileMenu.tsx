@@ -1,10 +1,10 @@
 import { useContext } from 'react';
-import { RiCloseFill, RiMoonClearFill, RiSunLine } from 'react-icons/ri';
+import { RiCloseFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
+import ChangeTheme from 'components/ChangeTheme';
 import RenderIf from 'components/RenderIf';
 import { NavigationLinks, SocialLinks } from 'config/header.config';
-import { ThemeStateContext, ThemeStateContextType } from 'theme/ThemeProvider';
 import useLocale from 'translations/hooks';
 
 import * as S from './MobileMenu.styles';
@@ -12,7 +12,6 @@ import { MobileMenuContext, MobileMenuContextStateType } from './MobileMenuProvi
 
 const MobileMenu = () => {
   const { region } = useLocale();
-  const { changeTheme, currentTheme } = useContext(ThemeStateContext) as ThemeStateContextType;
 
   const { isMenuOpen, changeMenuVisibility } = useContext(
     MobileMenuContext
@@ -23,13 +22,7 @@ const MobileMenu = () => {
       <S.Background>
         <S.MobileMenuWrapper>
           <S.Settings>
-            <RenderIf isTrue={currentTheme === 'light'}>
-              <RiSunLine onClick={changeTheme} />
-            </RenderIf>
-
-            <RenderIf isTrue={currentTheme === 'dark'}>
-              <RiMoonClearFill onClick={changeTheme} />
-            </RenderIf>
+            <ChangeTheme />
 
             {region}
 
