@@ -62,19 +62,11 @@ export const NavigationMenu = styled.div`
 `;
 
 export const Settings = styled.div`
+  margin: auto;
+  width: 75%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 
   line-height: 2rem;
   padding: 25px;
-
-  svg {
-    padding: 0 20px;
-  }
-`;
-
-export const Language = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 72px;
 `;

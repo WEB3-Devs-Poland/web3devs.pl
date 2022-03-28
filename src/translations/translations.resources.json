@@ -1,0 +1,18 @@
+{
+  "en": {
+    "translation": {
+      "header": {
+        "ourTeam": "Our Team",
+        "contactUs": "Contact Us"
+      }
+    }
+  },
+  "pl": {
+    "translation": {
+      "header": {
+        "ourTeam": "Zespół",
+        "contactUs": "Kontakt"
+      }
+    }
+  }
+}

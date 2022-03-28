@@ -11,10 +11,12 @@ import RenderIf from 'components/RenderIf';
 import { NavigationLinks, SocialLinks } from 'config/header.config';
 import useWindowChangeEvent from 'hooks/useWindowChangeEvent';
 import { ThemeStateContext, ThemeStateContextType } from 'theme/ThemeProvider';
+import useLocale from 'translations/hooks';
 
 import * as S from './Header.styles';
 
 const Header = () => {
+  const { region } = useLocale();
   const [windowWidth, setWindowWidth] = useState(0);
   const { changeTheme, currentTheme } = useContext(ThemeStateContext) as ThemeStateContextType;
   const { changeMenuVisibility } = useContext(MobileMenuContext) as MobileMenuContextStateType;
@@ -29,7 +31,7 @@ const Header = () => {
 
       <RenderIf isTrue={windowWidth > 800}>
         <S.MenuWrapper>
-          {NavigationLinks.map(({ title, link }) => (
+          {NavigationLinks().map(({ title, link }) => (
             <Link key={link} to={link}>
               {title}
             </Link>
@@ -46,7 +48,7 @@ const Header = () => {
           <S.VerticalSeparator />
 
           <S.Settings>
-            EN
+            {region}
             <RenderIf isTrue={currentTheme === 'light'}>
               <RiSunLine onClick={changeTheme} />
             </RenderIf>

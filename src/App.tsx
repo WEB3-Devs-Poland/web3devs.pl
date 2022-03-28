@@ -5,19 +5,22 @@ import Layout from 'components/Layout';
 import MobileMenu from 'components/MobileMenu';
 import MobileMenuProvider from 'components/MobileMenu/MobileMenuProvider';
 import ThemeProvider from 'theme/ThemeProvider';
+import TranslationsProvider from 'translations/TranslationsProvider';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <ThemeProvider>
-        <MobileMenuProvider>
-          <Layout>
-            <MobileMenu />
-            <Header />
-          </Layout>
-        </MobileMenuProvider>
-      </ThemeProvider>
-    </BrowserRouter>
+    <TranslationsProvider>
+      <BrowserRouter>
+        <ThemeProvider>
+          <MobileMenuProvider>
+            <Layout>
+              <MobileMenu />
+              <Header />
+            </Layout>
+          </MobileMenuProvider>
+        </ThemeProvider>
+      </BrowserRouter>
+    </TranslationsProvider>
   );
 };
 

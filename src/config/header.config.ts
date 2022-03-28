@@ -1,21 +1,26 @@
+import { useTranslation } from 'react-i18next';
 import { IconType } from 'react-icons';
-import { SiDiscord, SiGithub, SiTwitter } from 'react-icons/si';
+import { SiDiscord, SiGithub } from 'react-icons/si';
 
 type NavigationLinksModel = {
   title: string;
   link: string;
 };
 
-export const NavigationLinks: NavigationLinksModel[] = [
-  {
-    title: 'Our Team',
-    link: 'ourTeam',
-  },
-  {
-    title: 'Contact Us',
-    link: 'contactUs',
-  },
-];
+export const NavigationLinks = (): NavigationLinksModel[] => {
+  const { t } = useTranslation();
+
+  return [
+    {
+      title: t('header.ourTeam'),
+      link: 'ourTeam',
+    },
+    {
+      title: t('header.contactUs'),
+      link: 'contactUs',
+    },
+  ];
+};
 
 type SocialLinksModel = {
   name: string;
@@ -34,9 +39,9 @@ export const SocialLinks: SocialLinksModel[] = [
     Icon: SiGithub,
     link: 'https://github.com/WEB3-Devs-Poland',
   },
-  {
-    name: 'Twitter',
-    Icon: SiTwitter,
-    link: 'https://twitter.com/home',
-  },
+  // {
+  //   name: 'Twitter',
+  //   Icon: SiTwitter, //need to import this icon after uncomment
+  //   link: 'https://twitter.com/home',
+  // },
 ];
