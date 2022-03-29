@@ -11,14 +11,14 @@ export const NavigationLinks = (): NavigationLinksModel[] => {
   const { t } = useTranslation();
 
   return [
-    {
-      title: t('header.ourTeam'),
-      link: 'ourTeam',
-    },
-    {
-      title: t('header.contactUs'),
-      link: 'contactUs',
-    },
+    // {
+    //   title: t('header.ourTeam'),
+    //   link: 'ourTeam',
+    // },
+    // {
+    //   title: t('header.contactUs'),
+    //   link: 'contactUs',
+    // },
   ];
 };
 

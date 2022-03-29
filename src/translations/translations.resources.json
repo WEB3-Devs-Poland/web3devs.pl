@@ -4,6 +4,11 @@
       "header": {
         "ourTeam": "Our Team",
         "contactUs": "Contact Us"
+      },
+      "firstPage": {
+        "title": "First Polish community <1/> for <3>web3</3> developers",
+        "subTitle": "We learn, share experiences and build projects together. If you're interested in web3, this place is for you",
+        "button": "Join us"
       }
     }
   },
@@ -12,6 +17,11 @@
       "header": {
         "ourTeam": "Zespół",
         "contactUs": "Kontakt"
+      },
+      "firstPage": {
+        "title": "Pierwsza Polska społeczność <1/> dla programistów <3>web3</3>",
+        "subTitle": "Uczymy się, wymieniamy się doświadczeniem i wiedzą oraz tworzymy razem projekty. Jeśli jesteś zainteresowany światem web3, to miejsce dla Ciebie",
+        "button": "Dołącz do nas"
       }
     }
   }

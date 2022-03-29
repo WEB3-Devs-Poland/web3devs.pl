@@ -1,3 +1,7 @@
+import {
+  MobileMenuContext,
+  MobileMenuContextStateType,
+} from 'pages/LandingPage/providers/MobileMenuProvider';
 import { useCallback, useContext, useState } from 'react';
 import { RiMenuFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
@@ -5,10 +9,6 @@ import { Link } from 'react-router-dom';
 import ChangeLocale from 'components/ChangeLocale';
 import ChangeTheme from 'components/ChangeTheme';
 import Logo from 'components/Logo';
-import {
-  MobileMenuContext,
-  MobileMenuContextStateType,
-} from 'components/MobileMenu/MobileMenuProvider';
 import RenderIf from 'components/RenderIf';
 import { NavigationLinks, SocialLinks } from 'config/header.config';
 import useWindowChangeEvent from 'hooks/useWindowChangeEvent';

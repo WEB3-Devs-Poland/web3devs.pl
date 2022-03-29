@@ -33,7 +33,7 @@ export const MobileMenuWrapper = styled.div`
     color: ${({ theme }) => theme.text};
 
     :hover {
-      color: ${({ theme }) => theme.secondary};
+      color: ${({ theme }) => theme.primary};
     }
   }
 
@@ -45,7 +45,7 @@ export const MobileMenuWrapper = styled.div`
     color: ${({ theme }) => theme.text};
 
     :hover {
-      color: ${({ theme }) => theme.secondary};
+      color: ${({ theme }) => theme.primary};
     }
   }
 `;
@@ -60,15 +60,30 @@ export const MenuItem = styled.div`
 `;
 
 export const NavigationMenu = styled.div`
-  height: calc(100vh - 200px);
+  height: 70vh;
+  background-color: ${({ theme }) => theme.background};
 `;
 
 export const Settings = styled.div`
-  margin: auto;
+  background-color: ${({ theme }) => theme.background};
+  padding: 0 12.5%;
   width: 75%;
   display: flex;
+  align-items: center;
   justify-content: space-around;
 
   line-height: 2rem;
-  padding: 25px;
+  height: 10vh;
+`;
+
+export const Social = styled.div`
+  background-color: ${({ theme }) => theme.background};
+  padding: 0 12.5%;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  line-height: 2rem;
+  height: 10vh;
 `;
