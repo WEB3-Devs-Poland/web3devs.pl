@@ -2,6 +2,7 @@ import * as S from './Layout.styles';
 
 interface Props {
   children: React.ReactNode;
+  $center?: boolean;
 }
 
 const Layout = ({ children }: Props) => {

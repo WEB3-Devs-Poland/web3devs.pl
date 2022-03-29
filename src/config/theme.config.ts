@@ -8,5 +8,6 @@ export enum COLOR {
 
 export const basicTheme = {
   contentWidth: 1400,
+  maxWidth: 800,
   fontFamily: "'Inter', sans-serif",
 };

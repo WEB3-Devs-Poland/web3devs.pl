@@ -7,8 +7,8 @@ import ChangeTheme from 'components/ChangeTheme';
 import RenderIf from 'components/RenderIf';
 import { NavigationLinks, SocialLinks } from 'config/header.config';
 
+import { MobileMenuContext, MobileMenuContextStateType } from '../../providers/MobileMenuProvider';
 import * as S from './MobileMenu.styles';
-import { MobileMenuContext, MobileMenuContextStateType } from './MobileMenuProvider';
 
 const MobileMenu = () => {
   const { isMenuOpen, changeMenuVisibility } = useContext(
@@ -39,13 +39,13 @@ const MobileMenu = () => {
 
           <S.HorizontalSeparator />
 
-          <S.MenuItem>
+          <S.Social>
             {SocialLinks.map(({ Icon, name, link }) => (
               <a key={name} href={link} target="blank">
                 <Icon />
               </a>
             ))}
-          </S.MenuItem>
+          </S.Social>
         </S.MobileMenuWrapper>
       </S.Background>
     </RenderIf>

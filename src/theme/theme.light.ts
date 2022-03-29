@@ -3,8 +3,8 @@ import { DefaultTheme } from 'styled-components';
 import { COLOR, basicTheme } from '../config/theme.config';
 
 const lightTheme: DefaultTheme = {
-  primary: COLOR.PURPLE,
-  secondary: COLOR.VIOLET,
+  primary: COLOR.VIOLET,
+  secondary: COLOR.PURPLE,
 
   text: COLOR.BLACK,
   background: COLOR.WHITE,
@@ -14,6 +14,7 @@ const lightTheme: DefaultTheme = {
 
   fontFamily: basicTheme.fontFamily,
   contentWidth: basicTheme.contentWidth,
+  maxWidth: basicTheme.maxWidth,
 };
 
 export default lightTheme;

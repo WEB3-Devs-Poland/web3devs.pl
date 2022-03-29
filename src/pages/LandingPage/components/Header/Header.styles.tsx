@@ -24,7 +24,7 @@ export const HeaderWrapper = styled.div`
     color: ${({ theme }) => theme.text};
 
     :hover {
-      color: ${({ theme }) => theme.secondary};
+      color: ${({ theme }) => theme.primary};
     }
   }
 
@@ -36,7 +36,7 @@ export const HeaderWrapper = styled.div`
     color: ${({ theme }) => theme.text};
 
     :hover {
-      color: ${({ theme }) => theme.secondary};
+      color: ${({ theme }) => theme.primary};
     }
   }
 `;
