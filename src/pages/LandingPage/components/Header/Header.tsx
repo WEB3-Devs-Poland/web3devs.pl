@@ -6,17 +6,21 @@ import { useCallback, useContext, useState } from 'react';
 import { RiMenuFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
-import ChangeLocale from 'components/ChangeLocale';
+import darkThemeLogo from 'assets/logo/web3-dark-theme.png';
+import lightThemeLogo from 'assets/logo/web3-light-theme.png';
+import ChangeLanguage from 'components/ChangeLanguage';
 import ChangeTheme from 'components/ChangeTheme';
-import Logo from 'components/Logo';
 import RenderIf from 'components/RenderIf';
 import { NavigationLinks, SocialLinks } from 'config/header.config';
+import { basicTheme } from 'config/theme.config';
 import useWindowChangeEvent from 'hooks/useWindowChangeEvent';
+import { ThemeStateContext, ThemeStateContextType } from 'theme/ThemeProvider';
 
 import * as S from './Header.styles';
 
 const Header = () => {
   const [windowWidth, setWindowWidth] = useState(0);
+  const { currentTheme } = useContext(ThemeStateContext) as ThemeStateContextType;
   const { changeMenuVisibility } = useContext(MobileMenuContext) as MobileMenuContextStateType;
 
   const updateWindowWidth = useCallback(() => setWindowWidth(window.innerWidth), []);
@@ -24,11 +28,14 @@ const Header = () => {
   useWindowChangeEvent(updateWindowWidth, true);
 
   return (
-    <S.HeaderWrapper>
-      <Logo />
+    <S.Header>
+      <S.Logo
+        src={currentTheme === 'light' ? lightThemeLogo : darkThemeLogo}
+        alt="WEB3 Devs Poland"
+      />
 
-      <RenderIf isTrue={windowWidth > 800}>
-        <S.MenuWrapper>
+      <RenderIf isTrue={windowWidth > basicTheme.maxWidth}>
+        <S.Menu>
           {NavigationLinks().map(({ title, link }) => (
             <Link key={link} to={link}>
               {title}
@@ -45,19 +52,15 @@ const Header = () => {
 
           <S.VerticalSeparator />
 
-          <S.Settings>
-            <ChangeLocale />
-            <ChangeTheme />
-          </S.Settings>
-        </S.MenuWrapper>
+          <ChangeLanguage />
+          <ChangeTheme />
+        </S.Menu>
       </RenderIf>
 
-      <RenderIf isTrue={windowWidth < 800}>
-        <S.Mobile>
-          <RiMenuFill onClick={changeMenuVisibility} />
-        </S.Mobile>
+      <RenderIf isTrue={windowWidth < basicTheme.maxWidth}>
+        <RiMenuFill onClick={changeMenuVisibility} />
       </RenderIf>
-    </S.HeaderWrapper>
+    </S.Header>
   );
 };
 

@@ -7,6 +7,7 @@ export enum COLOR {
 }
 
 export const basicTheme = {
+  hederHeight: 64,
   contentWidth: 1400,
   maxWidth: 800,
   fontFamily: "'Inter', sans-serif",

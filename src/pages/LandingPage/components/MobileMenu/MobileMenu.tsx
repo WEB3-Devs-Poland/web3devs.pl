@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { RiCloseFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
-import ChangeLocale from 'components/ChangeLocale';
+import ChangeLanguage from 'components/ChangeLanguage';
 import ChangeTheme from 'components/ChangeTheme';
 import RenderIf from 'components/RenderIf';
 import { NavigationLinks, SocialLinks } from 'config/header.config';
@@ -17,37 +17,33 @@ const MobileMenu = () => {
 
   return (
     <RenderIf isTrue={isMenuOpen}>
-      <S.Background>
-        <S.MobileMenuWrapper>
-          <S.Settings>
-            <ChangeTheme />
+      <S.MobileMenu>
+        <S.Shortcuts>
+          <ChangeTheme />
+          <ChangeLanguage />
+          <RiCloseFill onClick={changeMenuVisibility} />
+        </S.Shortcuts>
 
-            <ChangeLocale />
+        <S.HorizontalSeparator />
 
-            <RiCloseFill onClick={changeMenuVisibility} />
-          </S.Settings>
+        <S.Navigation>
+          {NavigationLinks().map(({ title, link }) => (
+            <Link to={link} key={link}>
+              {title}
+            </Link>
+          ))}
+        </S.Navigation>
 
-          <S.HorizontalSeparator />
+        <S.HorizontalSeparator />
 
-          <S.NavigationMenu>
-            {NavigationLinks().map(({ title, link }) => (
-              <S.MenuItem key={link}>
-                <Link to={link}>{title}</Link>
-              </S.MenuItem>
-            ))}
-          </S.NavigationMenu>
-
-          <S.HorizontalSeparator />
-
-          <S.Social>
-            {SocialLinks.map(({ Icon, name, link }) => (
-              <a key={name} href={link} target="blank">
-                <Icon />
-              </a>
-            ))}
-          </S.Social>
-        </S.MobileMenuWrapper>
-      </S.Background>
+        <S.Shortcuts>
+          {SocialLinks.map(({ Icon, name, link }) => (
+            <a key={name} href={link} target="blank">
+              <Icon />
+            </a>
+          ))}
+        </S.Shortcuts>
+      </S.MobileMenu>
     </RenderIf>
   );
 };
