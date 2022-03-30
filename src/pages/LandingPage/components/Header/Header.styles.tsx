@@ -25,7 +25,7 @@ export const Header = styled.div`
   justify-content: space-between;
 
   ${ThemeSwitch}, ${LanguageSwitch} {
-    padding: 0 10px;
+    margin: 0 10px;
   }
 
   svg {
@@ -46,7 +46,7 @@ export const Header = styled.div`
     transition: 0.3s;
     text-decoration: none;
 
-    padding: 0 10px;
+    margin: 0 10px;
     color: ${({ theme }) => theme.text};
 
     :hover {
