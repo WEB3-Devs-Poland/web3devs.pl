@@ -12,6 +12,7 @@ const darkTheme: DefaultTheme = {
   black: COLOR.BLACK,
   white: COLOR.WHITE,
 
+  hederHeight: basicTheme.hederHeight,
   fontFamily: basicTheme.fontFamily,
   contentWidth: basicTheme.contentWidth,
   maxWidth: basicTheme.maxWidth,

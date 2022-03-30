@@ -1,9 +1,9 @@
 import useLocale from 'translations/hooks';
 import { LOCALE } from 'translations/translations.model';
 
-import * as S from './ChangeLocale.styles';
+import * as S from './ChangeLanguage.styles';
 
-const ChangeLocale = () => {
+const ChangeLanguage = () => {
   const { region, changeLocale } = useLocale();
 
   const changeLanguage = () => {
@@ -11,7 +11,7 @@ const ChangeLocale = () => {
     region === 'EN' && changeLocale(LOCALE.PL);
   };
 
-  return <S.Region onClick={changeLanguage}>{region}</S.Region>;
+  return <S.LanguageSwitch onClick={changeLanguage}>{region}</S.LanguageSwitch>;
 };
 
-export default ChangeLocale;
+export default ChangeLanguage;

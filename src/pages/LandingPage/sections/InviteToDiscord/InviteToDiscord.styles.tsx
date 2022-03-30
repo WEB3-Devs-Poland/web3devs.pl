@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 
 export const Content = styled.div`
+  height: calc(100vh - ${({ theme }) => theme.hederHeight}px);
   width: 100%;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+
+  text-align: center;
 `;
 
 export const Title = styled.div`
-  margin: 5rem auto 2.5rem auto;
-  width: 75%;
-  display: inline-block;
+  margin-top: 10rem;
 
-  text-align: center;
   font-weight: bold;
   font-size: 2.75rem;
 
@@ -29,23 +29,22 @@ export const Colored = styled.div`
 `;
 
 export const SubTitle = styled.div`
-  margin: auto;
-  width: 75%;
-  max-width: 700px;
-
   font-size: 1.25rem;
-  text-align: center;
+  margin: 2.5rem auto;
+
+  max-width: 600px;
 
   @media (max-width: ${({ theme }) => theme.maxWidth}px) {
-    font-size: 1.25rem;
-    width: 75%;
+    font-size: 1rem;
+
+    margin: 1.5rem auto;
+    max-width: 80%;
   }
 `;
 
 export const Button = styled.button`
   cursor: pointer;
-  margin: 2.5rem auto;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
 
   border: none;
   border-radius: 10px;

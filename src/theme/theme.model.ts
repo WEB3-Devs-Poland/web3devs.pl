@@ -11,6 +11,7 @@ declare module 'styled-components' {
     black: string;
     white: string;
 
+    hederHeight: number;
     fontFamily: string;
     contentWidth: number;
     maxWidth: number;
