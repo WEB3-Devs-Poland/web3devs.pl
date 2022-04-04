@@ -5,11 +5,15 @@
         "ourTeam": "Our Team",
         "contactUs": "Contact Us"
       },
-      "firstPage": {
+      "inviteToDiscord": {
         "title": "First Polish community <1/> for <3>web3</3> developers",
         "subTitle": "We learn, share experiences and build projects together. If you're interested in web3, this place is for you",
         "button": "Join us"
-      }
+      },
+      "ourTeam": {
+        "title": "Meet our Team"
+      },
+      "footer": "©2022 web3 Devs Poland. All rights reserved"
     }
   },
   "pl": {
@@ -18,11 +22,15 @@
         "ourTeam": "Zespół",
         "contactUs": "Kontakt"
       },
-      "firstPage": {
+      "inviteToDiscord": {
         "title": "Pierwsza Polska społeczność <1/> dla programistów <3>web3</3>",
         "subTitle": "Uczymy się, wymieniamy się doświadczeniem i wiedzą oraz tworzymy razem projekty. Jeśli jesteś zainteresowany światem web3, to miejsce dla Ciebie",
         "button": "Dołącz do nas"
-      }
+      },
+      "ourTeam": {
+        "title": "Poznaj nasz zespół"
+      },
+      "footer": "©2022 web3 Devs Polska. Wszelkie prawa zastrzeżone"
     }
   }
 }

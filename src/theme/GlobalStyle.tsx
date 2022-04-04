@@ -9,6 +9,16 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     font-family: ${({ theme }) => theme.fontFamily};
   }
+
+  //custom scrollbar
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.primary};
+    border-radius: 2px;
+  }
 `;
 
 export default GlobalStyle;

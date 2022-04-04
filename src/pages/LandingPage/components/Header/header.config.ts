@@ -11,10 +11,10 @@ export const NavigationLinks = (): NavigationLinksModel[] => {
   const { t } = useTranslation();
 
   return [
-    // {
-    //   title: t('header.ourTeam'),
-    //   link: 'ourTeam',
-    // },
+    {
+      title: t('header.ourTeam'),
+      link: '#ourTeam',
+    },
     // {
     //   title: t('header.contactUs'),
     //   link: 'contactUs',
@@ -32,7 +32,7 @@ export const SocialLinks: SocialLinksModel[] = [
   {
     name: 'Discord',
     Icon: SiDiscord,
-    link: 'https://discord.gg/Na5XW75G',
+    link: 'https://discord.gg/aPCQdz5cQA',
   },
   {
     name: 'GitHub',

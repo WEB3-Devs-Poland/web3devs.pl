@@ -9,7 +9,7 @@ export const HorizontalSeparator = styled.div`
 
 export const MobileMenu = styled.div`
   background-color: ${({ theme }) => theme.background};
-  position: absolute;
+  position: fixed;
 
   width: 100%;
   height: 100%;
