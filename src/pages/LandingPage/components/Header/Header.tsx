@@ -1,3 +1,4 @@
+import { NavigationLinks, SocialLinks } from 'pages/LandingPage/components/Header/header.config';
 import {
   MobileMenuContext,
   MobileMenuContextStateType,
@@ -11,7 +12,6 @@ import lightThemeLogo from 'assets/logo/web3-light-theme.png';
 import ChangeLanguage from 'components/ChangeLanguage';
 import ChangeTheme from 'components/ChangeTheme';
 import RenderIf from 'components/RenderIf';
-import { NavigationLinks, SocialLinks } from 'config/header.config';
 import { basicTheme } from 'config/theme.config';
 import useWindowChangeEvent from 'hooks/useWindowChangeEvent';
 import { ThemeStateContext, ThemeStateContextType } from 'theme/ThemeProvider';

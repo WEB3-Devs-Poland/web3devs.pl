@@ -5,6 +5,9 @@ import { COLOR, basicTheme } from '../config/theme.config';
 const lightTheme: DefaultTheme = {
   primary: COLOR.VIOLET,
   secondary: COLOR.PURPLE,
+  grey: {
+    first: COLOR.UNIFORM_GREY,
+  },
 
   text: COLOR.BLACK,
   background: COLOR.WHITE,

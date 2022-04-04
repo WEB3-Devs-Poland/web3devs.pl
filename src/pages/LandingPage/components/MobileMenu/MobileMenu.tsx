@@ -1,3 +1,4 @@
+import { NavigationLinks, SocialLinks } from 'pages/LandingPage/components/Header/header.config';
 import { useContext } from 'react';
 import { RiCloseFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
@@ -5,7 +6,6 @@ import { Link } from 'react-router-dom';
 import ChangeLanguage from 'components/ChangeLanguage';
 import ChangeTheme from 'components/ChangeTheme';
 import RenderIf from 'components/RenderIf';
-import { NavigationLinks, SocialLinks } from 'config/header.config';
 
 import { MobileMenuContext, MobileMenuContextStateType } from '../../providers/MobileMenuProvider';
 import * as S from './MobileMenu.styles';

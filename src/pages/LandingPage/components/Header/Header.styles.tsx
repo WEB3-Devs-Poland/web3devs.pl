@@ -25,6 +25,7 @@ export const Header = styled.div`
   justify-content: space-between;
 
   ${ThemeSwitch}, ${LanguageSwitch} {
+    width: 28px;
     margin: 0 10px;
   }
 

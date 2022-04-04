@@ -1,6 +1,5 @@
+import { SocialLinks } from 'pages/LandingPage/components/Header/header.config';
 import { Trans, useTranslation } from 'react-i18next';
-
-import { SocialLinks } from 'config/header.config';
 
 import * as S from './InviteToDiscord.styles';
 
@@ -11,15 +10,15 @@ const InviteToDiscord = () => {
   return (
     <S.Content>
       <S.Title>
-        <Trans i18nKey="firstPage.title" t={t}>
+        <Trans i18nKey="inviteToDiscord.title" t={t}>
           First Polish community <br /> for <S.Colored>web3</S.Colored> developers.
         </Trans>
       </S.Title>
       <S.SubTitle>
-        <Trans i18nKey="firstPage.subTitle" t={t} />
+        <Trans i18nKey="inviteToDiscord.subTitle" t={t} />
       </S.SubTitle>
       <S.Button onClick={() => window.open(discordLink, '_blank')}>
-        <Trans i18nKey="firstPage.button" t={t} />
+        <Trans i18nKey="inviteToDiscord.button" t={t} />
       </S.Button>
     </S.Content>
   );
