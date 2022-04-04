@@ -15,6 +15,7 @@ import RenderIf from 'components/RenderIf';
 import { basicTheme } from 'config/theme.config';
 import useWindowChangeEvent from 'hooks/useWindowChangeEvent';
 import { ThemeStateContext, ThemeStateContextType } from 'theme/ThemeProvider';
+import { goToSection } from 'utilities/goToSection';
 
 import * as S from './Header.styles';
 
@@ -29,15 +30,17 @@ const Header = () => {
 
   return (
     <S.Header>
-      <S.Logo
-        src={currentTheme === 'light' ? lightThemeLogo : darkThemeLogo}
-        alt="WEB3 Devs Poland"
-      />
+      <Link to="/">
+        <S.Logo
+          src={currentTheme === 'light' ? lightThemeLogo : darkThemeLogo}
+          alt="WEB3 Devs Poland"
+        />
+      </Link>
 
       <RenderIf isTrue={windowWidth > basicTheme.maxWidth}>
         <S.Menu>
           {NavigationLinks().map(({ title, link }) => (
-            <Link key={link} to={link}>
+            <Link key={link} to={link} onClick={() => goToSection(link)}>
               {title}
             </Link>
           ))}

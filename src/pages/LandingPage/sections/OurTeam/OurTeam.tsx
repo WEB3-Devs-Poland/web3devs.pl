@@ -7,11 +7,11 @@ const OurTeam = () => {
   const { t } = useTranslation();
 
   return (
-    <S.Content>
+    <S.Content id="#ourTeam">
       <S.Title>{t('ourTeam.title')}</S.Title>
       <S.Team>
         {ourTeamMembers.map((member) => (
-          <S.Member>
+          <S.Member key={member.name}>
             <S.MemberIMG src={member.img} />
             <S.MemberName>{member.name}</S.MemberName>
             <S.MemberRole>{member.role}</S.MemberRole>

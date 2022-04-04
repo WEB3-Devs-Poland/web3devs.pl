@@ -13,7 +13,7 @@ export const NavigationLinks = (): NavigationLinksModel[] => {
   return [
     {
       title: t('header.ourTeam'),
-      link: 'ourTeam',
+      link: '#ourTeam',
     },
     // {
     //   title: t('header.contactUs'),

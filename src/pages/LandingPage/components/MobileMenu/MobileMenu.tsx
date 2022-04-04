@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import ChangeLanguage from 'components/ChangeLanguage';
 import ChangeTheme from 'components/ChangeTheme';
 import RenderIf from 'components/RenderIf';
+import { goToSection } from 'utilities/goToSection';
 
 import { MobileMenuContext, MobileMenuContextStateType } from '../../providers/MobileMenuProvider';
 import * as S from './MobileMenu.styles';
@@ -28,7 +29,7 @@ const MobileMenu = () => {
 
         <S.Navigation>
           {NavigationLinks().map(({ title, link }) => (
-            <Link to={link} key={link}>
+            <Link to={link} key={link} onClick={() => goToSection(link, changeMenuVisibility)}>
               {title}
             </Link>
           ))}
