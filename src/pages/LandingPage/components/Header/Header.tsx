@@ -60,7 +60,7 @@ const Header = () => {
         </S.Menu>
       </RenderIf>
 
-      <RenderIf isTrue={windowWidth < basicTheme.maxWidth}>
+      <RenderIf isTrue={windowWidth <= basicTheme.maxWidth}>
         <RiMenuFill onClick={changeMenuVisibility} />
       </RenderIf>
     </S.Header>

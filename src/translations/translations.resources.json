@@ -13,6 +13,14 @@
       "ourTeam": {
         "title": "Meet our Team"
       },
+      "whatWeDo": {
+        "title": "What we do",
+        "cards": {
+          "pairPrograming": "We exchange knowledge and experiences",
+          "shareKnowledge": "We share what we do on GitHub",
+          "buildTogether": "We build projects together"
+        }
+      },
       "footer": "©2022 web3 Devs Poland. All rights reserved"
     }
   },
@@ -29,6 +37,14 @@
       },
       "ourTeam": {
         "title": "Poznaj nasz zespół"
+      },
+      "whatWeDo": {
+        "title": "Czym się zajmujemy",
+        "cards": {
+          "pairPrograming": "Wymieniamy wiedzę i doświadczenia",
+          "shareKnowledge": "Udostępniamy naszą wiedzę na GitHub",
+          "buildTogether": "Budujemy razem projekty"
+        }
       },
       "footer": "©2022 web3 Devs Polska. Wszelkie prawa zastrzeżone"
     }

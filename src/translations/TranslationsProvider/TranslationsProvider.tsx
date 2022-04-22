@@ -24,7 +24,7 @@ interface Props {
 
 const TranslationsProvider = ({ children }: Props) => {
   const [locale, setLocale] = useState<LOCALE>(
-    (localStorage.getItem('locale') as LOCALE) || LOCALE.EN
+    (localStorage.getItem('locale') as LOCALE) || LOCALE.PL
   );
 
   useEffect(() => {
