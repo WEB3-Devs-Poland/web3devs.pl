@@ -7,6 +7,7 @@ export const Footer = styled.div`
   color: ${({ theme }) => theme.grey.first};
 
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
 `;
