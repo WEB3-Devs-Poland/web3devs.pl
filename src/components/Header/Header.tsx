@@ -1,4 +1,3 @@
-import { NavigationLinks, SocialLinks } from 'pages/LandingPage/components/Header/header.config';
 import {
   MobileMenuContext,
   MobileMenuContextStateType,
@@ -11,6 +10,7 @@ import darkThemeLogo from 'assets/logo/web3-dark-theme.png';
 import lightThemeLogo from 'assets/logo/web3-light-theme.png';
 import ChangeLanguage from 'components/ChangeLanguage';
 import ChangeTheme from 'components/ChangeTheme';
+import { NavigationLinks, SocialLinks } from 'components/Header/header.config';
 import RenderIf from 'components/RenderIf';
 import { basicTheme } from 'config/theme.config';
 import useWindowChangeEvent from 'hooks/useWindowChangeEvent';
@@ -39,10 +39,18 @@ const Header = () => {
 
       <RenderIf isTrue={windowWidth > basicTheme.maxWidth}>
         <S.Menu>
-          {NavigationLinks().map(({ title, link }) => (
-            <Link key={link} to={link} onClick={() => goToSection(link)}>
-              {title}
-            </Link>
+          {NavigationLinks().map(({ title, link, componentType }) => (
+            <>
+              {componentType === 'section' ? (
+                <p key={link} onClick={() => goToSection(link)}>
+                  {title}
+                </p>
+              ) : (
+                <Link to={link} key={link} onClick={() => goToSection(link)}>
+                  {title}
+                </Link>
+              )}
+            </>
           ))}
 
           <S.VerticalSeparator />

@@ -1,7 +1,7 @@
 import Layout from 'components/Layout';
 
+import Header from '../../components/Header';
 import Footer from './components/Footer';
-import Header from './components/Header';
 import MobileMenu from './components/MobileMenu';
 import MobileMenuProvider from './providers/MobileMenuProvider';
 import InviteToDiscord from './sections/InviteToDiscord';

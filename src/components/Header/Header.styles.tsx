@@ -40,9 +40,11 @@ export const Header = styled.div`
     }
   }
 
-  a {
+  a,
+  p {
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     transition: 0.3s;
     text-decoration: none;

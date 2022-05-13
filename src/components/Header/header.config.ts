@@ -5,6 +5,7 @@ import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from 'react-icons/si';
 type NavigationLinksModel = {
   title: string;
   link: string;
+  componentType: 'section' | 'link';
 };
 
 export const NavigationLinks = (): NavigationLinksModel[] => {
@@ -14,6 +15,12 @@ export const NavigationLinks = (): NavigationLinksModel[] => {
     {
       title: t('header.ourTeam'),
       link: '#ourTeam',
+      componentType: 'section',
+    },
+    {
+      title: t('header.ourCommunity'),
+      link: 'ourCommunity',
+      componentType: 'link',
     },
   ];
 };

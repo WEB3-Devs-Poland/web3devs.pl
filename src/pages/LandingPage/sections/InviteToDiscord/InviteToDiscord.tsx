@@ -1,5 +1,6 @@
-import { SocialLinks } from 'pages/LandingPage/components/Header/header.config';
 import { Trans, useTranslation } from 'react-i18next';
+
+import { SocialLinks } from 'components/Header/header.config';
 
 import * as S from './InviteToDiscord.styles';
 
