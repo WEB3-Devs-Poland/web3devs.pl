@@ -2,9 +2,8 @@
   "en": {
     "translation": {
       "header": {
-        "ourTeam": "Team",
-        "contactUs": "Contact Us",
-        "ourCommunity": "Community"
+        "introduction": "Introduction",
+        "community": "Community"
       },
       "inviteToDiscord": {
         "title": "First Polish community <1/> for <3>web3</3> developers",
@@ -28,9 +27,8 @@
   "pl": {
     "translation": {
       "header": {
-        "ourTeam": "Zespół",
-        "contactUs": "Kontakt",
-        "ourCommunity": "Społeczność"
+        "introduction": "Wprowadzenie",
+        "community": "Społeczność"
       },
       "inviteToDiscord": {
         "title": "Pierwsza Polska społeczność <1/> dla programistów <3>web3</3>",

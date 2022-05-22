@@ -16,8 +16,8 @@ const App = () => {
         <MobileMenu />
         <Header />
 
-        <IPFSRoute path="" component={<LandingPage />} />
-        <IPFSRoute path="community" component={<OurCommunity />} />
+        <IPFSRoute path="/" component={<LandingPage />} />
+        <IPFSRoute path="/community" component={<OurCommunity />} />
 
         <Footer />
       </Layout>

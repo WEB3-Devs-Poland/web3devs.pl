@@ -1,6 +1,6 @@
 import useIPFSNavigate from 'providers/IPFSRouter/hooks/useIPFSNavigate';
 import { MobileMenuContext, MobileMenuContextStateType } from 'providers/MobileMenuProvider';
-import React, { useCallback, useContext, useState } from 'react';
+import { useCallback, useContext, useState } from 'react';
 import { RiMenuFill } from 'react-icons/ri';
 
 import darkThemeLogo from 'assets/logo/web3-dark-theme.png';
@@ -12,7 +12,6 @@ import RenderIf from 'components/RenderIf';
 import { basicTheme } from 'config/theme.config';
 import useWindowChangeEvent from 'hooks/useWindowChangeEvent';
 import { ThemeStateContext, ThemeStateContextType } from 'theme/ThemeProvider';
-import { goToSection } from 'utilities/goToSection';
 
 import * as S from './Header.styles';
 
@@ -36,16 +35,9 @@ const Header = () => {
 
       <RenderIf isTrue={windowWidth > basicTheme.maxWidth}>
         <S.Menu>
-          {NavigationLinks().map(({ title, link, componentType }) => (
-            <React.Fragment key={link}>
-              {componentType === 'section' ? (
-                <p onClick={() => goToSection(link)}>{title}</p>
-              ) : (
-                <p onClick={() => goToSection(link)}>{title}</p>
-              )}
-            </React.Fragment>
+          {NavigationLinks().map(({ title, link }) => (
+            <p onClick={() => navigate(link)}>{title}</p>
           ))}
-
           <S.VerticalSeparator />
 
           {SocialLinks.map(({ Icon, name, link }) => (

@@ -1,24 +1,20 @@
+import useIPFSNavigate from 'providers/IPFSRouter/hooks/useIPFSNavigate';
 import { MobileMenuContext, MobileMenuContextStateType } from 'providers/MobileMenuProvider';
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { RiCloseFill } from 'react-icons/ri';
 
 import ChangeLanguage from 'components/ChangeLanguage';
 import ChangeTheme from 'components/ChangeTheme';
 import { NavigationLinks, SocialLinks } from 'components/Header/header.config';
 import RenderIf from 'components/RenderIf';
-import { goToSection } from 'utilities/goToSection';
 
 import * as S from './MobileMenu.styles';
 
 const MobileMenu = () => {
+  const navigate = useIPFSNavigate();
   const { isMenuOpen, changeMenuVisibility } = useContext(
     MobileMenuContext
   ) as MobileMenuContextStateType;
-
-  const goToMobileSection = (link: string) => {
-    changeMenuVisibility();
-    goToSection(link);
-  };
 
   return (
     <RenderIf isTrue={isMenuOpen}>
@@ -32,14 +28,8 @@ const MobileMenu = () => {
         <S.HorizontalSeparator />
 
         <S.Navigation>
-          {NavigationLinks().map(({ title, link, componentType }) => (
-            <React.Fragment key={link}>
-              {componentType === 'section' ? (
-                <p onClick={() => goToMobileSection(link)}>{title}</p>
-              ) : (
-                <p onClick={() => goToSection(link)}>{title}</p>
-              )}
-            </React.Fragment>
+          {NavigationLinks().map(({ title, link }) => (
+            <p onClick={() => navigate(link)}>{title}</p>
           ))}
         </S.Navigation>
 
