@@ -16,6 +16,11 @@ const MobileMenu = () => {
     MobileMenuContext
   ) as MobileMenuContextStateType;
 
+  const goToMobileSection = (link: string) => {
+    changeMenuVisibility();
+    goToSection(link);
+  };
+
   return (
     <RenderIf isTrue={isMenuOpen}>
       <S.MobileMenu>
@@ -28,10 +33,18 @@ const MobileMenu = () => {
         <S.HorizontalSeparator />
 
         <S.Navigation>
-          {NavigationLinks().map(({ title, link }) => (
-            <Link to={link} key={link} onClick={() => goToSection(link, changeMenuVisibility)}>
-              {title}
-            </Link>
+          {NavigationLinks().map(({ title, link, componentType }) => (
+            <>
+              {componentType === 'section' ? (
+                <p key={link} onClick={() => goToMobileSection(link)}>
+                  {title}
+                </p>
+              ) : (
+                <Link to={link} key={link} onClick={() => goToSection(link)}>
+                  {title}
+                </Link>
+              )}
+            </>
           ))}
         </S.Navigation>
 
