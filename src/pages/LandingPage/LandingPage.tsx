@@ -1,4 +1,3 @@
-import Footer from './components/Footer';
 import InviteToDiscord from './sections/InviteToDiscord';
 import OurTeam from './sections/OurTeam';
 import WhatWeDo from './sections/WhatWeDo';
@@ -9,7 +8,6 @@ const LandingPage = () => {
       <InviteToDiscord />
       <WhatWeDo />
       <OurTeam />
-      <Footer />
     </>
   );
 };
