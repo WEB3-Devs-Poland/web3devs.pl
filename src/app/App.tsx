@@ -1,5 +1,5 @@
+import CommunityPage from 'pages/CommunityPage';
 import LandingPage from 'pages/LandingPage';
-import OurCommunity from 'pages/OurCommunity';
 import IPFSRoute from 'providers/IPFSRouter/IPFSRoute';
 
 import Footer from 'components/Footer';
@@ -17,7 +17,7 @@ const App = () => {
         <Header />
 
         <IPFSRoute path="/" component={<LandingPage />} />
-        <IPFSRoute path="/community" component={<OurCommunity />} />
+        <IPFSRoute path="/community" component={<CommunityPage />} />
 
         <Footer />
       </Layout>
