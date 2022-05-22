@@ -1,5 +1,5 @@
+import IPFSRouterProvider from 'providers/IPFSRouter';
 import MobileMenuProvider from 'providers/MobileMenuProvider';
-import { BrowserRouter } from 'react-router-dom';
 
 import ThemeProvider from 'theme/ThemeProvider';
 import TranslationsProvider from 'translations/TranslationsProvider';
@@ -11,11 +11,11 @@ interface Props {
 const Providers = ({ children }: Props) => {
   return (
     <TranslationsProvider>
-      <BrowserRouter>
+      <IPFSRouterProvider>
         <ThemeProvider>
           <MobileMenuProvider>{children}</MobileMenuProvider>
         </ThemeProvider>
-      </BrowserRouter>
+      </IPFSRouterProvider>
     </TranslationsProvider>
   );
 };

@@ -1,6 +1,6 @@
 import LandingPage from 'pages/LandingPage';
 import OurCommunity from 'pages/OurCommunity';
-import { Route, Routes } from 'react-router-dom';
+import IPFSRoute from 'providers/IPFSRouter/IPFSRoute';
 
 import Footer from 'components/Footer';
 import Header from 'components/Header';
@@ -16,10 +16,8 @@ const App = () => {
         <MobileMenu />
         <Header />
 
-        <Routes>
-          <Route index element={<LandingPage />} />
-          <Route path="ourCommunity" element={<OurCommunity />} />
-        </Routes>
+        <IPFSRoute path="" component={<LandingPage />} />
+        <IPFSRoute path="community" component={<OurCommunity />} />
 
         <Footer />
       </Layout>

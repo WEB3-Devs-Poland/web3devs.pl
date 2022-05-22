@@ -1,7 +1,6 @@
 import { MobileMenuContext, MobileMenuContextStateType } from 'providers/MobileMenuProvider';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { RiCloseFill } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
 
 import ChangeLanguage from 'components/ChangeLanguage';
 import ChangeTheme from 'components/ChangeTheme';
@@ -34,17 +33,13 @@ const MobileMenu = () => {
 
         <S.Navigation>
           {NavigationLinks().map(({ title, link, componentType }) => (
-            <>
+            <React.Fragment key={link}>
               {componentType === 'section' ? (
-                <p key={link} onClick={() => goToMobileSection(link)}>
-                  {title}
-                </p>
+                <p onClick={() => goToMobileSection(link)}>{title}</p>
               ) : (
-                <Link to={link} key={link} onClick={() => goToSection(link)}>
-                  {title}
-                </Link>
+                <p onClick={() => goToSection(link)}>{title}</p>
               )}
-            </>
+            </React.Fragment>
           ))}
         </S.Navigation>
 

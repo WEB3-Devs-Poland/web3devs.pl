@@ -1,7 +1,7 @@
+import useIPFSNavigate from 'providers/IPFSRouter/hooks/useIPFSNavigate';
 import { MobileMenuContext, MobileMenuContextStateType } from 'providers/MobileMenuProvider';
-import { useCallback, useContext, useState } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import { RiMenuFill } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
 
 import darkThemeLogo from 'assets/logo/web3-dark-theme.png';
 import lightThemeLogo from 'assets/logo/web3-light-theme.png';
@@ -17,6 +17,7 @@ import { goToSection } from 'utilities/goToSection';
 import * as S from './Header.styles';
 
 const Header = () => {
+  const navigate = useIPFSNavigate();
   const [windowWidth, setWindowWidth] = useState(0);
   const { currentTheme } = useContext(ThemeStateContext) as ThemeStateContextType;
   const { changeMenuVisibility } = useContext(MobileMenuContext) as MobileMenuContextStateType;
@@ -27,27 +28,22 @@ const Header = () => {
 
   return (
     <S.Header>
-      <Link to="/">
-        <S.Logo
-          src={currentTheme === 'light' ? lightThemeLogo : darkThemeLogo}
-          alt="WEB3 Devs Poland"
-        />
-      </Link>
+      <S.Logo
+        src={currentTheme === 'light' ? lightThemeLogo : darkThemeLogo}
+        alt="WEB3 Devs Poland"
+        onClick={() => navigate('/')}
+      />
 
       <RenderIf isTrue={windowWidth > basicTheme.maxWidth}>
         <S.Menu>
           {NavigationLinks().map(({ title, link, componentType }) => (
-            <>
+            <React.Fragment key={link}>
               {componentType === 'section' ? (
-                <p key={link} onClick={() => goToSection(link)}>
-                  {title}
-                </p>
+                <p onClick={() => goToSection(link)}>{title}</p>
               ) : (
-                <Link to={link} key={link} onClick={() => goToSection(link)}>
-                  {title}
-                </Link>
+                <p onClick={() => goToSection(link)}>{title}</p>
               )}
-            </>
+            </React.Fragment>
           ))}
 
           <S.VerticalSeparator />
