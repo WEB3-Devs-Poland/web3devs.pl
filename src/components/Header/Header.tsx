@@ -1,7 +1,4 @@
-import {
-  MobileMenuContext,
-  MobileMenuContextStateType,
-} from 'pages/LandingPage/providers/MobileMenuProvider';
+import { MobileMenuContext, MobileMenuContextStateType } from 'providers/MobileMenuProvider';
 import { useCallback, useContext, useState } from 'react';
 import { RiMenuFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';

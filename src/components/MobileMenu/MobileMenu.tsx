@@ -1,3 +1,4 @@
+import { MobileMenuContext, MobileMenuContextStateType } from 'providers/MobileMenuProvider';
 import { useContext } from 'react';
 import { RiCloseFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
@@ -8,7 +9,6 @@ import { NavigationLinks, SocialLinks } from 'components/Header/header.config';
 import RenderIf from 'components/RenderIf';
 import { goToSection } from 'utilities/goToSection';
 
-import { MobileMenuContext, MobileMenuContextStateType } from '../../providers/MobileMenuProvider';
 import * as S from './MobileMenu.styles';
 
 const MobileMenu = () => {

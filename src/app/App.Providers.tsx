@@ -1,3 +1,4 @@
+import MobileMenuProvider from 'providers/MobileMenuProvider';
 import { BrowserRouter } from 'react-router-dom';
 
 import ThemeProvider from 'theme/ThemeProvider';
@@ -11,7 +12,9 @@ const Providers = ({ children }: Props) => {
   return (
     <TranslationsProvider>
       <BrowserRouter>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <MobileMenuProvider>{children}</MobileMenuProvider>
+        </ThemeProvider>
       </BrowserRouter>
     </TranslationsProvider>
   );
