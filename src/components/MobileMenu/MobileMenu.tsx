@@ -16,6 +16,11 @@ const MobileMenu = () => {
     MobileMenuContext
   ) as MobileMenuContextStateType;
 
+  const mobileNavigate = (link: string) => {
+    changeMenuVisibility();
+    navigate(link);
+  };
+
   return (
     <RenderIf isTrue={isMenuOpen}>
       <S.MobileMenu>
@@ -29,7 +34,7 @@ const MobileMenu = () => {
 
         <S.Navigation>
           {NavigationLinks().map(({ title, link }) => (
-            <p onClick={() => navigate(link)}>{title}</p>
+            <p onClick={() => mobileNavigate(link)}>{title}</p>
           ))}
         </S.Navigation>
 

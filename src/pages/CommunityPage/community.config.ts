@@ -1,3 +1,10 @@
+import ASmolarek from 'pages/CommunityPage/assets/adam-smolarek.png';
+import AChmaro from 'pages/CommunityPage/assets/artur-chmaro.png';
+import KPusiak from 'pages/CommunityPage/assets/kuba-pusiak.png';
+import MBudkowski from 'pages/CommunityPage/assets/maciej-budkowski.png';
+import PDev from 'pages/CommunityPage/assets/pablo-dev.png';
+import PKowalski from 'pages/CommunityPage/assets/pawel-kowalski.png';
+import SPaluch from 'pages/CommunityPage/assets/szymon-paluch.png';
 import {
   RiListCheck2 as BlogIcon,
   RiInstagramLine as InstagramIcon,
@@ -8,7 +15,8 @@ import {
 
 export const ourCommunityMembers = [
   {
-    name: 'Artur Chmaro', //
+    name: 'Artur Chmaro',
+    img: AChmaro,
     social: [
       {
         link: 'https://www.youtube.com/c/ArturChmaro',
@@ -25,16 +33,22 @@ export const ourCommunityMembers = [
     ],
   },
   {
-    name: 'PabloDev', //
+    name: 'Adam Smolarek',
+    img: ASmolarek,
     social: [
       {
-        link: 'https://itswebdev.com/',
+        link: 'https://chaindev.pl/',
+        Icon: BlogIcon,
+      },
+      {
+        link: 'https://chaindev.pl/m',
         Icon: NewsletterIcon,
       },
     ],
   },
   {
-    name: 'Kuba Pusiak', //
+    name: 'Kuba Pusiak',
+    img: KPusiak,
     social: [
       {
         link: 'https://www.youtube.com/channel/UCqawL4rsFulZi1zjpromBNQ',
@@ -46,8 +60,10 @@ export const ourCommunityMembers = [
       },
     ],
   },
+
   {
-    name: 'Szymon Paluch', //
+    name: 'Szymon Paluch',
+    img: SPaluch,
     social: [
       {
         link: 'https://www.youtube.com/channel/UC7PC5cYdtf9O6TsAMxTx9Og',
@@ -60,16 +76,20 @@ export const ourCommunityMembers = [
     ],
   },
   {
-    name: 'Paweł Kowalewski',
+    name: 'PabloDev',
+    img: PDev,
+    addBackground: true,
     social: [
       {
-        link: 'https://www.youtube.com/channel/UCRAD6DLx97zw9AOX1Gwj77Q',
-        Icon: YoutubeIcon,
+        link: 'https://itswebdev.com/',
+        Icon: NewsletterIcon,
       },
     ],
   },
+
   {
     name: 'Maciej Budkowski',
+    img: MBudkowski,
     social: [
       {
         link: 'https://anchor.fm/web3-talks/',
@@ -77,16 +97,14 @@ export const ourCommunityMembers = [
       },
     ],
   },
+
   {
-    name: 'Adam Smolarek',
+    name: 'Paweł Kowalewski',
+    img: PKowalski,
     social: [
       {
-        link: 'https://chaindev.pl/',
-        Icon: BlogIcon,
-      },
-      {
-        link: 'https://chaindev.pl/m',
-        Icon: NewsletterIcon,
+        link: 'https://www.youtube.com/channel/UCRAD6DLx97zw9AOX1Gwj77Q',
+        Icon: YoutubeIcon,
       },
     ],
   },

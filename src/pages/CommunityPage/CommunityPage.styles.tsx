@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Content = styled.div`
   width: 100%;
 
+  margin: 5rem 0;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -35,6 +37,15 @@ export const MemberName = styled.div`
 
   font-weight: bold;
   font-size: 1.25rem;
+`;
+
+export const MemberIMG = styled.img<{ $addBackground?: boolean }>`
+  background-color: ${({ theme, $addBackground }) =>
+    $addBackground ? theme.white : 'transparent'};
+  margin: auto;
+  width: 7.5rem;
+  border-radius: 50%;
+  box-shadow: ${({ theme }) => theme.text}25 0px 7px 29px 0px; //opacity <- last two numbers of color
 `;
 
 export const MemberSocial = styled.div`
