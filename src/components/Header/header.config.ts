@@ -12,8 +12,12 @@ export const NavigationLinks = (): NavigationLinksModel[] => {
 
   return [
     {
-      title: t('header.ourTeam'),
-      link: '#ourTeam',
+      title: t('header.introduction'),
+      link: '/',
+    },
+    {
+      title: t('header.community'),
+      link: '/community',
     },
   ];
 };

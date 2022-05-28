@@ -7,7 +7,7 @@ const OurTeam = () => {
   const { t } = useTranslation();
 
   return (
-    <S.Content id="#ourTeam">
+    <S.Content>
       <S.Title>{t('ourTeam.title')}</S.Title>
       <S.Team>
         {ourTeamMembers.map((member) => (

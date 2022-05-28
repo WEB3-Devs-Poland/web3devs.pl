@@ -1,20 +1,25 @@
-import { NavigationLinks, SocialLinks } from 'pages/LandingPage/components/Header/header.config';
+import useIPFSNavigate from 'providers/IPFSRouter/hooks/useIPFSNavigate';
+import { MobileMenuContext, MobileMenuContextStateType } from 'providers/MobileMenuProvider';
 import { useContext } from 'react';
 import { RiCloseFill } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
 
 import ChangeLanguage from 'components/ChangeLanguage';
 import ChangeTheme from 'components/ChangeTheme';
+import { NavigationLinks, SocialLinks } from 'components/Header/header.config';
 import RenderIf from 'components/RenderIf';
-import { goToSection } from 'utilities/goToSection';
 
-import { MobileMenuContext, MobileMenuContextStateType } from '../../providers/MobileMenuProvider';
 import * as S from './MobileMenu.styles';
 
 const MobileMenu = () => {
+  const navigate = useIPFSNavigate();
   const { isMenuOpen, changeMenuVisibility } = useContext(
     MobileMenuContext
   ) as MobileMenuContextStateType;
+
+  const mobileNavigate = (link: string) => {
+    changeMenuVisibility();
+    navigate(link);
+  };
 
   return (
     <RenderIf isTrue={isMenuOpen}>
@@ -29,9 +34,7 @@ const MobileMenu = () => {
 
         <S.Navigation>
           {NavigationLinks().map(({ title, link }) => (
-            <Link to={link} key={link} onClick={() => goToSection(link, changeMenuVisibility)}>
-              {title}
-            </Link>
+            <p onClick={() => mobileNavigate(link)}>{title}</p>
           ))}
         </S.Navigation>
 
