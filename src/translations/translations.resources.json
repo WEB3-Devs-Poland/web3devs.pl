@@ -2,8 +2,10 @@
   "en": {
     "translation": {
       "header": {
-        "introduction": "Introduction",
         "community": "Community"
+      },
+      "community": {
+        "backButton": "Home page"
       },
       "inviteToDiscord": {
         "title": "First Polish community <1/> for <3>web3</3> developers",
@@ -27,8 +29,10 @@
   "pl": {
     "translation": {
       "header": {
-        "introduction": "Wprowadzenie",
         "community": "Społeczność"
+      },
+      "community": {
+        "backButton": "Strona główna"
       },
       "inviteToDiscord": {
         "title": "Pierwsza Polska społeczność <1/> dla programistów <3>web3</3>",
