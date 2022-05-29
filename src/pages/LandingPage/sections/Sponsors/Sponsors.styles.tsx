@@ -8,6 +8,8 @@ export const Content = styled.div<{ $currentTheme?: ThemeType }>`
   position: relative;
   left: calc(-50vw + 50%);
 
+  z-index: -1;
+
   transition: 0.5s;
   background-color: ${({ $currentTheme }) => ($currentTheme === 'light' ? '#f0f0f0' : '#0a0a0a')};
 `;
@@ -16,7 +18,6 @@ export const Wrapper = styled.div`
   margin: auto;
   display: flex;
   align-items: center;
-  position: relative;
 
   max-width: ${({ theme }) => theme.contentWidth}px;
   overflow-x: hidden;
