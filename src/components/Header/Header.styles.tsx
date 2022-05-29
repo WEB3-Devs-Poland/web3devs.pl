@@ -65,6 +65,7 @@ export const Header = styled.div`
 `;
 
 export const Logo = styled.img`
+  cursor: pointer;
   height: 4rem;
 `;
 
