@@ -5,7 +5,7 @@ import GlobalStyle from './GlobalStyle';
 import darkTheme from './theme.dark';
 import lightTheme from './theme.light';
 
-type ThemeType = 'light' | 'dark';
+export type ThemeType = 'light' | 'dark';
 
 export type ThemeStateContextType = {
   currentTheme: ThemeType;

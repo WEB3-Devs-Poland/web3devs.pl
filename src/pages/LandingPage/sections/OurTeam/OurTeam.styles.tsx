@@ -30,7 +30,7 @@ export const Team = styled.div`
 `;
 
 export const Member = styled.div`
-  min-width: 200px;
+  min-width: 12rem;
   padding: 1.5rem 2rem;
   margin: 2rem;
 
@@ -47,6 +47,19 @@ export const Member = styled.div`
     transition: 0.3s;
     box-shadow: ${({ theme }) => theme.primary}25 0px 7px 29px 0px; //opacity <- last two numbers of color: ;
   }
+
+  @media (max-width: ${({ theme }) => theme.maxWidth}px) {
+    min-width: 18rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+export const Details = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 `;
 
 export const MemberIMG = styled.img`
@@ -54,6 +67,11 @@ export const MemberIMG = styled.img`
   width: 7.5rem;
   border-radius: 50%;
   box-shadow: ${({ theme }) => theme.text}25 0px 7px 29px 0px; //opacity <- last two numbers of color
+
+  @media (max-width: ${({ theme }) => theme.maxWidth}px) {
+    width: 6rem;
+    margin: auto 0;
+  }
 `;
 
 export const MemberName = styled.div`
@@ -61,6 +79,11 @@ export const MemberName = styled.div`
 
   font-weight: bold;
   font-size: 1.25rem;
+
+  @media (max-width: ${({ theme }) => theme.maxWidth}px) {
+    margin-top: 0.25rem;
+    font-size: 1rem;
+  }
 `;
 
 export const MemberRole = styled.div`
@@ -74,6 +97,13 @@ export const MemberRole = styled.div`
   width: 75%;
   border-radius: 5px;
   background-color: ${({ theme }) => theme.primary};
+
+  @media (max-width: ${({ theme }) => theme.maxWidth}px) {
+    margin: 0.25rem auto;
+    padding: 0.25rem 0.5rem;
+
+    width: auto;
+  }
 `;
 
 export const MemberSocial = styled.div`

@@ -28,10 +28,15 @@ export const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (max-width: ${({ theme }) => theme.maxWidth}px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Card = styled.div`
-  max-width: 250px;
+  max-width: 16rem;
   padding: 1.5rem 2rem;
   margin: 2rem;
 
@@ -42,6 +47,18 @@ export const Card = styled.div`
   svg {
     width: 16rem;
     height: 16rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.maxWidth}px) {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+
+    svg {
+      height: 10rem;
+      width: 15rem;
+      margin-right: 1rem;
+    }
   }
 `;
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Content = styled.div`
-  height: calc(100vh - ${({ theme }) => theme.hederHeight}px - 5vh);
+  margin-bottom: 10rem;
   width: 100%;
 
   display: flex;

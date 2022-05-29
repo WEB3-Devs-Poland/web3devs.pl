@@ -3,8 +3,6 @@ import styled from 'styled-components';
 export const Content = styled.div`
   width: 100%;
 
-  margin: 5rem 0;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -15,7 +13,7 @@ export const Content = styled.div`
 export const Card = styled.div`
   min-width: 200px;
   padding: 1.5rem 2rem;
-  margin: 2rem;
+  margin: 0 2rem 4rem;
 
   display: flex;
   flex-direction: column;
@@ -46,6 +44,33 @@ export const MemberIMG = styled.img<{ $addBackground?: boolean }>`
   width: 7.5rem;
   border-radius: 50%;
   box-shadow: ${({ theme }) => theme.text}25 0px 7px 29px 0px; //opacity <- last two numbers of color
+`;
+
+export const TopLineContent = styled.div`
+  width: 90%;
+  margin: 2.5rem 0;
+`;
+
+export const BackButton = styled.div`
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+  padding: 0.5rem;
+  width: 100px;
+  width: 12rem;
+
+  display: flex;
+  align-items: center;
+
+  svg {
+    padding: 0 0.5rem;
+  }
+
+  :hover {
+    color: ${({ theme }) => theme.primary};
+    transition: 0.3s;
+  }
 `;
 
 export const MemberSocial = styled.div`

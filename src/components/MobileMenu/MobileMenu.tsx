@@ -34,7 +34,9 @@ const MobileMenu = () => {
 
         <S.Navigation>
           {NavigationLinks().map(({ title, link }) => (
-            <p onClick={() => mobileNavigate(link)}>{title}</p>
+            <p key={title} onClick={() => mobileNavigate(link)}>
+              {title}
+            </p>
           ))}
         </S.Navigation>
 

@@ -30,7 +30,7 @@ export const ourTeamMembers = [
   },
   {
     name: 'Kacper Adler',
-    role: 'Community / DEV',
+    role: 'DEV',
     img: KAdlerPNG,
     social: [
       {
