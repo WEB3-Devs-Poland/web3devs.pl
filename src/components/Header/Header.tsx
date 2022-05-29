@@ -36,7 +36,9 @@ const Header = () => {
       <RenderIf isTrue={windowWidth > basicTheme.maxWidth}>
         <S.Menu>
           {NavigationLinks().map(({ title, link }) => (
-            <p onClick={() => navigate(link)}>{title}</p>
+            <p key={title} onClick={() => navigate(link)}>
+              {title}
+            </p>
           ))}
           <S.VerticalSeparator />
 

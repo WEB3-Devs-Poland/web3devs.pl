@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
     transition: 0.5s;
     background-color: ${({ theme }) => theme.background};
 
+    margin-right: 5px;
+
     color: ${({ theme }) => theme.text};
     font-family: ${({ theme }) => theme.fontFamily};
   }
