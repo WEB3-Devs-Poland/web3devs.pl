@@ -23,6 +23,7 @@ export const Card = styled.div`
   padding: 1.5rem 2rem;
   margin: 1rem;
 
+
   display: flex;
   flex-direction: column;
 
@@ -95,6 +96,33 @@ export const MemberRole = styled.div`
     padding: 0.25rem 0.5rem;
 
     width: auto;
+  }
+`;
+
+export const TopLineContent = styled.div`
+  width: 90%;
+  margin: 2.5rem 0;
+`;
+
+export const BackButton = styled.div`
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+  padding: 0.5rem;
+  width: 100px;
+  width: 12rem;
+
+  display: flex;
+  align-items: center;
+
+  svg {
+    padding: 0 0.5rem;
+  }
+
+  :hover {
+    color: ${({ theme }) => theme.primary};
+    transition: 0.3s;
   }
 `;
 
