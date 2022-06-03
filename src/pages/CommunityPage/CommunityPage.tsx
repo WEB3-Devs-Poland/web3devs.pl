@@ -16,19 +16,24 @@ const CommunityPage = () => {
           <IoMdArrowBack /> {t('community.backButton')}
         </S.BackButton>
       </S.TopLineContent>
-      {ourCommunityMembers.map((member) => (
-        <S.Card key={member.name}>
-          <S.MemberIMG src={member.img} $addBackground={member.addBackground} />
-          <S.MemberName>{member.name}</S.MemberName>
-          <S.MemberSocial>
-            {member.social.map(({ link, Icon }) => (
-              <a href={link} key={link} target="blank">
-                <Icon />
-              </a>
-            ))}
-          </S.MemberSocial>
-        </S.Card>
-      ))}
+      <S.CommunityMembers>
+        {ourCommunityMembers.map((member) => (
+          <S.Card key={member.name}>
+            <S.MemberIMG src={member.img} $addBackground={member.addBackground} />
+            <S.Details>
+              <S.MemberName>{member.name}</S.MemberName>
+              <S.MemberRole>{member.bio}</S.MemberRole>
+              <S.MemberSocial>
+                {member.social.map(({ link, Icon }) => (
+                  <a href={link} key={link} target="blank">
+                    <Icon />
+                  </a>
+                ))}
+              </S.MemberSocial>
+            </S.Details>
+          </S.Card>
+        ))}
+      </S.CommunityMembers>
     </S.Content>
   );
 };

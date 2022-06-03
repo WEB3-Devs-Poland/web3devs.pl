@@ -4,6 +4,8 @@ import ElympicsDarkTheme from 'pages/LandingPage/assets/sponsors/elympics/logo-d
 import ElympicsLightTheme from 'pages/LandingPage/assets/sponsors/elympics/logo-light-theme.png';
 import FirestartersDarkTheme from 'pages/LandingPage/assets/sponsors/firestarters/logo-dark-theme.png';
 import FirestartersLightTheme from 'pages/LandingPage/assets/sponsors/firestarters/logo-light-theme.png';
+import UnimindDarkTheme from 'pages/LandingPage/assets/sponsors/unimind/logo-dark-theme.png';
+import UnimindLightTheme from 'pages/LandingPage/assets/sponsors/unimind/logo-light-theme.png';
 
 export const sponsors = [
   {
@@ -12,6 +14,14 @@ export const sponsors = [
     logo: {
       dark: DaftcodeDarkTheme,
       light: DaftcodeLightTheme,
+    },
+  },
+  {
+    name: 'Unimind',
+    link: 'https://webtrzy.xyz/',
+    logo: {
+      dark: UnimindDarkTheme,
+      light: UnimindLightTheme,
     },
   },
   {
