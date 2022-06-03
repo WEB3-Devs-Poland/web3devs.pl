@@ -9,7 +9,6 @@ export const Content = styled.div<{ $currentTheme?: ThemeType }>`
   left: calc(-50vw + 50%);
 
   z-index: -1;
-
   transition: 0.3s;
   background-color: ${({ $currentTheme }) => ($currentTheme === 'light' ? '#f0f0f0' : '#1d1d1d')};
 `;
