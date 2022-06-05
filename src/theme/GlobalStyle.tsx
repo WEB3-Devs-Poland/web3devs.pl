@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-    transition: 0.5s;
+    transition: 0.3s;
     background-color: ${({ theme }) => theme.background};
 
     margin-right: 5px;

@@ -9,9 +9,8 @@ export const Content = styled.div<{ $currentTheme?: ThemeType }>`
   left: calc(-50vw + 50%);
 
   z-index: -1;
-
-  transition: 0.5s;
-  background-color: ${({ $currentTheme }) => ($currentTheme === 'light' ? '#f0f0f0' : '#0a0a0a')};
+  transition: 0.3s;
+  background-color: ${({ $currentTheme }) => ($currentTheme === 'light' ? '#f0f0f0' : '#1d1d1d')};
 `;
 
 export const Wrapper = styled.div`
@@ -25,11 +24,10 @@ export const Wrapper = styled.div`
 
 export const SponsorIMG = styled.img`
   margin: auto;
-  width: 10rem;
-  padding: 0 2.5rem;
+  width: 20%;
+  padding: 0 2%;
+  max-width: 8rem;
 
   @media (max-width: ${({ theme }) => theme.maxWidth}px) {
-    width: 7.5rem;
-    padding: 0 1rem;
   }
 `;

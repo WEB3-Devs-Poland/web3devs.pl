@@ -10,6 +10,7 @@ import {
   RiInstagramLine as InstagramIcon,
   RiMailSendLine as NewsletterIcon,
   RiMicLine as PodcastIcon,
+  RiWindow2Line as WebsiteIcon,
   RiYoutubeLine as YoutubeIcon,
 } from 'react-icons/ri';
 
@@ -17,6 +18,8 @@ export const ourCommunityMembers = [
   {
     name: 'Artur Chmaro',
     img: AChmaro,
+    bio: 'Fullstack DEV',
+    addBackground: false,
     social: [
       {
         link: 'https://www.youtube.com/c/ArturChmaro',
@@ -35,6 +38,8 @@ export const ourCommunityMembers = [
   {
     name: 'Adam Smolarek',
     img: ASmolarek,
+    bio: 'Blockchain DEV',
+    addBackground: false,
     social: [
       {
         link: 'https://chaindev.pl/',
@@ -49,6 +54,8 @@ export const ourCommunityMembers = [
   {
     name: 'Kuba Pusiak',
     img: KPusiak,
+    bio: 'Frontend DEV',
+    addBackground: false,
     social: [
       {
         link: 'https://www.youtube.com/channel/UCqawL4rsFulZi1zjpromBNQ',
@@ -64,6 +71,8 @@ export const ourCommunityMembers = [
   {
     name: 'Szymon Paluch',
     img: SPaluch,
+    bio: 'IT Consultant',
+    addBackground: false,
     social: [
       {
         link: 'https://www.youtube.com/channel/UC7PC5cYdtf9O6TsAMxTx9Og',
@@ -73,11 +82,16 @@ export const ourCommunityMembers = [
         link: 'https://www.instagram.com/szymonpaluch.eth/?hl=pl',
         Icon: InstagramIcon,
       },
+      {
+        link: 'https://szymonpaluch.com/',
+        Icon: WebsiteIcon,
+      },
     ],
   },
   {
-    name: 'PabloDev',
+    name: 'Paweł Marszalec',
     img: PDev,
+    bio: 'DEV',
     addBackground: true,
     social: [
       {
@@ -90,6 +104,7 @@ export const ourCommunityMembers = [
   {
     name: 'Maciej Budkowski',
     img: MBudkowski,
+    bio: 'Host @ WEB3 talks',
     social: [
       {
         link: 'https://anchor.fm/web3-talks/',
@@ -101,6 +116,8 @@ export const ourCommunityMembers = [
   {
     name: 'Paweł Kowalewski',
     img: PKowalski,
+    bio: 'DEV',
+    addBackground: false,
     social: [
       {
         link: 'https://www.youtube.com/channel/UCRAD6DLx97zw9AOX1Gwj77Q',
