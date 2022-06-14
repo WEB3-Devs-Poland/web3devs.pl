@@ -35,8 +35,8 @@ const Header = () => {
 
       <RenderIf isTrue={windowWidth > basicTheme.maxWidth}>
         <S.Menu>
-          {NavigationLinks().map(({ title, link }) => (
-            <p key={title} onClick={() => navigate(link)}>
+          {NavigationLinks().map(({ title, link, isBlank }) => (
+            <p key={title} onClick={() => (isBlank ? window.open(link, '_blank') : navigate(link))}>
               {title}
             </p>
           ))}

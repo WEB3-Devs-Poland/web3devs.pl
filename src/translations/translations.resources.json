@@ -2,7 +2,8 @@
   "en": {
     "translation": {
       "header": {
-        "community": "Community"
+        "community": "Community",
+        "jobs": "Job boards"
       },
       "community": {
         "backButton": "Home page"
@@ -11,6 +12,9 @@
         "title": "First Polish community <1/> for <3>web3</3> developers",
         "subTitle": "We learn, share experiences and build projects together. If you're interested in web3, this place is for you",
         "button": "Join us"
+      },
+      "partners": {
+        "title": "OUR PARTNERS"
       },
       "ourTeam": {
         "title": "Meet our Team"
@@ -29,7 +33,8 @@
   "pl": {
     "translation": {
       "header": {
-        "community": "Społeczność"
+        "community": "Społeczność",
+        "jobs": "Praca"
       },
       "community": {
         "backButton": "Strona główna"
@@ -38,6 +43,9 @@
         "title": "Pierwsza Polska społeczność <1/> dla programistów <3>web3</3>",
         "subTitle": "Uczymy się, wymieniamy się doświadczeniem i wiedzą oraz tworzymy razem projekty. Jeśli jesteś zainteresowany światem web3, to miejsce dla Ciebie",
         "button": "Dołącz do nas"
+      },
+      "partners": {
+        "title": "NASI PARTNERZY"
       },
       "ourTeam": {
         "title": "Poznaj nasz zespół"

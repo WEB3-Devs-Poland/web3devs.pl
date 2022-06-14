@@ -3,6 +3,7 @@ import { IconType } from 'react-icons';
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from 'react-icons/si';
 
 type NavigationLinksModel = {
+  isBlank: boolean;
   title: string;
   link: string;
 };
@@ -12,8 +13,14 @@ export const NavigationLinks = (): NavigationLinksModel[] => {
 
   return [
     {
+      isBlank: false,
       title: t('header.community'),
       link: '/community',
+    },
+    {
+      isBlank: true,
+      title: t('header.jobs'),
+      link: 'https://techtree.dev/users/dev1812/bounties',
     },
   ];
 };
