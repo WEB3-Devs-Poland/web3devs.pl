@@ -1,7 +1,7 @@
-import useIPFSNavigate from 'providers/IPFSRouter/hooks/useIPFSNavigate';
 import { MobileMenuContext, MobileMenuContextStateType } from 'providers/MobileMenuProvider';
 import { useContext } from 'react';
 import { RiCloseFill } from 'react-icons/ri';
+import { useNavigate } from 'react-router-dom';
 
 import ChangeLanguage from 'components/ChangeLanguage';
 import ChangeTheme from 'components/ChangeTheme';
@@ -11,7 +11,7 @@ import RenderIf from 'components/RenderIf';
 import * as S from './MobileMenu.styles';
 
 const MobileMenu = () => {
-  const navigate = useIPFSNavigate();
+  const navigate = useNavigate();
   const { isMenuOpen, changeMenuVisibility } = useContext(
     MobileMenuContext
   ) as MobileMenuContextStateType;
@@ -33,8 +33,11 @@ const MobileMenu = () => {
         <S.HorizontalSeparator />
 
         <S.Navigation>
-          {NavigationLinks().map(({ title, link }) => (
-            <p key={title} onClick={() => mobileNavigate(link)}>
+          {NavigationLinks().map(({ title, link, isBlank }) => (
+            <p
+              key={title}
+              onClick={() => (isBlank ? window.open(link, '_blank') : mobileNavigate(link))}
+            >
               {title}
             </p>
           ))}
