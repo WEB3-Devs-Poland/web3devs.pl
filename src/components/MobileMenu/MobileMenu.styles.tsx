@@ -17,6 +17,7 @@ export const MobileMenu = styled.div`
   font-size: 1.25rem;
   font-weight: bold;
   color: ${({ theme }) => theme.text};
+  z-index: 10;
 
   a {
     text-decoration: none;
