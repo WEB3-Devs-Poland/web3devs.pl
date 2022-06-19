@@ -1,7 +1,7 @@
-import useIPFSNavigate from 'providers/IPFSRouter/hooks/useIPFSNavigate';
 import { MobileMenuContext, MobileMenuContextStateType } from 'providers/MobileMenuProvider';
 import { useCallback, useContext, useState } from 'react';
 import { RiMenuFill } from 'react-icons/ri';
+import { useNavigate } from 'react-router-dom';
 
 import darkThemeLogo from 'assets/logo/web3-dark-theme.png';
 import lightThemeLogo from 'assets/logo/web3-light-theme.png';
@@ -16,7 +16,7 @@ import { ThemeStateContext, ThemeStateContextType } from 'theme/ThemeProvider';
 import * as S from './Header.styles';
 
 const Header = () => {
-  const navigate = useIPFSNavigate();
+  const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(0);
   const { currentTheme } = useContext(ThemeStateContext) as ThemeStateContextType;
   const { changeMenuVisibility } = useContext(MobileMenuContext) as MobileMenuContextStateType;

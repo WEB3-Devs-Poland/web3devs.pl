@@ -1,13 +1,13 @@
-import useIPFSNavigate from 'providers/IPFSRouter/hooks/useIPFSNavigate';
 import { useTranslation } from 'react-i18next';
 import { IoMdArrowBack } from 'react-icons/io';
+import { useNavigate } from 'react-router-dom';
 
 import * as S from './CommunityPage.styles';
 import { ourCommunityMembers } from './community.config';
 
 const CommunityPage = () => {
   const { t } = useTranslation();
-  const navigate = useIPFSNavigate();
+  const navigate = useNavigate();
 
   return (
     <S.Content>
