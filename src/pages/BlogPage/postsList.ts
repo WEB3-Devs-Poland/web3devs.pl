@@ -1,3 +1,4 @@
+//to add new post, add title to this type and then add new object to postsList
 export type postTitleType = 'zakladanie-portfela-metamask';
 
 export const postsList: Record<
