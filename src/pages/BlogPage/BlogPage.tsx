@@ -6,7 +6,7 @@ import useLocale from 'translations/hooks';
 
 import * as S from './BlogPage.styles';
 import { SinglePost } from './components/SinglePost';
-import { postsList } from './postsList';
+import { postTitleType, postsList } from './postsList';
 
 export const BlogPage = () => {
   const locale = useLocale();
@@ -26,12 +26,12 @@ export const BlogPage = () => {
                 <IoMdArrowBack /> {t('community.backButton')}
               </S.BackButton>
             </S.TopLineContent>
-            {postsList.map((item, index) => (
-              <S.PostLinkContent onClick={() => navigate(`/blog/${index}`)} key={index}>
+            {(Object.keys(postsList) as postTitleType[]).map((key) => (
+              <S.PostLinkContent onClick={() => navigate(`/blog/${key}`)} key={key}>
                 <S.PostDate>
-                  {item.date.toLocaleDateString(locale.locale, { dateStyle: 'short' })}
+                  {postsList[key].date.toLocaleDateString(locale.locale, { dateStyle: 'short' })}
                 </S.PostDate>
-                <S.PostLink>{item.postName}</S.PostLink>
+                <S.PostLink>{postsList[key].postName}</S.PostLink>
               </S.PostLinkContent>
             ))}
           </S.Content>
