@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { IoMdArrowBack } from 'react-icons/io';
-import { Link, Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import useLocale from 'translations/hooks';
 
