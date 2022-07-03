@@ -13,7 +13,7 @@ export const SinglePost: React.FC = () => {
   const [post, setPost] = useState('');
 
   useEffect(() => {
-    import(`./posts/${fileName}.md`).then((res) => {
+    import(`https://web3devs.pl/blog/posts/${fileName}.md`).then((res) => {
       fetch(res.default)
         .then((res) => res.text())
         .then((res) => setPost(res));
