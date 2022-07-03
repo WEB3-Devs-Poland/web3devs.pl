@@ -18,6 +18,11 @@ export const NavigationLinks = (): NavigationLinksModel[] => {
       link: '/community',
     },
     {
+      isBlank: false,
+      title: t('header.blog'),
+      link: '/blog',
+    },
+    {
       isBlank: true,
       title: t('header.jobs'),
       link: 'https://techtree.dev/users/dev1812/bounties',

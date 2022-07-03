@@ -1,8 +1,10 @@
 {
   "en": {
     "translation": {
+      "backButton": "Back",
       "header": {
         "community": "Community",
+        "blog": "Blog",
         "jobs": "Job boards"
       },
       "community": {
@@ -32,8 +34,10 @@
   },
   "pl": {
     "translation": {
+      "backButton": "Powrót",
       "header": {
         "community": "Społeczność",
+        "blog": "Blog",
         "jobs": "Praca"
       },
       "community": {
