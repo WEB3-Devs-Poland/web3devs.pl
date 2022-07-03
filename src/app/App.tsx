@@ -1,3 +1,4 @@
+import { BlogPage } from 'pages/BlogPage/BlogPage';
 import CommunityPage from 'pages/CommunityPage';
 import LandingPage from 'pages/LandingPage';
 import { Route, Routes } from 'react-router-dom';
@@ -19,6 +20,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/community" element={<CommunityPage />} />
+          <Route path="/blog/*" element={<BlogPage />} />
         </Routes>
 
         <Footer />

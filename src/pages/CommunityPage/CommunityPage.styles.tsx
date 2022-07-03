@@ -113,7 +113,7 @@ export const MemberSocial = styled.div`
 `;
 
 export const TopLineContent = styled.div`
-  width: 90%;
+  width: 100%;
   margin: 2.5rem 0;
 `;
 
