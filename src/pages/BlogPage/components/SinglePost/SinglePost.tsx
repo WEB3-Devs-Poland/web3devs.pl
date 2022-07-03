@@ -1,4 +1,4 @@
-import { postsList } from 'pages/BlogPage/postsList';
+import { postTitleType, postsList } from 'pages/BlogPage/postsList';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { IoMdArrowBack } from 'react-icons/io';
@@ -14,7 +14,7 @@ export const SinglePost: React.FC = () => {
   const [post, setPost] = useState('');
 
   useEffect(() => {
-    fetch(postsList[Number(postId)].address)
+    fetch(postsList[postId as postTitleType].address)
       .then((res) => res.text())
       .then((res) => setPost(res));
   }, [postId]);
