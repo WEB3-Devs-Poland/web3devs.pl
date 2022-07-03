@@ -2,7 +2,7 @@ import KAdlerPNG from 'pages/LandingPage/assets/team/kacper-adler.png';
 import Kkokosa from 'pages/LandingPage/assets/team/konrad-kokosa.png';
 import LOlender from 'pages/LandingPage/assets/team/lukasz-olender.png';
 import MCholewkaPNG from 'pages/LandingPage/assets/team/maja-cholewka.png';
-import MCieplak from 'pages/LandingPage/assets/team/mateusz-cieplak.png';
+import PPaczoski from 'pages/LandingPage/assets/team/przemyslaw-paczoski.png';
 import { SiLinkedin } from 'react-icons/si';
 
 export const ourTeamMembers = [
@@ -18,12 +18,12 @@ export const ourTeamMembers = [
     ],
   },
   {
-    name: 'Mateusz Cieplak',
-    role: 'Co-Founder',
-    img: MCieplak,
+    name: 'Przemysław Paczoski',
+    role: 'DEV',
+    img: PPaczoski,
     social: [
       {
-        link: 'https://www.linkedin.com/in/mateusz-cieplak/',
+        link: 'https://www.linkedin.com/in/ppaczoski/',
         Icon: SiLinkedin,
       },
     ],
