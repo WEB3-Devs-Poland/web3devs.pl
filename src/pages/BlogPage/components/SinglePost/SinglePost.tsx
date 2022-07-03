@@ -1,3 +1,4 @@
+import { postsList } from 'pages/BlogPage/postsList';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { IoMdArrowBack } from 'react-icons/io';
@@ -8,17 +9,15 @@ import * as S from './SinglePost.styles';
 export const SinglePost: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { fileName } = useParams();
+  const { postId } = useParams();
 
   const [post, setPost] = useState('');
 
   useEffect(() => {
-    import(`https://web3devs.pl/blog/posts/${fileName}.md`).then((res) => {
-      fetch(res.default)
-        .then((res) => res.text())
-        .then((res) => setPost(res));
-    });
-  }, [fileName]);
+    fetch(postsList[Number(postId)].address)
+      .then((res) => res.text())
+      .then((res) => setPost(res));
+  }, [postId]);
 
   return (
     <S.Content>

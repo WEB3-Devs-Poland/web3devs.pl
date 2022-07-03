@@ -15,7 +15,7 @@ export const BlogPage = () => {
 
   return (
     <Routes>
-      <Route path=":fileName" element={<SinglePost />} />
+      <Route path=":postId" element={<SinglePost />} />
 
       <Route
         index
@@ -26,11 +26,8 @@ export const BlogPage = () => {
                 <IoMdArrowBack /> {t('community.backButton')}
               </S.BackButton>
             </S.TopLineContent>
-            {postsList.map((item) => (
-              <S.PostLinkContent
-                onClick={() => navigate(`/blog/${item.fileName}`)}
-                key={item.fileName}
-              >
+            {postsList.map((item, index) => (
+              <S.PostLinkContent onClick={() => navigate(`/blog/${index}`)} key={index}>
                 <S.PostDate>
                   {item.date.toLocaleDateString(locale.locale, { dateStyle: 'short' })}
                 </S.PostDate>
