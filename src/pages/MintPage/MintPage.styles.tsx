@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ConnectionStatus from './components/ConnectionStatus';
 
 export const Button = styled.button`
   cursor: pointer;
@@ -13,7 +14,7 @@ export const Button = styled.button`
   background-color: ${({ theme }) => theme.primary};
   align-self: center;
 
-  :active {
+  :active, :hover {
     background-color: ${({ theme }) => theme.secondary};
   }
 `;
@@ -21,6 +22,11 @@ export const Button = styled.button`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   min-height: 100%;
+`;
+
+export const StyledConnectionStatus = styled(ConnectionStatus)`
+  align-self: flex-start;
 `;
