@@ -29,7 +29,20 @@
           "buildTogether": "We build projects together"
         }
       },
-      "footer": "©2022 web3 Devs Poland. All rights reserved"
+      "footer": "©2022 web3 Devs Poland. All rights reserved",
+      "wallet": {
+        "connecting": "Connecting...",
+        "connect": "Connect to Metamask",
+        "connectionIssues": "Connection issues",
+        "disconnect": "Disconnect",
+        "notConnected": "Not connected"
+      },
+      "mintPage": {
+        "heading": "Mint Early Adopter NFT",
+        "connectRemark": "Start with connecting to your Metamask wallet",
+        "instruction": "Click below Mint button to mint yours NFT",
+        "mintButton": "Mint"
+      }
     }
   },
   "pl": {
@@ -62,7 +75,20 @@
           "buildTogether": "Budujemy razem projekty"
         }
       },
-      "footer": "©2022 web3 Devs Polska. Wszelkie prawa zastrzeżone"
+      "footer": "©2022 web3 Devs Polska. Wszelkie prawa zastrzeżone",
+      "wallet": {
+        "connecting": "Łączenie...",
+        "connect": "Połącz z Metamask",
+        "connectionIssues": "Problemy z połączeniem",
+        "disconnect": "Rozłącz portfel",
+        "notConnected": "Nie połączono"
+      },
+      "mintPage": {
+        "heading": "Wybij swoje EarlyAdopter NFT",
+        "connectRemark": "Zacznij od połącznia ze swoim portfelem Metamask",
+        "instruction": "Kliknij poniższy przycisk, aby wydobyć NFT.",
+        "mintButton": "Mint"
+      }
     }
   }
 }
