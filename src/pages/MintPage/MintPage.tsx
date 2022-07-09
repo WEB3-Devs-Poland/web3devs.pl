@@ -27,8 +27,12 @@ const MintPage = () => {
       /*
        * @todo Create proper logic for final contract
       */
-      contract.mint(address, 'QmPbxeGcXhYQQNgsC6a36dDyYUcHgMLnGKnF8pVFmGsvqi');
-    } catch (error) {}
+      await contract.mint(address, 'QmPbxeGcXhYQQNgsC6a36dDyYUcHgMLnGKnF8pVFmGsvqi');
+    } catch (error) {
+      /*
+       * Add error handling
+      */
+    }
   }
 
   return (
@@ -44,10 +48,9 @@ const MintPage = () => {
       {isConnected && (
         <>
           <p>{t('mintPage.instruction')}</p>
+          {/* @todo Add some click spamming protection */}
           <S.Button
-            onClick={() => {
-              handleMint();
-            }}
+            onClick={handleMint}
           >
             {t('mintPage.mintButton')}
           </S.Button>
