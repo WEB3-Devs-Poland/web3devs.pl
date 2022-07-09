@@ -9,6 +9,7 @@ import Layout from 'components/Layout';
 import MobileMenu from 'components/MobileMenu';
 
 import Providers from './App.Providers';
+import MintPage from 'pages/MintPage';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/community" element={<CommunityPage />} />
           <Route path="/blog/*" element={<BlogPage />} />
+          <Route path="/mint" element={<MintPage />} />
         </Routes>
 
         <Footer />
