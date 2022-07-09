@@ -5,6 +5,8 @@ import { COLOR, basicTheme } from '../config/theme.config';
 const darkTheme: DefaultTheme = {
   primary: COLOR.VIOLET,
   secondary: COLOR.PURPLE,
+  green: COLOR.SUCCESS_GREEN,
+  red: COLOR.FAIL_RED,
   grey: {
     first: COLOR.UNIFORM_GREY,
   },
