@@ -1,7 +1,15 @@
-export type MetaDataType = { [key: string]: any };
+export type MetaDataType = {
+  title: string;
+  author: string;
+  path: string;
+  date: Date;
+  category: string;
+  tags: string[];
+  summary: string;
+};
 
-export const parseMetaDataFromArticle = (data: string[]): MetaDataType => {
-  const metaData: MetaDataType = {};
+export const parseMetaDataFromArticle = (data: string[]) => {
+  const metaData: { [key: string]: any } = {};
 
   data[1].split('\n').forEach((item) => {
     if (item.length > 0) {
@@ -16,5 +24,5 @@ export const parseMetaDataFromArticle = (data: string[]): MetaDataType => {
     }
   });
 
-  return metaData;
+  return metaData as MetaDataType;
 };

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { IoMdArrowBack } from 'react-icons/io';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { getArticle, getArticles } from 'utilities/blog';
+import { getArticle, getArticles } from 'utilities/getArticles';
 import { MetaDataType, parseMetaDataFromArticle } from 'utilities/parseMetaDataFromArticle';
 
 import * as S from './SinglePost.styles';
@@ -14,17 +14,19 @@ export const SinglePost: React.FC = () => {
   const { postId } = useParams();
 
   const [post, setPost] = useState('');
-  const [metaData, setMetaData] = useState<MetaDataType>();
+  const [, setMetaData] = useState<MetaDataType>();
 
   useEffect(() => {
-    const articles = getArticles();
+    getArticles().forEach((file) =>
+      getArticle(file).then((data) => {
+        const articleMetaData = parseMetaDataFromArticle(data);
 
-    getArticle(articles[0])
-      .then((res) => {
-        setMetaData(parseMetaDataFromArticle(res));
-        return res;
+        if (articleMetaData.path === postId) {
+          setPost(data[2]);
+          setMetaData(articleMetaData);
+        }
       })
-      .then((res) => setPost(res[2]));
+    );
   }, [postId]);
 
   return (
