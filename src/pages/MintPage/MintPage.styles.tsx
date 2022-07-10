@@ -22,9 +22,14 @@ export const Button = styled.button`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 16px;
   align-items: center;
   width: 100%;
   min-height: 100%;
+
+  & > * {
+    box-sizing: border-box;
+  }
 `;
 
 export const StyledConnectionStatus = styled(ConnectionStatus)`

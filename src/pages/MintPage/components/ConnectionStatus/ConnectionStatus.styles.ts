@@ -10,9 +10,9 @@ export const Container = styled.div<ContainerProps>`
   border: 1px solid ${({ theme }) => theme.primary};
   align-items: center;
   border-radius: 10px;
-  padding: 4px;
+  padding: 8px;
   font-size: 0.8rem;
-  height: 1.3rem;
+  height: 2.3rem;
   width: fit-content;
   transition-duration: 200ms;
   transition-property: all;
