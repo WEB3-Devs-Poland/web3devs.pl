@@ -1,3 +1,4 @@
+import { compareDesc } from 'date-fns';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { IoMdArrowBack } from 'react-icons/io';
@@ -38,17 +39,19 @@ export const BlogPage = () => {
                 <IoMdArrowBack /> {t('community.backButton')}
               </S.BackButton>
             </S.TopLineContent>
-            {listOfArticles.map((article) => (
-              <S.PostLinkContent
-                onClick={() => navigate(`/blog/${article.path}`)}
-                key={article.path}
-              >
-                <S.PostDate>
-                  {article.date.toLocaleDateString(locale.locale, { dateStyle: 'short' })}
-                </S.PostDate>
-                <S.PostLink>{article.title}</S.PostLink>
-              </S.PostLinkContent>
-            ))}
+            {listOfArticles
+              .sort((article1, article2) => compareDesc(article1.date, article2.date))
+              .map((article) => (
+                <S.PostLinkContent
+                  onClick={() => navigate(`/blog/${article.path}`)}
+                  key={article.path}
+                >
+                  <S.PostDate>
+                    {article.date.toLocaleDateString(locale.locale, { dateStyle: 'short' })}
+                  </S.PostDate>
+                  <S.PostLink>{article.title}</S.PostLink>
+                </S.PostLinkContent>
+              ))}
           </S.Content>
         }
       />
