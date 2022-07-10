@@ -51,6 +51,7 @@
     "@trivago/prettier-plugin-sort-imports": "^3.2.0",
     "@types/markdown-to-jsx": "^7.0.1",
     "@types/styled-components": "^5.1.24",
+    "@types/webpack-env": "^1.17.0",
     "prettier": "2.6.1"
   }
 }

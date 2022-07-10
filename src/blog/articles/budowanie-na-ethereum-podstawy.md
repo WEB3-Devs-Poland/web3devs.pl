@@ -1,3 +1,13 @@
+---
+title: 'Budowanie na Ethereum: Podstawy'
+author: 'https://github.com/adbo'
+path: 'budowanie-na-ethereum-podstawy'
+date: 2022-05-03
+category: 'Building'
+tags: ['ETH', 'Ether', 'Ethereum', 'Development', 'decentralizacja']
+summary: 'Podstawy budowania na Ethereum'
+---
+
 # Podstawy
 
 ## Blockchain
