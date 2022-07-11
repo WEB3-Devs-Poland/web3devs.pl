@@ -41,6 +41,7 @@ export const PostLinkContent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  margin: 10px 0;
 `;
 
 export const PostLink = styled.div`
@@ -54,6 +55,7 @@ export const PostLink = styled.div`
 `;
 
 export const PostDate = styled.div`
+  width: 120px;
   margin-left: 40px;
   color: ${({ theme }) => theme.grey.first};
 `;

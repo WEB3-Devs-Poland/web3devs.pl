@@ -1,8 +1,11 @@
-import { postTitleType, postsList } from 'pages/BlogPage/postsList';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { IoMdArrowBack } from 'react-icons/io';
 import { useNavigate, useParams } from 'react-router-dom';
+
+import Loading from 'components/Loading';
+import { getArticle, getArticles } from 'utilities/getArticles';
+import { MetaDataType, parseMetaDataFromArticle } from 'utilities/parseMetaDataFromArticle';
 
 import * as S from './SinglePost.styles';
 
@@ -11,12 +14,31 @@ export const SinglePost: React.FC = () => {
   const navigate = useNavigate();
   const { postId } = useParams();
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
   const [post, setPost] = useState('');
+  const [, setMetaData] = useState<MetaDataType>();
 
   useEffect(() => {
-    fetch(postsList[postId as postTitleType].address)
-      .then((res) => res.text())
-      .then((res) => setPost(res));
+    setIsLoading(true);
+    getArticles().forEach((file) => {
+      if (file.includes(postId)) {
+        getArticle(file)
+          .then((data) => {
+            const articleMetaData = parseMetaDataFromArticle(data);
+            console.log();
+            if (articleMetaData.path === postId) {
+              setPost(data[2]);
+              setMetaData(articleMetaData);
+              setIsLoading(false);
+            }
+          })
+          .catch(() => {
+            setIsError(true);
+          });
+      }
+    });
   }, [postId]);
 
   return (
@@ -27,7 +49,7 @@ export const SinglePost: React.FC = () => {
         </S.BackButton>
       </S.TopLineContent>
 
-      <S.SinglePost>{post}</S.SinglePost>
+      {isLoading ? <Loading /> : isError ? <>{t('error')}</> : <S.SinglePost>{post}</S.SinglePost>}
     </S.Content>
   );
 };
