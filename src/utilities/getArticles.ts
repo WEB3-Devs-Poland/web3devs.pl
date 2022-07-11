@@ -1,5 +1,6 @@
 export const getArticle = (path: string) => {
-  return fetch(path.replace('/blog', ''))
+  console.log(path);
+  return fetch(path)
     .then((res) => res.text())
     .then((res) => res.split('---'));
 };
