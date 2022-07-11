@@ -40,9 +40,9 @@ export const BackButton = styled.div`
 
 export const SinglePost = styled(Markdown)`
   text-align: left;
-  margin: 0 20px;
+  width: 90%;
 
   img {
-    width: 100%;
+    width: 90%;
   }
 `;
