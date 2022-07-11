@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { IoMdArrowBack } from 'react-icons/io';
 import { useNavigate, useParams } from 'react-router-dom';
 
+import Loading from 'components/Loading';
 import { getArticle, getArticles } from 'utilities/getArticles';
 import { MetaDataType, parseMetaDataFromArticle } from 'utilities/parseMetaDataFromArticle';
 
@@ -13,10 +14,12 @@ export const SinglePost: React.FC = () => {
   const navigate = useNavigate();
   const { postId } = useParams();
 
+  const [isLoading, setIsLoading] = useState(false);
   const [post, setPost] = useState('');
   const [, setMetaData] = useState<MetaDataType>();
 
   useEffect(() => {
+    setIsLoading(true);
     getArticles().forEach((file) =>
       getArticle(file).then((data) => {
         const articleMetaData = parseMetaDataFromArticle(data);
@@ -24,6 +27,7 @@ export const SinglePost: React.FC = () => {
         if (articleMetaData.path === postId) {
           setPost(data[2]);
           setMetaData(articleMetaData);
+          setIsLoading(false);
         }
       })
     );
@@ -37,7 +41,7 @@ export const SinglePost: React.FC = () => {
         </S.BackButton>
       </S.TopLineContent>
 
-      <S.SinglePost>{post}</S.SinglePost>
+      {isLoading ? <Loading /> : <S.SinglePost>{post}</S.SinglePost>}
     </S.Content>
   );
 };
