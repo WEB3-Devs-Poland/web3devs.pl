@@ -11,27 +11,25 @@ Nic prostrzego! Przygotuj wpis w dowolnym edytorze tekstu, najlepiej Google Docs
 ```
 
 ## Jak dodać artykuł do bloga?
+*Pierwsze artykuły i zdjęcia są juz umieszczone w odpowiednich folderach, wzoruj się na nich*
 
-1. Pobierz [repozytorium](https://github.com/WEB3-Devs-Poland/blog)
+1. Pobierz [repozytorium](https://github.com/WEB3-Devs-Poland/web3devs.pl)
 
 ```
-  git clone https://github.com/WEB3-Devs-Poland/blog.git
+  git clone https://github.com/WEB3-Devs-Poland/web3devs.pl
 ```
 
 2. Utwórz osobny branch dla swojego wpisu np.
    <br>**articles/nazwa-mojego-artykulu**
 
-3. Stwórz nowy katalog z nazwą twojego artykułu bez polskich znaków według schematu
-   <br>**src/articles/nazwa-mojego-artykulu**
+3. Stwórz nowy plik z nazwą twojego artykułu bez polskich znaków według schematu
+   <br>**src/blog/articles/nazwa-mojego-artykulu.md**
 
-4. Zawartość twojego wpisu umieść w pliku
-   <br> **src/articles/nazwa-mojego-artykulu/article.md**
+4. Jeśli twój arykuł zawiera pliki graficzne, umieść je w katalogu
+   <br> **"public/blog/assets"**
 
-5. Jeśli twój arykuł zawiera pliki graficzne, umieść je w katalogu
-   <br> **"nazwa-mojego-artykulu/assets"**
+5. Następnie za pomocą **git-a** zrób **push** do repozytorium
 
-6. Następnie za pomocą **git-a** zrób **push** do repozytorium
+6. Przejdź do github i utwórz **pull request**-a
 
-7. Przejdź do github i utwórz **pull request**-a
-
-8. Resztą procesu zajmie się nasz zespół
+7. Resztą procesu zajmie się nasz zespół
