@@ -40,6 +40,7 @@ export const BackButton = styled.div`
 
 export const SinglePost = styled(Markdown)`
   text-align: left;
+  margin: 0 20px;
 
   img {
     width: 100%;
