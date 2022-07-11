@@ -8,7 +8,7 @@ import { SiLinkedin } from 'react-icons/si';
 export const ourTeamMembers = [
   {
     name: 'Maja Cholewka',
-    role: 'Co-Founder',
+    role: 'Founder',
     img: MCholewkaPNG,
     social: [
       {
