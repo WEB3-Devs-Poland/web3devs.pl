@@ -2,6 +2,7 @@
   "en": {
     "translation": {
       "backButton": "Back",
+      "error": "Something went wrong...",
       "header": {
         "community": "Community",
         "blog": "Blog",
@@ -35,6 +36,7 @@
   "pl": {
     "translation": {
       "backButton": "Powrót",
+      "error": "Coś poszło nie tak...",
       "header": {
         "community": "Społeczność",
         "blog": "Blog",

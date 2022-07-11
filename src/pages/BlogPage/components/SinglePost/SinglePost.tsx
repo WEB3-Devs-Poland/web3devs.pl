@@ -15,21 +15,29 @@ export const SinglePost: React.FC = () => {
   const { postId } = useParams();
 
   const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
   const [post, setPost] = useState('');
   const [, setMetaData] = useState<MetaDataType>();
 
   useEffect(() => {
     setIsLoading(true);
     getArticles().forEach((file) =>
-      getArticle(file).then((data) => {
-        const articleMetaData = parseMetaDataFromArticle(data);
-
-        if (articleMetaData.path === postId) {
-          setPost(data[2]);
-          setMetaData(articleMetaData);
-          setIsLoading(false);
-        }
-      })
+      getArticle(file)
+        .then((data) => {
+          const articleMetaData = parseMetaDataFromArticle(data);
+          console.log();
+          if (articleMetaData.path === postId) {
+            setPost(data[2]);
+            setMetaData(articleMetaData);
+            setIsLoading(false);
+          }
+        })
+        .catch(() => {
+          if (file.includes(postId)) {
+            setIsError(true);
+          }
+        })
     );
   }, [postId]);
 
@@ -41,7 +49,7 @@ export const SinglePost: React.FC = () => {
         </S.BackButton>
       </S.TopLineContent>
 
-      {isLoading ? <Loading /> : <S.SinglePost>{post}</S.SinglePost>}
+      {isLoading ? <Loading /> : isError ? <>{t('error')}</> : <S.SinglePost>{post}</S.SinglePost>}
     </S.Content>
   );
 };
