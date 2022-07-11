@@ -22,23 +22,23 @@ export const SinglePost: React.FC = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    getArticles().forEach((file) =>
-      getArticle(file)
-        .then((data) => {
-          const articleMetaData = parseMetaDataFromArticle(data);
-          console.log();
-          if (articleMetaData.path === postId) {
-            setPost(data[2]);
-            setMetaData(articleMetaData);
-            setIsLoading(false);
-          }
-        })
-        .catch(() => {
-          if (file.includes(postId)) {
+    getArticles().forEach((file) => {
+      if (file.includes(postId)) {
+        getArticle(file)
+          .then((data) => {
+            const articleMetaData = parseMetaDataFromArticle(data);
+            console.log();
+            if (articleMetaData.path === postId) {
+              setPost(data[2]);
+              setMetaData(articleMetaData);
+              setIsLoading(false);
+            }
+          })
+          .catch(() => {
             setIsError(true);
-          }
-        })
-    );
+          });
+      }
+    });
   }, [postId]);
 
   return (
