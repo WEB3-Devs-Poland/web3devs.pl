@@ -41,7 +41,8 @@
         "heading": "Mint Early Adopter NFT",
         "connectRemark": "Start with connecting to your Metamask wallet",
         "instruction": "Click below Mint button to mint yours NFT",
-        "mintButton": "Mint"
+        "mintButton": "Mint",
+        "nftCopies": "Number of NFT to mint"
       }
     }
   },
@@ -86,8 +87,9 @@
       "mintPage": {
         "heading": "Wybij swoje EarlyAdopter NFT",
         "connectRemark": "Zacznij od połącznia ze swoim portfelem Metamask",
-        "instruction": "Kliknij poniższy przycisk, aby wydobyć NFT.",
-        "mintButton": "Mint"
+        "instruction": "Wybierz ilość NFT do wybicia, a następnie kliknij poniższy przycisk, aby wydobyć NFT.",
+        "mintButton": "Mint",
+        "nftCopies": "Ilość NFT do wybicia"
       }
     }
   }
