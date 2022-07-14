@@ -24,7 +24,7 @@ export const InviteToDiscord = () => {
         <Translation translationKey="inviteToDiscord.subTitle" />
       </Text>
 
-      <Button>
+      <Button type="primary">
         <Translation translationKey="inviteToDiscord.button" />
       </Button>
     </S.Content>

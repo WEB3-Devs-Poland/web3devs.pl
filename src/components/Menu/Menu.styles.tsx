@@ -10,3 +10,9 @@ export const Content = styled.div`
   height: ${({ theme }) => theme.config.hederHeight};
   max-width: ${({ theme }) => theme.config.maxContentWidth};
 `;
+
+export const Links = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;
