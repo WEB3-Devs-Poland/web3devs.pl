@@ -1,15 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 16px;
+  }
+
   body {
     margin: 0;
-    transition: 0.3s;
-    background-color: ${({ theme }) => theme.background};
 
-    margin-right: 5px;
-
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.colors.black};
     font-family: ${({ theme }) => theme.fontFamily};
+    background-color: ${({ theme }) => theme.colors.white};
   }
 
   //custom scrollbar
@@ -18,8 +19,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.primary};
-    border-radius: 2px;
+    background: ${({ theme }) => theme.colors.primary2};
+    border-radius: 1px;
   }
 `;
 

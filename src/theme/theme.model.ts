@@ -1,22 +1,17 @@
 import 'styled-components';
 
+import { colors } from './theme.colors';
+import { config } from './theme.config';
+import { fontSizes } from './theme.fontSizes';
+import { fontWeights } from './theme.fontWeights';
+
 declare module 'styled-components' {
   export interface DefaultTheme {
-    primary: string;
-    secondary: string;
-    grey: {
-      first: string;
-    };
-
-    text: string;
-    background: string;
-
-    black: string;
-    white: string;
-
-    hederHeight: number;
+    colors: typeof colors;
+    config: typeof config;
+    fontSizes: typeof fontSizes;
+    fontWeights: typeof fontWeights;
     fontFamily: string;
-    contentWidth: number;
-    maxWidth: number;
+    transition: string;
   }
 }

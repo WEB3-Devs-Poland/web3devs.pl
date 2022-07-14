@@ -1,1 +1,1 @@
-export { default } from './InviteToDiscord';
+export { InviteToDiscord } from './InviteToDiscord.component';
