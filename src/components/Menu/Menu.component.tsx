@@ -17,6 +17,8 @@ export const Menu: React.FC<MenuProps> = () => {
           <Button type="link">Społeczność</Button>
           <Button type="link">Blog</Button>
           <Button type="link">Praca</Button>
+
+          <S.VerticalSeparator />
         </S.Links>
       </S.Content>
     </S.Wrapper>

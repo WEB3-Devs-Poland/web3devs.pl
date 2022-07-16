@@ -6,7 +6,7 @@ export const Button = styled.div`
   :after {
     content: '';
     display: block;
-    margin-top: 2px;
+    margin-top: 1px;
 
     border-bottom: solid 3px ${({ theme }) => theme.colors.transparent};
     border-image: ${({ theme }) => theme.colors.gradient1};

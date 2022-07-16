@@ -16,3 +16,10 @@ export const Links = styled.div`
   display: flex;
   align-items: center;
 `;
+
+export const VerticalSeparator = styled.div`
+  width: 2px;
+  margin: 0 10px;
+  height: ${({ theme }) => theme.fontSizes.xxl};
+  background-color: ${({ theme }) => theme.colors.black};
+`;
