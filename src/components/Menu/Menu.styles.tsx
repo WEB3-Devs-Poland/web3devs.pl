@@ -11,7 +11,7 @@ export const Content = styled.div`
   max-width: ${({ theme }) => theme.config.maxContentWidth};
 `;
 
-export const Links = styled.div`
+export const Menu = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
