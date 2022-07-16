@@ -7,9 +7,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.text};
     font-family: ${({ theme }) => theme.fontFamily};
-    background-color: ${({ theme }) => theme.colors.white};
+    transition: ${({ theme }) => theme.transition};
+    background-color: ${({ theme }) => theme.colors.background};
   }
 
   *, *::before, *::after {

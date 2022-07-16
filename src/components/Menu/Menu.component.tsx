@@ -2,6 +2,7 @@ import { PropsWithChildren } from 'react';
 
 import { Button } from 'components/Button';
 import { ChangeLanguage } from 'components/ChangeLanguage';
+import { ChangeTheme } from 'components/ChangeTheme';
 import { Logo } from 'components/Logo';
 import { Translation } from 'components/Translation';
 
@@ -25,6 +26,7 @@ export const Menu: React.FC<MenuProps> = () => {
 
           <S.VerticalSeparator />
 
+          <ChangeTheme />
           <ChangeLanguage />
         </S.Menu>
       </S.Content>

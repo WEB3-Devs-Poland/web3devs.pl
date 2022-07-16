@@ -9,11 +9,10 @@ export const Wrapper = styled.div`
   flex-direction: row;
 
   width: max-content;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.transparent};
 `;
 
 export const Text = styled.div<{ type?: ButtonTypes }>`
-  transition: ${({ theme }) => theme.transition};
   justify-content: center;
   align-items: center;
   padding: 0 5px;

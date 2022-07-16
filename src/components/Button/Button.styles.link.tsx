@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Button = styled.div`
+  user-select: none;
   margin: 0 10px;
 
   :after {

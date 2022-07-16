@@ -1,6 +1,6 @@
 import 'styled-components';
 
-import { colors } from './theme.colors';
+import { colors } from './theme.colors.light';
 import { config } from './theme.config';
 import { fontSizes } from './theme.fontSizes';
 import { fontWeights } from './theme.fontWeights';

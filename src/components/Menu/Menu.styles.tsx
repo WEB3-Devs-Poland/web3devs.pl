@@ -21,5 +21,6 @@ export const VerticalSeparator = styled.div`
   width: 2px;
   margin: 0 10px;
   height: ${({ theme }) => theme.fontSizes.xxl};
-  background-color: ${({ theme }) => theme.colors.black};
+  transition: ${({ theme }) => theme.transition};
+  background-color: ${({ theme }) => theme.colors.text};
 `;

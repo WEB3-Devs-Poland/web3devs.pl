@@ -8,10 +8,12 @@ export const colors = {
   primary2: '#9200FF',
   primary3: '#B754FF',
 
+  text: '#000000',
   black: '#000000',
   grey1: '#56575D',
   grey2: '#74767B',
   grey3: '#C9CACD',
   grey4: '#F0F0F2',
   white: '#FFFFFF',
+  background: '#FFFFFF',
 };
