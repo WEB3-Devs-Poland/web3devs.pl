@@ -6,10 +6,15 @@ export const Button = styled.div`
   :after {
     content: '';
     display: block;
-    border-bottom: solid 3px ${({ theme }) => theme.colors.primary2};
+    margin-top: 2px;
+
+    border-bottom: solid 3px ${({ theme }) => theme.colors.transparent};
+    border-image: ${({ theme }) => theme.colors.gradient1};
+    border-image-slice: 1;
+
     transform: scaleX(0);
-    transition: transform 250ms;
     transform-origin: 0% 50%;
+    transition: transform 250ms;
   }
 
   :hover:after {

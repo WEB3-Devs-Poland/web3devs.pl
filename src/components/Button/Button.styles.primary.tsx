@@ -1,28 +1,17 @@
-import styled, { keyframes } from 'styled-components';
-
-const animation = keyframes`
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-`;
+import styled from 'styled-components';
 
 export const Button = styled.div`
   height: min-content;
   width: max-content;
   padding: 10px 15px;
+  border-radius: ${({ theme }) => theme.config.radius};
 
-  background-size: 400% 400%;
-  animation: ${animation} 3s ease infinite;
   transition: ${({ theme }) => theme.transition};
-  background-image: ${({ theme }) => theme.colors.gradient2};
+  background-color: ${({ theme }) => theme.colors.primary2};
 
   :hover {
     transform: scale(1.1);
+    box-shadow: ${({ theme }) => theme.colors.shadow};
+    background-color: ${({ theme }) => theme.colors.primary3};
   }
 `;

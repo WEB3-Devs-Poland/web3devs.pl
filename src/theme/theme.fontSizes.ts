@@ -2,7 +2,7 @@ export const fontSizes = {
   s: '0.5rem',
   m: '0.75rem',
   l: '1rem',
-  xl: '1.5rem',
-  xxl: '2rem',
-  title: '3rem',
+  xl: '1.25rem',
+  xxl: '1.75rem',
+  title: '2.5rem',
 };

@@ -3,4 +3,5 @@ export const config = {
   defaultFontSize: '16px',
   maxContentWidth: '1250px',
   mobileBreakpoint: '800px',
+  radius: '5px',
 };

@@ -1,6 +1,7 @@
 export const colors = {
   gradient1: 'linear-gradient(45.67deg, #9200FF 10.08%, #B754FF 84.81%);',
   gradient2: 'linear-gradient(45.67deg, #B754FF 10.08%, #9200FF 84.81%);',
+  shadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;',
 
   primary1: '#6802B1',
   primary2: '#9200FF',
