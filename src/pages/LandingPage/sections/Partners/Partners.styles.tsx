@@ -14,7 +14,7 @@ export const Content = styled.div<{ $currentTheme?: ThemeType }>`
 
 export const SubTitle = styled.div`
   color: ${({ theme }) => theme.text};
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   padding-top: 1rem;
   margin: auto;
 
@@ -45,5 +45,5 @@ export const SponsorIMG = styled.img`
   margin: auto;
   width: 25%;
   padding: 0 2%;
-  max-width: 8rem;
+  max-width: 10rem;
 `;

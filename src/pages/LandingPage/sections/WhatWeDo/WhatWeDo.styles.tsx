@@ -13,7 +13,7 @@ export const Content = styled.div`
 
 export const Title = styled.div`
   font-weight: bold;
-  font-size: 2.75rem;
+  font-size: 2.25rem;
 
   @media (max-width: ${({ theme }) => theme.maxWidth}px) {
     font-size: 1.75rem;
