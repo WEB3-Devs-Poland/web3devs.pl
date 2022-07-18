@@ -4,6 +4,8 @@ import ElympicsDarkTheme from 'pages/LandingPage/assets/partners/elympics/logo-d
 import ElympicsLightTheme from 'pages/LandingPage/assets/partners/elympics/logo-light-theme.png';
 import FirestartersDarkTheme from 'pages/LandingPage/assets/partners/firestarters/logo-dark-theme.png';
 import FirestartersLightTheme from 'pages/LandingPage/assets/partners/firestarters/logo-light-theme.png';
+import HashUpDarkTheme from 'pages/LandingPage/assets/partners/hashup/logo-dark-theme.png';
+import HashUpLightTheme from 'pages/LandingPage/assets/partners/hashup/logo-light-theme.png';
 import UnimindDarkTheme from 'pages/LandingPage/assets/partners/unimind/logo-dark-theme.png';
 import UnimindLightTheme from 'pages/LandingPage/assets/partners/unimind/logo-light-theme.png';
 
@@ -38,6 +40,14 @@ export const partners = [
     logo: {
       dark: ElympicsDarkTheme,
       light: ElympicsLightTheme,
+    },
+  },
+  {
+    name: 'HashUp',
+    link: 'https://hashup.it/',
+    logo: {
+      dark: HashUpDarkTheme,
+      light: HashUpLightTheme,
     },
   },
 ];

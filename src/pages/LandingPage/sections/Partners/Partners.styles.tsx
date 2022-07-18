@@ -14,7 +14,7 @@ export const Content = styled.div<{ $currentTheme?: ThemeType }>`
 
 export const SubTitle = styled.div`
   color: ${({ theme }) => theme.text};
-  font-size: 1.25rem;
+  font-size: 2rem;
   padding-top: 1rem;
   margin: auto;
 
@@ -33,14 +33,17 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
 
+  flex-wrap: wrap;
+
   max-width: ${({ theme }) => theme.contentWidth}px;
   overflow-x: hidden;
+  padding: 20px 0;
 `;
 
 export const SponsorIMG = styled.img`
   cursor: pointer;
   margin: auto;
-  width: 20%;
+  width: 25%;
   padding: 0 2%;
-  max-width: 8rem;
+  max-width: 10rem;
 `;
