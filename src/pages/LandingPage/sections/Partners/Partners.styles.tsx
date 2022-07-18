@@ -14,7 +14,7 @@ export const Content = styled.div<{ $currentTheme?: ThemeType }>`
 
 export const SubTitle = styled.div`
   color: ${({ theme }) => theme.text};
-  font-size: 2.25rem;
+  font-size: 2rem;
   padding-top: 1rem;
   margin: auto;
 
