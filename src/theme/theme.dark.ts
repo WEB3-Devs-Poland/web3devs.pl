@@ -19,6 +19,7 @@ const darkTheme: DefaultTheme = {
   fontFamily: basicTheme.fontFamily,
   contentWidth: basicTheme.contentWidth,
   maxWidth: basicTheme.maxWidth,
+  shadow: 'rgba(204, 216, 227, 0.2)',
 };
 
 export default darkTheme;

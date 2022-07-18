@@ -18,5 +18,6 @@ declare module 'styled-components' {
     fontFamily: string;
     contentWidth: number;
     maxWidth: number;
+    shadow: string;
   }
 }

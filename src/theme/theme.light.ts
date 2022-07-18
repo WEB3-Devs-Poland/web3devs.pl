@@ -19,6 +19,7 @@ const lightTheme: DefaultTheme = {
   fontFamily: basicTheme.fontFamily,
   contentWidth: basicTheme.contentWidth,
   maxWidth: basicTheme.maxWidth,
+  shadow: 'rgba(100, 100, 111, 0.2)',
 };
 
 export default lightTheme;

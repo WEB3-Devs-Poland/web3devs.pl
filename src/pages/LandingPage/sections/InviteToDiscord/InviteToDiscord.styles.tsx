@@ -48,11 +48,18 @@ export const Button = styled.button`
 
   border: none;
   border-radius: 10px;
+  transition: 300ms;
 
   font-size: 1rem;
   font-weight: bold;
   color: ${({ theme }) => theme.white};
   background-color: ${({ theme }) => theme.primary};
+
+  :hover {
+    background-color: ${({ theme }) => theme.secondary};
+    transform: scale(1.1);
+    box-shadow: ${({ theme }) => theme.shadow} 0px 7px 29px 0px;
+  }
 
   :active {
     background-color: ${({ theme }) => theme.secondary};
