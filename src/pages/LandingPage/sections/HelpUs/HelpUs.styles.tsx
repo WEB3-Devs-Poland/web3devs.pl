@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Content = styled.div`
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   width: 100%;
 
   display: flex;
