@@ -17,7 +17,7 @@ export const Colored = styled.div`
 `;
 
 export const SubTitle = styled.div`
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   margin: 2.5rem auto;
 
   max-width: 600px;
