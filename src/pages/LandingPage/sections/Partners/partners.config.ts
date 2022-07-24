@@ -1,3 +1,5 @@
+import BvhubDarkTheme from 'pages/LandingPage/assets/partners/bvhub/logo-dark-theme.png';
+import BvhubLightTheme from 'pages/LandingPage/assets/partners/bvhub/logo-light-theme.png';
 import DaftcodeDarkTheme from 'pages/LandingPage/assets/partners/daftcode/logo-dark-theme.png';
 import DaftcodeLightTheme from 'pages/LandingPage/assets/partners/daftcode/logo-light-theme.png';
 import ElympicsDarkTheme from 'pages/LandingPage/assets/partners/elympics/logo-dark-theme.png';
@@ -48,6 +50,14 @@ export const partners = [
     logo: {
       dark: HashUpDarkTheme,
       light: HashUpLightTheme,
+    },
+  },
+  {
+    name: 'BVHub',
+    link: 'https://bvhub.com/',
+    logo: {
+      dark: BvhubDarkTheme,
+      light: BvhubLightTheme,
     },
   },
 ];

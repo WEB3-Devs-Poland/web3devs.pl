@@ -4,6 +4,7 @@ import { ThemeType } from 'theme/ThemeProvider';
 
 export const Content = styled.div<{ $currentTheme?: ThemeType }>`
   margin-bottom: 10rem;
+  padding: 20px 0;
   width: 100vw;
   position: relative;
   left: calc(-50vw + 50%);
@@ -40,10 +41,13 @@ export const Wrapper = styled.div`
   padding: 20px 0;
 `;
 
+export const ImgWrapper = styled.div`
+  margin: auto;
+  padding: 0 50px;
+  min-height: 100px;
+`;
+
 export const SponsorIMG = styled.img`
   cursor: pointer;
-  margin: auto;
-  width: 25%;
-  padding: 0 2%;
   max-width: 10rem;
 `;
