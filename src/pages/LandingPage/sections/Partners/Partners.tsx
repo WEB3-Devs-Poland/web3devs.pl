@@ -15,12 +15,13 @@ const Partners = () => {
       <S.SubTitle>{t('partners.title')}</S.SubTitle>
       <S.Wrapper>
         {partners.map(({ logo, name, link }) => (
-          <S.SponsorIMG
-            key={name}
-            alt={name}
-            src={logo[currentTheme]}
-            onClick={() => window.open(link, '_blank')}
-          />
+          <S.ImgWrapper>
+            <S.SponsorIMG
+              alt={name}
+              src={logo[currentTheme]}
+              onClick={() => window.open(link, '_blank')}
+            />
+          </S.ImgWrapper>
         ))}
       </S.Wrapper>
     </S.Content>
