@@ -9,6 +9,7 @@ import translationResources from '../translations.resources.json';
 i18n.use(initReactI18next).init({
   interpolation: { escapeValue: false },
   resources: translationResources,
+  lng: 'en'
 });
 
 export type TranslationsContextType = {
@@ -24,7 +25,7 @@ interface Props {
 
 const TranslationsProvider = ({ children }: Props) => {
   const [locale, setLocale] = useState<LOCALE>(
-    (localStorage.getItem('locale') as LOCALE) || LOCALE.PL
+    (localStorage.getItem('locale') as LOCALE) || LOCALE.EN
   );
 
   useEffect(() => {
