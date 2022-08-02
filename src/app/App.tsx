@@ -8,26 +8,20 @@ import Header from 'components/Header';
 import Layout from 'components/Layout';
 import MobileMenu from 'components/MobileMenu';
 
-import Providers from './App.Providers';
-import MintPage from 'pages/MintPage';
-
 const App = () => {
   return (
-    <Providers>
-      <Layout>
-        <MobileMenu />
-        <Header />
+    <Layout>
+      <MobileMenu />
+      <Header />
 
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/community" element={<CommunityPage />} />
-          <Route path="/blog/*" element={<BlogPage />} />
-          <Route path="/mint" element={<MintPage />} />
-        </Routes>
+      <Routes>
+        <Route index element={<LandingPage />} />
+        <Route path="/community" element={<CommunityPage />} />
+        <Route path="/blog/*" element={<BlogPage />} />
+      </Routes>
 
-        <Footer />
-      </Layout>
-    </Providers>
+      <Footer />
+    </Layout>
   );
 };
 
