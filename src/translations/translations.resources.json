@@ -38,6 +38,7 @@
         "notConnected": "Not connected"
       },
       "mintPage": {
+        "name": "Web3 Devs Poland",
         "heading": "Mint Early Adopter NFT",
         "connectRemark": "Start with connecting to your Metamask wallet",
         "instruction": "Click below Mint button to mint yours NFT",
@@ -85,7 +86,8 @@
         "notConnected": "Nie połączono"
       },
       "mintPage": {
-        "heading": "Wybij swoje EarlyAdopter NFT",
+        "name": "Web3 Devs Poland",
+        "heading": "EarlyAdopter NFT",
         "connectRemark": "Zacznij od połącznia ze swoim portfelem Metamask",
         "instruction": "Wybierz ilość NFT do wybicia, a następnie kliknij poniższy przycisk, aby wydobyć NFT.",
         "mintButton": "Mint",

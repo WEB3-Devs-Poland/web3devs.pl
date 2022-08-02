@@ -19,6 +19,11 @@ export const Button = styled.button`
   :hover {
     background-color: ${({ theme }) => theme.secondary};
   }
+
+  &:disabled {
+    pointer-events: none;
+    background-color: ${({ theme }) => theme.grey.first};
+  }
 `;
 
 export const Content = styled.div`
@@ -33,6 +38,13 @@ export const Content = styled.div`
   & > * {
     box-sizing: border-box;
   }
+`;
+
+export const Name = styled.span`
+  display: inline-block;
+  padding: 8px;
+  border: 2px solid ${({ theme }) => theme.primary};
+  border-radius: 10px;
 `;
 
 export const StyledConnectionStatus = styled(ConnectionStatus)`
@@ -57,8 +69,8 @@ export const Input = styled.input`
 
 export const CircleButton = styled.button`
   border: none;
-  color: ${({theme}) => theme.white};
-  background: ${({theme}) => theme.primary};
+  color: ${({ theme }) => theme.white};
+  background: ${({ theme }) => theme.primary};
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -69,11 +81,11 @@ export const CircleButton = styled.button`
   font-size: 2em;
 
   &:hover {
-    background: ${({theme}) => theme.secondary};
+    background: ${({ theme }) => theme.secondary};
     cursor: pointer;
   }
 
   &:disabled {
-    background: ${({theme}) => theme.grey.first};
+    background: ${({ theme }) => theme.grey.first};
   }
 `;

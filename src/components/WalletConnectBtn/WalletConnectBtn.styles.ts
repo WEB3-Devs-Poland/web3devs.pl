@@ -1,16 +1,22 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+import { ThemeStateContextType } from 'theme/ThemeProvider';
+
+interface ButtonProps {
+  currentTheme: ThemeStateContextType['currentTheme'];
+}
+
+export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   display: flex;
   gap: 8px;
-  padding: 1rem 2.5rem;
-  border: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid ${({ theme }) => theme.secondary};
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
-  color: ${({ theme }) => theme.white};
-  background-color: ${({ theme }) => theme.primary};
+  color: ${({ currentTheme, theme }) => (currentTheme === 'light' ? theme.black : theme.white)};
+  background-color: transparent;
   align-items: center;
   justify-content: center;
   width: fit-content;
@@ -18,10 +24,18 @@ export const Button = styled.button`
   :active,
   :hover {
     background-color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.white};
   }
 `;
 
-export const MetaMaskIcon = styled.img`
+interface MetaMaskIconProps {
+  isConnected?: boolean;
+}
+
+export const MetaMaskIcon = styled.img<MetaMaskIconProps>`
+  padding: 4px;
   width: 20px;
   height: 20px;
+  border: ${({ theme, isConnected }) => `2px solid ${isConnected ? theme.green : theme.red}`};
+  border-radius: 50%;
 `;
