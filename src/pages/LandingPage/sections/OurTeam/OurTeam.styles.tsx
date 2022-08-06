@@ -30,7 +30,7 @@ export const Team = styled.div`
 `;
 
 export const Member = styled.div`
-  min-width: 12rem;
+  min-width: 20rem;
   padding: 1.5rem 2rem;
   margin: 2rem;
 
@@ -45,7 +45,7 @@ export const Member = styled.div`
 
   :hover {
     transition: 0.3s;
-    box-shadow: ${({ theme }) => theme.primary}25 0px 7px 29px 0px; //opacity <- last two numbers of color: ;
+    box-shadow: ${({ theme }) => theme.primary}25 0px 7px 29px 0px; //opacity <- last two numbers of color: ;lasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolor
   }
 
   @media (max-width: ${({ theme }) => theme.maxWidth}px) {
@@ -107,6 +107,9 @@ export const MemberRole = styled.div`
 `;
 
 export const MemberSocial = styled.div`
+  display: flex;
+  justify-content: center;
+
   svg {
     transition: 0.3s;
 

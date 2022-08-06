@@ -1,25 +1,17 @@
 import styled from 'styled-components';
 
-export const Content = styled.div`
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  text-align: center;
-`;
-
 export const CommunityMembers = styled.div`
   width: 100%;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  text-align: center;
 `;
 
 export const Card = styled.div`
-  min-width: 12rem;
+  min-width: 20rem;
   padding: 1.5rem 2rem;
   margin: 1rem;
 
@@ -30,11 +22,11 @@ export const Card = styled.div`
 
   border-radius: 1rem;
   transition: 0.3s;
-  box-shadow: ${({ theme }) => theme.text}25 0px 7px 29px 0px; //opacity <- last two numbers of color
+  box-shadow: ${({ theme }) => theme.text}25 0px 7px 29px 0px;
 
   :hover {
     transition: 0.3s;
-    box-shadow: ${({ theme }) => theme.primary}25 0px 7px 29px 0px; //opacity <- last two numbers of color: ;
+    box-shadow: ${({ theme }) => theme.primary}25 0px 7px 29px 0px;
   }
 
   @media (max-width: ${({ theme }) => theme.maxWidth}px) {
@@ -70,7 +62,7 @@ export const MemberIMG = styled.img<{ $addBackground?: boolean }>`
   box-shadow: ${({ theme }) => theme.text}25 0px 7px 29px 0px; //opacity <- last two numbers of color
 
   background-color: ${({ theme, $addBackground }) =>
-    $addBackground ? theme.white : 'transparent'};
+    $addBackground ? theme.white : 'transparent'};lasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-color
 
   @media (max-width: ${({ theme }) => theme.maxWidth}px) {
     width: 6rem;
@@ -99,6 +91,9 @@ export const MemberRole = styled.div`
 `;
 
 export const MemberSocial = styled.div`
+  display: flex;
+  justify-content: center;
+
   svg {
     margin: 0 0.5rem;
     transition: 0.3s;
@@ -109,32 +104,5 @@ export const MemberSocial = styled.div`
     :hover {
       color: ${({ theme }) => theme.primary};
     }
-  }
-`;
-
-export const TopLineContent = styled.div`
-  width: 100%;
-  margin: 2.5rem 0;
-`;
-
-export const BackButton = styled.div`
-  transition: 0.3s;
-  cursor: pointer;
-  font-size: 1.2rem;
-
-  padding: 0.5rem;
-  width: 100px;
-  width: 12rem;
-
-  display: flex;
-  align-items: center;
-
-  svg {
-    padding: 0 0.5rem;
-  }
-
-  :hover {
-    color: ${({ theme }) => theme.primary};
-    transition: 0.3s;
   }
 `;

@@ -1,24 +1,23 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { IoMdArrowBack } from 'react-icons/io';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-import Loading from 'components/Loading';
-import { getArticle, getArticles } from 'utilities/getArticles';
-import { MetaDataType, parseMetaDataFromArticle } from 'utilities/parseMetaDataFromArticle';
+import BackButton from '../../../../components/BackButton/BackButton';
+import { MetaDataType, parseMetaDataFromArticle } from '../../../../utilities/parseMetaDataFromArticle';
 
+import { getArticle, getArticles } from '../../../../utilities/getArticles';
+import Loading from '../../../../components/Loading';
 import * as S from './SinglePost.styles';
 
 export const SinglePost: React.FC = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const { postId } = useParams();
 
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const [ isLoading, setIsLoading ] = useState(false);
+  const [ isError, setIsError ] = useState(false);
 
-  const [post, setPost] = useState('');
-  const [, setMetaData] = useState<MetaDataType>();
+  const [ post, setPost ] = useState('');
+  const [ , setMetaData ] = useState<MetaDataType>();
 
   useEffect(() => {
     setIsLoading(true);
@@ -39,17 +38,20 @@ export const SinglePost: React.FC = () => {
           });
       }
     });
-  }, [postId]);
+  }, [ postId ]);
 
   return (
     <S.Content>
-      <S.TopLineContent>
-        <S.BackButton onClick={() => navigate('/blog')}>
-          <IoMdArrowBack /> {t('backButton')}
-        </S.BackButton>
-      </S.TopLineContent>
+      <div className="my-8">
+        <BackButton target="/blog" />
+      </div>
 
-      {isLoading ? <Loading /> : isError ? <>{t('error')}</> : <S.SinglePost>{post}</S.SinglePost>}
+      {isLoading ? <Loading /> : isError ? <>{t('error')}</>
+        : (
+          <S.SinglePost>
+            {post}
+          </S.SinglePost>
+        )}
     </S.Content>
   );
 };

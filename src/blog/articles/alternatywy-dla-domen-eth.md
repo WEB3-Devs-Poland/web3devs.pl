@@ -1,11 +1,12 @@
 ---
 title: 'Alternatywy dla domen .eth'
-author: 'https://github.com/pnowosie'
+author: Paweł Nowosielski
+authorLink: 'https://github.com/pnowosie'
 path: 'alternatywy-dla-domen-eth'
 date: 2022-05-05
 category: 'Domains'
 tags: ['Domeny', '.eth', 'Ethereum', 'DNSSEC']
-summary: 'Alternatywy dla domen .eth'
+summary: 'Gdy myślimy o odpowiedniku usługi DNS w świecie web3 czyli ENS (Ethereum Name Service) pierwsza na myśli przychodzi końcówka .eth.'
 ---
 
 # Alternatywy dla domen .eth
