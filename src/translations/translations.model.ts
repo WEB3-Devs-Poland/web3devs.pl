@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 export enum LOCALE {
   PL = 'pl-PL',
   EN = 'en-EN',

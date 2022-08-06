@@ -8,16 +8,14 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Providers = ({ children }: Props) => {
-  return (
-    <TranslationsProvider>
-      <BrowserRouter>
-        <ThemeProvider>
-          <MobileMenuProvider>{children}</MobileMenuProvider>
-        </ThemeProvider>
-      </BrowserRouter>
-    </TranslationsProvider>
-  );
-};
+const Providers = ({ children }: Props) => (
+  <TranslationsProvider>
+    <BrowserRouter>
+      <ThemeProvider>
+        <MobileMenuProvider>{children}</MobileMenuProvider>
+      </ThemeProvider>
+    </BrowserRouter>
+  </TranslationsProvider>
+);
 
 export default Providers;

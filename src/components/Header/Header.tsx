@@ -17,7 +17,7 @@ import * as S from './Header.styles';
 
 const Header = () => {
   const navigate = useNavigate();
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [ windowWidth, setWindowWidth ] = useState(0);
   const { currentTheme } = useContext(ThemeStateContext) as ThemeStateContextType;
   const { changeMenuVisibility } = useContext(MobileMenuContext) as MobileMenuContextStateType;
 
