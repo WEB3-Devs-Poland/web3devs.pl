@@ -55,7 +55,7 @@ export const BlogPage = () => {
               <BackButton />
             </div>
 
-            <div className="grid grid-cols-3 gap-8 text-left">
+            <div className="grid lg:grid-cols-3 grid-cols-1 gap-8 text-left">
               {listOfArticles
                 .sort((article1, article2) => compareDesc(new Date(article1.date), new Date(article2.date)))
                 .map((article) => (
