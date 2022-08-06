@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { compareDesc } from 'date-fns';
 import { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import BackButton from '../../components/BackButton/BackButton';
 
 import useLocale from '../../translations/hooks';
@@ -33,6 +35,7 @@ const swiatWeb3BlogPosts = [ {
 } ];
 
 export const BlogPage = () => {
+  const navigate = useNavigate();
   const locale = useLocale();
 
   const [ listOfArticles, setListOfArticles ] = useState<MetaDataType[]>(swiatWeb3BlogPosts);
@@ -59,10 +62,9 @@ export const BlogPage = () => {
               {listOfArticles
                 .sort((article1, article2) => compareDesc(new Date(article1.date), new Date(article2.date)))
                 .map((article) => (
-                  <a
+                  <div
                     className="flex flex-col p-4 cursor-pointer shadow-sm shadow-gray-300"
-                    href={(article.path.includes('https://')) ? article.path : `/blog/${article.path}`}
-                    target={(article.path.includes('https://')) ? 'blank' : ''}
+                    onClick={() => ((article.path.includes('https://')) ? window.open(article.path, '_blank') : navigate(`/blog/${article.path}`))}
                     key={article.path}
                   >
                     <div className="flex flex-col">
@@ -84,7 +86,7 @@ export const BlogPage = () => {
                       {' '}
                       {'->'}
                     </a>
-                  </a>
+                  </div>
                 ))}
             </div>
           </>

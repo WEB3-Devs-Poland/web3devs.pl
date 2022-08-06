@@ -26,7 +26,7 @@ export const SinglePost: React.FC = () => {
         getArticle(file)
           .then((data) => {
             const articleMetaData = parseMetaDataFromArticle(data);
-            console.log();
+
             if (articleMetaData.path === postId) {
               setPost(data[2]);
               setMetaData(articleMetaData);
