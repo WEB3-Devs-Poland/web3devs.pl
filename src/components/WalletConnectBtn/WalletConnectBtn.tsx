@@ -5,7 +5,7 @@ import metaMaskIcon from 'assets/icons/metamask.png';
 import { hashEllipsis } from 'utilities/hashEllipsis';
 
 import * as S from './WalletConnectBtn.styles';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ThemeStateContext, ThemeStateContextType } from 'theme/ThemeProvider';
 
 const WalletConnectBtn = () => {
@@ -17,6 +17,7 @@ const WalletConnectBtn = () => {
   const handleConnection = (connector: Connector) => {
     isConnected ? disconnect() : connect({ connector });
   };
+  const [hovered, setHovered] = useState(false);
 
   return (
     <>
@@ -25,6 +26,12 @@ const WalletConnectBtn = () => {
           disabled={!connector.ready}
           key={connector.id}
           onClick={() => handleConnection(connector)}
+          onMouseEnter={() => {
+            setHovered(true)
+          }}
+          onMouseLeave={() => {
+            setHovered(false)
+          }}
           title={address}
           currentTheme={currentTheme}
         >
@@ -32,7 +39,8 @@ const WalletConnectBtn = () => {
           {isLoading && pendingConnector?.id === connector.id
             ? t('wallet.connecting')
             : !error && !isConnected && t('wallet.connect')}
-          {isConnected && address && hashEllipsis(address)}
+          {isConnected && address && !hovered && hashEllipsis(address)}
+          {isConnected && address && hovered && t('wallet.disconnect')}
           {error && t('wallet.connectionIssues')}
         </S.Button>
       ))}

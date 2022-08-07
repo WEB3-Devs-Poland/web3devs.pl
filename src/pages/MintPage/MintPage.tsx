@@ -2,28 +2,33 @@ import { ethers } from 'ethers';
 import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { RiAddLine, RiSubtractLine } from 'react-icons/ri';
-import { useAccount, useConnect, useContract, useSigner } from 'wagmi';
+import {
+  useAccount,
+  useConnect,
+  useContract,
+  useSigner,
+} from 'wagmi';
 
 import ErrorMessage from 'components/ErrorMessage';
 import Layout from 'components/Layout';
+import { ThemeStateContext, ThemeStateContextType } from 'theme/ThemeProvider';
 import { isString } from 'utilities/typeGuards';
 
 import EarlyAdoptersNFTAbi from './EarlyAdoptersNFT.json';
 import * as S from './MintPage.styles';
 import Header from './components/Header';
-import { ThemeStateContext, ThemeStateContextType } from 'theme/ThemeProvider';
+import { Socials } from './components/Socials/Socials';
+import { TransactionStatus } from './components/TransactionStatus/TransactionStatus';
 
-/*
- * @todo Add correct contarct address
- */
-const contractAddress = '0xFd67d71A33FB2B2904B1762fed9C63b9A15f17C6';
+
 const PRIV_KEY = '';
+const contractAddress = '0x5b0aDB5a9c152952092446fbDcC2aec595a61cB9';
 
 const signMessageForContract = async (hashedMessage: string) => {
   try {
     if (!PRIV_KEY) throw new Error('Something went wrong');
     const wallet = new ethers.Wallet(PRIV_KEY);
-    const sig = await wallet.signMessage(hashedMessage);
+    const sig = await wallet.signMessage(ethers.utils.arrayify(hashedMessage));
 
     return {
       sig,
@@ -48,6 +53,7 @@ const MintPage = () => {
     contractInterface: EarlyAdoptersNFTAbi,
     signerOrProvider: recipient,
   });
+  const [transactions, setTransactions] = useState<string[]>([]);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.value) {
@@ -73,20 +79,30 @@ const MintPage = () => {
       /* @todo get correct img hashes */
       const imgHashes = ['QmPbxeGcXhYQQNgsC6a36dDyYUcHgMLnGKnF8pVFmGsvqi'];
       if (!isString(recipientAddress)) throw new Error('Something went wrong no Recipient address');
+      setIsMinting(true);
+
+      const date = new Date();
+      const time = date.getTime();
       const hashedMessage = await contract.getMessageHash(
         recipientAddress,
         nftCopiesNumber,
-        imgHashes[0]
+        imgHashes[0],
+        time
       );
       const { sig, error } = await signMessageForContract(hashedMessage);
-      console.log(`DEBUG ~ handleMint ~ sig`, sig);
 
       if (error) {
         throw error;
       }
-
-      setIsMinting(true);
-      await contract.multiMint(recipientAddress, imgHashes, nftCopiesNumber, hashedMessage, sig);
+      const transaction = await contract.multiMint(
+        recipientAddress,
+        imgHashes,
+        nftCopiesNumber,
+        time,
+        sig
+      );
+      setTransactions([...transactions, transaction.hash]);
+      setIsMinting(false);
     } catch (error) {
       setIsMinting(false);
       if (error instanceof Error) {
@@ -138,11 +154,20 @@ const MintPage = () => {
             </S.InputContainer>
           )}
           <S.Button disabled={isMinting || !isConnected} onClick={handleMint}>
-            {t('mintPage.mintButton')}
+            {!isMinting ? t('mintPage.mintButton') : t('mintPage.minting')}
           </S.Button>
+          {!!transactions.length && (
+            <S.Transactions>
+              {transactions.map((transaction) => {
+                return <TransactionStatus key={transaction} transaction={transaction} />;
+              })}
+            </S.Transactions>
+          )}
         </>
         {error && <ErrorMessage message={error.message} />}
       </S.Content>
+      <Socials />
+      <S.Background />
     </Layout>
   );
 };

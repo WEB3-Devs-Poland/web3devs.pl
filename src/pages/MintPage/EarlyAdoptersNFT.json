@@ -130,9 +130,9 @@
         "type": "uint256"
       },
       {
-        "internalType": "bytes32",
-        "name": "message",
-        "type": "bytes32"
+        "internalType": "uint256",
+        "name": "time",
+        "type": "uint256"
       },
       {
         "internalType": "bytes",
@@ -143,9 +143,9 @@
     "name": "multiMint",
     "outputs": [
       {
-        "internalType": "uint256[]",
+        "internalType": "uint256[10]",
         "name": "tokenId",
-        "type": "uint256[]"
+        "type": "uint256[10]"
       }
     ],
     "stateMutability": "nonpayable",
@@ -412,6 +412,11 @@
         "internalType": "string",
         "name": "hash",
         "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "time",
+        "type": "uint256"
       }
     ],
     "name": "getMessageHash",
@@ -693,6 +698,11 @@
       {
         "internalType": "uint256",
         "name": "nftCopies",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "time",
         "type": "uint256"
       },
       {

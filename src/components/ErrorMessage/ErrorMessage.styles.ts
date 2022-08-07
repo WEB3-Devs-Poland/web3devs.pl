@@ -10,7 +10,8 @@ export const Container = styled.div`
   border-radius: 10px;
   width: 100%;
   min-height: 40px;
-  padding: 0 20px;
+  padding: 8px 20px;
+  word-break: break-word;
 `;
 
 export const StyledRiCloseCircleLine = styled(RiCloseCircleLine)`

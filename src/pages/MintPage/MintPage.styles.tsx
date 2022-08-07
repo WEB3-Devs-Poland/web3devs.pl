@@ -40,6 +40,23 @@ export const Content = styled.div`
   }
 `;
 
+export const Background = styled.div`
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(/mint/img/nft.jpg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-size: cover;
+`;
+
 export const Name = styled.span`
   display: inline-block;
   padding: 8px;
@@ -88,4 +105,13 @@ export const CircleButton = styled.button`
   &:disabled {
     background: ${({ theme }) => theme.grey.first};
   }
+`;
+
+export const Transactions = styled.div`
+  border-radius: 10px;
+  padding: 8px 20px;
+  border: 1px solid ${({ theme }) => theme.white};
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 `;
