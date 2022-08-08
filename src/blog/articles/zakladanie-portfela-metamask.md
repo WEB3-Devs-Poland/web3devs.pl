@@ -6,6 +6,7 @@ path: 'zakladanie-portfela-metamask'
 date: 2022-05-03
 category: 'Configuration'
 tags: ['MetaMask', 'Portfel', 'Token', 'Decentralizacja']
+image: '/blog/previews/metamask.png'
 summary: 'MetaMask to portfel który służy do obsługi tokenów opartych o sieć Ethereum. Oprócz obsługi tokenów umożliwia nam łączenie się ze zdecentralizowanymi aplikacjami.'
 ---
 

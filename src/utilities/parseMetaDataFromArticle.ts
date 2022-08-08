@@ -7,6 +7,7 @@ export type MetaDataType = {
   category: string;
   tags: string[];
   summary: string;
+  image: string;
 };
 
 export const parseMetaDataFromArticle = (data: string[]) => {

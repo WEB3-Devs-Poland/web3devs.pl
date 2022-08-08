@@ -6,6 +6,7 @@ path: 'alternatywy-dla-domen-eth'
 date: 2022-05-05
 category: 'Domains'
 tags: ['Domeny', '.eth', 'Ethereum', 'DNSSEC']
+image: '/blog/previews/ens.png'
 summary: 'Gdy myślimy o odpowiedniku usługi DNS w świecie web3 czyli ENS (Ethereum Name Service) pierwsza na myśli przychodzi końcówka .eth.'
 ---
 
