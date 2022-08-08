@@ -1,11 +1,13 @@
 ---
 title: 'Zakładanie portfela MetaMask'
-author: 'https://github.com/pnowosie'
+author: Paweł Nowosielski
+authorLink: 'https://github.com/pnowosie'
 path: 'zakladanie-portfela-metamask'
 date: 2022-05-03
 category: 'Configuration'
 tags: ['MetaMask', 'Portfel', 'Token', 'Decentralizacja']
-summary: 'Zakładanie portflea metamask'
+image: '/blog/previews/metamask.png'
+summary: 'MetaMask to portfel który służy do obsługi tokenów opartych o sieć Ethereum. Oprócz obsługi tokenów umożliwia nam łączenie się ze zdecentralizowanymi aplikacjami.'
 ---
 
 # Zakładanie portfela MetaMask

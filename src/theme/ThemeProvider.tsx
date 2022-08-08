@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, ReactNode } from 'react';
 import * as SC from 'styled-components';
 
 import GlobalStyle from './GlobalStyle';
@@ -15,11 +15,11 @@ export type ThemeStateContextType = {
 export const ThemeStateContext = createContext<ThemeStateContextType | null>(null);
 
 interface Props {
-  children: React.ReactNode;
+  children: JSX.Element|JSX.Element[];
 }
 
 const ThemeProvider = ({ children }: Props) => {
-  const [currentTheme, setCurrentTheme] = useState<ThemeType>('light');
+  const [ currentTheme, setCurrentTheme ] = useState<ThemeType>('light');
 
   const changeTheme = () => {
     const theme: ThemeType = currentTheme === 'light' ? 'dark' : 'light';

@@ -1,11 +1,13 @@
 ---
 title: 'Budowanie na Ethereum: Podstawy'
-author: 'https://github.com/adbo'
+author: Adam Borkowski
+authorLink: 'https://github.com/adbo'
 path: 'budowanie-na-ethereum-podstawy'
 date: 2022-05-03
 category: 'Building'
 tags: ['ETH', 'Ether', 'Ethereum', 'Development', 'decentralizacja']
-summary: 'Podstawy budowania na Ethereum'
+image: '/blog/previews/eth.png'
+summary: 'Blockchain to publiczna baza danych, modyfikowana i przechowywana na wielu komputerach w Internecie.'
 ---
 
 # Podstawy

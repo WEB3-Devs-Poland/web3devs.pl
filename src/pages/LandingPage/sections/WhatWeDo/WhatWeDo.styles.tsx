@@ -36,7 +36,7 @@ export const Cards = styled.div`
 `;
 
 export const Card = styled.div`
-  max-width: 16rem;
+  max-width: 20rem;
   padding: 1.5rem 2rem;
   margin: 2rem;
 

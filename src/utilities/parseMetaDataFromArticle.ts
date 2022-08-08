@@ -1,11 +1,13 @@
 export type MetaDataType = {
   title: string;
   author: string;
+  authorLink: string;
   path: string;
-  date: Date;
+  date: string | Date;
   category: string;
   tags: string[];
   summary: string;
+  image: string;
 };
 
 export const parseMetaDataFromArticle = (data: string[]) => {

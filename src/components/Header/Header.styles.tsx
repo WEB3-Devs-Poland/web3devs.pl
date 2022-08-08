@@ -12,7 +12,7 @@ export const VerticalSeparator = styled.div`
 
 export const Header = styled.div`
   margin: auto;
-  width: 95%;
+  width: 100%;
   max-width: ${({ theme }) => theme.maxWidth};
 
   height: ${({ theme }) => theme.hederHeight}px;
