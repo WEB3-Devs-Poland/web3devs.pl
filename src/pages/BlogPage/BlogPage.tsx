@@ -79,15 +79,14 @@ export const BlogPage = () => {
                       {article.summary}
                     </div>
 
-                    <a
-                      href={(article.path.includes('https://')) ? article.path : `/blog/${article.path}`}
-                      target={(article.path.includes('https://')) ? 'blank' : ''}
+                    <span
+                      onClick={() => ((article.path.includes('https://')) ? window.open(article.path, '_blank') : navigate(`/blog/${article.path}`))}
                       className="cursor-pointer text-purple-600 font-bold mt-auto"
                     >
                       Read
                       {' '}
                       {'->'}
-                    </a>
+                    </span>
                   </div>
                 ))}
             </div>
