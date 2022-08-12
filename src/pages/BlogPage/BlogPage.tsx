@@ -46,7 +46,7 @@ export const BlogPage = () => {
 
   return (
     <Routes>
-      <Route path=":postId" element={<SinglePost />} />
+      {/* <Route path=":postId" element={<SinglePost />} /> */}
 
       <Route
         index

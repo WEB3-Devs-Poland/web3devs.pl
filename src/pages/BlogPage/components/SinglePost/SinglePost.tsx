@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
@@ -25,6 +26,7 @@ export const SinglePost: React.FC = () => {
       if (file.includes(postId)) {
         getArticle(file)
           .then((data) => {
+            console.log(data);
             const articleMetaData = parseMetaDataFromArticle(data);
 
             if (articleMetaData.path === postId) {
