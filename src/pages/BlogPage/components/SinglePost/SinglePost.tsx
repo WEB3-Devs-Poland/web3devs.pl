@@ -41,6 +41,8 @@ export const SinglePost: React.FC = () => {
             setIsError(true);
           });
       }
+
+      console.log('empty blospot');
     });
   }, [ postId ]);
 
