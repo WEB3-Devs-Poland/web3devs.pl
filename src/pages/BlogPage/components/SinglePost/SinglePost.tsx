@@ -23,6 +23,7 @@ export const SinglePost: React.FC = () => {
   useEffect(() => {
     setIsLoading(true);
     getArticles().forEach((file) => {
+      console.log({ file });
       if (file.includes(postId)) {
         getArticle(file)
           .then((data) => {
