@@ -10,6 +10,7 @@ import Layout from '../components/Layout';
 import MobileMenu from '../components/MobileMenu';
 
 import Providers from './App.Providers';
+import { RemoveTrailingSlash } from './RemoveTrailingSlash';
 
 const App = () => (
   <Providers>
@@ -17,6 +18,7 @@ const App = () => (
       <MobileMenu />
       <Header />
 
+      <RemoveTrailingSlash />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/community" element={<CommunityPage />} />
