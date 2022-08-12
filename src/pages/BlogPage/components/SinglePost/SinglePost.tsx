@@ -19,11 +19,12 @@ export const SinglePost: React.FC = () => {
 
   const [ post, setPost ] = useState('');
   const [ , setMetaData ] = useState<MetaDataType>();
+  console.log('single post');
 
   useEffect(() => {
     setIsLoading(true);
     getArticles().forEach((file) => {
-      console.log({ file });
+      console.log({ file, postId });
       if (file.includes(postId)) {
         getArticle(file)
           .then((data) => {

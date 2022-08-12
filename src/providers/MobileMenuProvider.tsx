@@ -12,7 +12,7 @@ interface Props {
 }
 
 const MobileMenuProvider = ({ children }: Props) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [ isMenuOpen, setIsMenuOpen ] = useState(false);
 
   const changeMenuVisibility = () => setIsMenuOpen((prevState) => !prevState);
 
