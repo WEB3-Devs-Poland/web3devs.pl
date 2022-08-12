@@ -42,7 +42,7 @@ export const SinglePost: React.FC = () => {
           });
       }
 
-      console.log('empty blospot');
+      console.log('empty blogpost');
     });
   }, [ postId ]);
 

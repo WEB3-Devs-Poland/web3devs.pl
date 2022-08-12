@@ -36,6 +36,8 @@ export const BlogPage = () => {
   const navigate = useNavigate();
   const locale = useLocale();
 
+  console.log('blog page');
+
   const [ listOfArticles, setListOfArticles ] = useState<MetaDataType[]>(swiatWeb3BlogPosts);
 
   useEffect(() => {
@@ -45,54 +47,45 @@ export const BlogPage = () => {
   }, []);
 
   return (
-    <Routes>
-      {/* <Route path=":postId" element={<SinglePost />} /> */}
+    <>
+      <div className="my-8">
+        <BackButton />
+      </div>
 
-      <Route
-        index
-        element={(
-          <>
-            <div className="my-8">
-              <BackButton />
+      <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 text-left">
+        {listOfArticles
+          .sort((article1, article2) => compareDesc(new Date(article1.date), new Date(article2.date)))
+          .map((article) => (
+            <div
+              className="flex flex-col p-4 cursor-pointer shadow-sm shadow-gray-300 hover:bg-gray-50"
+              onClick={() => ((article.path.includes('https://')) ? window.open(article.path, '_blank') : navigate(`/blog/${article.path}`))}
+              key={article.path}
+            >
+              <div className="mb-4 h-40 w-fit flex flex-col justify-center mx-auto">
+                <img src={article.image} alt="post" className="max-h-40 w-fit mx-auto" />
+              </div>
+
+              <div className="flex flex-col">
+                <a className="text-md text-purple-600 font-semibold" target="_blank" rel="noreferrer" href={article.authorLink}>{article.author}</a>
+                <span className="text-sm text-gray-400 mb-1">{new Date(article.date).toLocaleDateString(locale.locale, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                <h2 className="font-bold text-xl">{article.title}</h2>
+              </div>
+
+              <div className="text-sm text-gray-500 mt-4 mb-4">
+                {article.summary}
+              </div>
+
+              <span
+                onClick={() => ((article.path.includes('https://')) ? window.open(article.path, '_blank') : navigate(`/blog/${article.path}`))}
+                className="cursor-pointer text-purple-600 font-bold mt-auto"
+              >
+                Read
+                {' '}
+                {'->'}
+              </span>
             </div>
-
-            <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 text-left">
-              {listOfArticles
-                .sort((article1, article2) => compareDesc(new Date(article1.date), new Date(article2.date)))
-                .map((article) => (
-                  <div
-                    className="flex flex-col p-4 cursor-pointer shadow-sm shadow-gray-300 hover:bg-gray-50"
-                    onClick={() => ((article.path.includes('https://')) ? window.open(article.path, '_blank') : navigate(`/blog/${article.path}`))}
-                    key={article.path}
-                  >
-                    <div className="mb-4 h-40 w-fit flex flex-col justify-center mx-auto">
-                      <img src={article.image} alt="post" className="max-h-40 w-fit mx-auto" />
-                    </div>
-
-                    <div className="flex flex-col">
-                      <a className="text-md text-purple-600 font-semibold" target="_blank" rel="noreferrer" href={article.authorLink}>{article.author}</a>
-                      <span className="text-sm text-gray-400 mb-1">{new Date(article.date).toLocaleDateString(locale.locale, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                      <h2 className="font-bold text-xl">{article.title}</h2>
-                    </div>
-
-                    <div className="text-sm text-gray-500 mt-4 mb-4">
-                      {article.summary}
-                    </div>
-
-                    <span
-                      onClick={() => ((article.path.includes('https://')) ? window.open(article.path, '_blank') : navigate(`/blog/${article.path}`))}
-                      className="cursor-pointer text-purple-600 font-bold mt-auto"
-                    >
-                      Read
-                      {' '}
-                      {'->'}
-                    </span>
-                  </div>
-                ))}
-            </div>
-          </>
-        )}
-      />
-    </Routes>
+          ))}
+      </div>
+    </>
   );
 };
