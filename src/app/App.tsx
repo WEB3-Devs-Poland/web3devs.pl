@@ -20,9 +20,9 @@ const App = () => (
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/community" element={<CommunityPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:postId" element={<SinglePost />} />
+        <Route path="community" element={<CommunityPage />} />
+        <Route path="blog" element={<BlogPage />} />
+        <Route path="blog/:postId" element={<SinglePost />} />
       </Routes>
 
       <Footer />
