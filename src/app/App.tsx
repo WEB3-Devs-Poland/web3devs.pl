@@ -18,7 +18,6 @@ const App = () => (
       <MobileMenu />
       <Header />
 
-      <RemoveTrailingSlash />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/community" element={<CommunityPage />} />
