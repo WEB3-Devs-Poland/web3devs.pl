@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Outlet, Route, Routes } from 'react-router-dom';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -18,10 +18,12 @@ const App = () => (
       <Header />
 
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="community" element={<CommunityPage />} />
-        <Route path="blog/*" element={<BlogPage />}>
-          <Route path=":postId" element={<SinglePost />} />
+        <Route path="/" element={<Outlet />}>
+          <Route index element={<LandingPage />} />
+          <Route path="community" element={<CommunityPage />} />
+          <Route path="blog" element={<BlogPage />}>
+            <Route path=":postId" element={<SinglePost />} />
+          </Route>
         </Route>
       </Routes>
 
