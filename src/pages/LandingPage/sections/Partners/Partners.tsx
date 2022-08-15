@@ -15,7 +15,7 @@ const Partners = () => {
       <S.SubTitle>{t('partners.title')}</S.SubTitle>
       <S.Wrapper>
         {partners.map(({ logo, name, link }) => (
-          <S.ImgWrapper>
+          <S.ImgWrapper key={name}>
             <S.SponsorIMG
               alt={name}
               src={logo[currentTheme]}
