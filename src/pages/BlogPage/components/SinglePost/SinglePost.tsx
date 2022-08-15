@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom';
 
 import BackButton from '../../../../components/BackButton/BackButton';
 import Loading from '../../../../components/Loading';
-// import { getArticle, getArticles } from '../../../../utilities/getArticles';
 import {
   MetaDataType,
   parseMetaDataFromArticle,

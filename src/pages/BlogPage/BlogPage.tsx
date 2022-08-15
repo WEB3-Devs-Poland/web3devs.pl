@@ -10,7 +10,7 @@ import useLocale from '../../translations/hooks';
 // import { getArticle, getArticles } from '../../utilities/getArticles';
 import { MetaDataType, parseMetaDataFromArticle } from '../../utilities/parseMetaDataFromArticle';
 
-const swiatWeb3BlogPosts = [
+const listOfArticles = [
   {
     title: 'Polygon',
     date: '2022-08-04T17:35:03.794Z',
@@ -123,25 +123,23 @@ const swiatWeb3BlogPosts = [
     tags: ['Świat Web 3'],
     image: '/blogAssets/previews/quantstamp.png',
   },
+  {
+    title: 'Zrozum DeFi. 6 najważniejszych pojęć',
+    author: 'Sebastian Strzałkowski',
+    authorLink: 'https://www.boredfoundersclub.com/member/sebastian-strzalkowski',
+    path: 'zrozum-defi',
+    date: new Date('2022-08-10'),
+    category: 'DeFi',
+    tags: ['DeFi', 'Decentalized', 'Finance', 'Development', 'decentralizacja'],
+    image: '/blogAssets/previews/defi.jpeg',
+    summary:
+      'W tym artykule przyjrzymy się giełdzie scentralizowanej, zdecentralizowanej oraz kilku pojęciom zwiazanymi z nimi.',
+  },
 ];
 
 export const BlogPage = () => {
   const navigate = useNavigate();
   const locale = useLocale();
-
-  console.log('blog page');
-
-  const [listOfArticles, setListOfArticles] = useState<MetaDataType[]>(swiatWeb3BlogPosts);
-
-  useEffect(() => {
-    fetch('/blogAssets/articles/').then((res) => console.log(res));
-
-    // getArticles()
-    //   .map((file) => getArticle(file).then((res) => parseMetaDataFromArticle(res)))
-    //   .forEach((item) =>
-    //     item.then((article) => setListOfArticles((prevState) => [...prevState, article]))
-    //   );
-  }, []);
 
   return (
     <>
