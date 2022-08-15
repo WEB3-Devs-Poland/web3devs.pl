@@ -1,5 +1,5 @@
 import MobileMenuProvider from 'providers/MobileMenuProvider';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import ThemeProvider from 'theme/ThemeProvider';
 import TranslationsProvider from 'translations/TranslationsProvider';
@@ -10,11 +10,11 @@ interface Props {
 
 const Providers = ({ children }: Props) => (
   <TranslationsProvider>
-    <BrowserRouter>
+    <HashRouter>
       <ThemeProvider>
         <MobileMenuProvider>{children}</MobileMenuProvider>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   </TranslationsProvider>
 );
 
