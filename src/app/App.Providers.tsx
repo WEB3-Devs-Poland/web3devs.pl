@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import MobileMenuProvider from '../providers/MobileMenuProvider';
 import ThemeProvider from '../theme/ThemeProvider';
@@ -11,12 +11,12 @@ interface Props {
 
 const Providers = ({ children }: Props) => (
   <TranslationsProvider>
-    <BrowserRouter>
+    <HashRouter>
       <RemoveTrailingSlash />
       <ThemeProvider>
         <MobileMenuProvider>{children}</MobileMenuProvider>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   </TranslationsProvider>
 );
 
