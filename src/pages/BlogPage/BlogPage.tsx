@@ -134,6 +134,8 @@ export const BlogPage = () => {
   const [listOfArticles, setListOfArticles] = useState<MetaDataType[]>(swiatWeb3BlogPosts);
 
   useEffect(() => {
+    fetch('/blogAssets/articles/').then((res) => console.log(res));
+
     getArticles()
       .map((file) => getArticle(file).then((res) => parseMetaDataFromArticle(res)))
       .forEach((item) =>

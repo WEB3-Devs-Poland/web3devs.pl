@@ -21,31 +21,23 @@ export const SinglePost: React.FC = () => {
 
   const [post, setPost] = useState('');
   const [, setMetaData] = useState<MetaDataType>();
-  console.log('single post');
 
   useEffect(() => {
     setIsLoading(true);
-    getArticles().forEach((file) => {
-      console.log({ file, postId });
-      if (file.includes(postId)) {
-        getArticle(file)
-          .then((data) => {
-            console.log(data);
-            const articleMetaData = parseMetaDataFromArticle(data);
 
-            if (articleMetaData.path === postId) {
-              setPost(data[2]);
-              setMetaData(articleMetaData);
-              setIsLoading(false);
-            }
-          })
-          .catch(() => {
-            setIsError(true);
-          });
-      }
+    fetch(`/blogAssets/articles/${postId}.md`)
+      .then((res) => res.text())
+      .then((res) => res.split('---'))
+      .then((data) => {
+        const articleMetaData = parseMetaDataFromArticle(data);
 
-      console.log('empty blogpost');
-    });
+        if (articleMetaData.path === postId) {
+          setPost(data[2]);
+          setIsLoading(false);
+          setMetaData(articleMetaData);
+        }
+      })
+      .catch(() => setIsError(true));
   }, [postId]);
 
   return (
