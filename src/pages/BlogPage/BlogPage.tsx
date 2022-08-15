@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 import BackButton from '../../components/BackButton/BackButton';
 import useLocale from '../../translations/hooks';
-import { getArticle, getArticles } from '../../utilities/getArticles';
+// import { getArticle, getArticles } from '../../utilities/getArticles';
 import { MetaDataType, parseMetaDataFromArticle } from '../../utilities/parseMetaDataFromArticle';
 
 const swiatWeb3BlogPosts = [
@@ -136,11 +136,11 @@ export const BlogPage = () => {
   useEffect(() => {
     fetch('/blogAssets/articles/').then((res) => console.log(res));
 
-    getArticles()
-      .map((file) => getArticle(file).then((res) => parseMetaDataFromArticle(res)))
-      .forEach((item) =>
-        item.then((article) => setListOfArticles((prevState) => [...prevState, article]))
-      );
+    // getArticles()
+    //   .map((file) => getArticle(file).then((res) => parseMetaDataFromArticle(res)))
+    //   .forEach((item) =>
+    //     item.then((article) => setListOfArticles((prevState) => [...prevState, article]))
+    //   );
   }, []);
 
   return (
