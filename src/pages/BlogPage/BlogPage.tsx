@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { compareDesc } from 'date-fns';
 import { useEffect, useState } from 'react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Outlet, Route, Routes, useNavigate } from 'react-router-dom';
 
 import BackButton from '../../components/BackButton/BackButton';
 import useLocale from '../../translations/hooks';
@@ -147,6 +147,7 @@ export const BlogPage = () => {
       <div className="my-8">
         <BackButton />
       </div>
+      <Outlet />
 
       <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 text-left">
         {listOfArticles
