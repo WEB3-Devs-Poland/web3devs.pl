@@ -9,7 +9,6 @@ import { SinglePost } from '../pages/BlogPage/components/SinglePost';
 import CommunityPage from '../pages/CommunityPage';
 import LandingPage from '../pages/LandingPage';
 import Providers from './App.Providers';
-import { RemoveTrailingSlash } from './RemoveTrailingSlash';
 
 const App = () => (
   <Providers>
@@ -20,8 +19,11 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Outlet />}>
           <Route index element={<LandingPage />} />
-          <Route path="community" element={<CommunityPage />} />
-          <Route path="blog" element={<BlogPage />}>
+          <Route path="community" element={<Outlet />}>
+            <Route index element={<CommunityPage />} />
+          </Route>
+          <Route path="blog" element={<Outlet />}>
+            <Route index element={<BlogPage />} />
             <Route path=":postId" element={<SinglePost />} />
           </Route>
         </Route>

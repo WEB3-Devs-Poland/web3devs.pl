@@ -1,19 +1,20 @@
-import { t } from "i18next";
-import { IoMdArrowBack } from "react-icons/io";
+import { t } from 'i18next';
+import { IoMdArrowBack } from 'react-icons/io';
+import { useNavigate } from 'react-router-dom';
 
-type BackButtonProps = {
-  target?: string
-}
+const BackButton = () => {
+  const navigate = useNavigate();
 
-const BackButton = ({target = '/'}: BackButtonProps) => {
+  const goBack = () => navigate(-1);
+
   return (
-    <a href={target} className="text-left flex text-xl hover:text-purple-600">
+    <div onClick={goBack} className="text-left flex text-xl hover:text-purple-600">
       <div className="mt-auto mb-auto mr-2">
-        <IoMdArrowBack /> 
+        <IoMdArrowBack />
       </div>
       {t('backButton')}
-  </a>
-  )
+    </div>
+  );
 };
 
 export default BackButton;

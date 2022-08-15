@@ -6,7 +6,7 @@ path: 'zrozum-defi'
 date: 2022-08-10
 category: 'DeFi'
 tags: ['DeFi', 'Decentalized', 'Finance', 'Development', 'decentralizacja']
-image: '/blog/previews/defi.jpeg'
+image: '/blogAssets/previews/defi.jpeg'
 summary: 'W tym artykule przyjrzymy się giełdzie scentralizowanej, zdecentralizowanej oraz kilku pojęciom zwiazanymi z nimi.'
 ---
 

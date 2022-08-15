@@ -6,7 +6,7 @@ path: 'budowanie-na-ethereum-podstawy'
 date: 2022-05-03
 category: 'Building'
 tags: ['ETH', 'Ether', 'Ethereum', 'Development', 'decentralizacja']
-image: '/blog/previews/eth.png'
+image: '/blogAssets/previews/eth.png'
 summary: 'Blockchain to publiczna baza danych, modyfikowana i przechowywana na wielu komputerach w Internecie.'
 ---
 

@@ -3,13 +3,12 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { compareDesc } from 'date-fns';
 import { useEffect, useState } from 'react';
-import { Outlet, Route, Routes, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import BackButton from '../../components/BackButton/BackButton';
 import useLocale from '../../translations/hooks';
 import { getArticle, getArticles } from '../../utilities/getArticles';
 import { MetaDataType, parseMetaDataFromArticle } from '../../utilities/parseMetaDataFromArticle';
-import { SinglePost } from './components/SinglePost';
 
 const swiatWeb3BlogPosts = [
   {
@@ -21,7 +20,7 @@ const swiatWeb3BlogPosts = [
     summary: 'Dlaczego sieci Layer2 są konkurencją dla Layer1?',
     category: 'Article',
     tags: ['Świat Web 3'],
-    image: '/blog/previews/polygon.png',
+    image: '/blogAssets/previews/polygon.png',
   },
   {
     title: 'Dogecoin',
@@ -32,7 +31,7 @@ const swiatWeb3BlogPosts = [
     summary: 'A co jakby z mema zrobić kryptowalutę?',
     category: 'Article',
     tags: ['Świat Web 3'],
-    image: '/blog/previews/doge.png',
+    image: '/blogAssets/previews/doge.png',
   },
   {
     title: 'Decentraland',
@@ -43,7 +42,7 @@ const swiatWeb3BlogPosts = [
     summary: 'Czy metaverse Decentraland opanuje całe web3?',
     category: 'Article',
     tags: ['Świat Web 3'],
-    image: '/blog/previews/decentraland.png',
+    image: '/blogAssets/previews/decentraland.png',
   },
   {
     title: 'Bezpieczeństwo w Web3',
@@ -54,7 +53,7 @@ const swiatWeb3BlogPosts = [
     summary: 'Czy blockchain jest wystarczająco bezpieczny?',
     category: 'Article',
     tags: ['Świat Web 3'],
-    image: '/blog/previews/security.jpg',
+    image: '/blogAssets/previews/security.jpg',
   },
   {
     title: 'AAVE',
@@ -65,7 +64,7 @@ const swiatWeb3BlogPosts = [
     summary: 'Dlaczego protokoły DeFi to koszmar bankierów?',
     category: 'Article',
     tags: ['Świat Web 3'],
-    image: '/blog/previews/aave.png',
+    image: '/blogAssets/previews/aave.png',
   },
   {
     title: 'Audius',
@@ -76,7 +75,7 @@ const swiatWeb3BlogPosts = [
     summary: 'A gdyby tak zdecentralizować platformy streamingowe?',
     category: 'Article',
     tags: ['Świat Web 3'],
-    image: '/blog/previews/audius.png',
+    image: '/blogAssets/previews/audius.png',
   },
   {
     title: 'NBA Top Shot',
@@ -87,7 +86,7 @@ const swiatWeb3BlogPosts = [
     summary: 'Projekt NFT za 3 punkty?',
     category: 'Article',
     tags: ['Świat Web 3'],
-    image: '/blog/previews/topshot.png',
+    image: '/blogAssets/previews/topshot.png',
   },
   {
     title: "Stellar - następca SWIFT'u czy tylko kopia XRP?",
@@ -99,7 +98,7 @@ const swiatWeb3BlogPosts = [
       'Witaj w trzeciej odsłonie newslettera Świat Web3, w którym dwójka pasjonatów stara się rozwikłać zagadki technologii blockchain, metaverse, DeFi oraz…',
     category: 'Article',
     tags: ['Świat Web 3'],
-    image: '/blog/previews/stellar.png',
+    image: '/blogAssets/previews/stellar.png',
   },
   {
     title: 'Algorand - czy Blockchain Trillema naprawdę istnieje?',
@@ -111,7 +110,7 @@ const swiatWeb3BlogPosts = [
       'Witaj w drugiej odsłonie newslettera Świat Web3, w którym dwójka pasjonatów stara się rozwikłać zagadki technologii blockchain, metaverse, DeFi oraz…',
     category: 'Article',
     tags: ['Świat Web 3'],
-    image: '/blog/previews/algorand.png',
+    image: '/blogAssets/previews/algorand.png',
   },
   {
     title: 'Quantstamp - audyt i bezpieczeństwo w Web 3.0',
@@ -122,7 +121,7 @@ const swiatWeb3BlogPosts = [
     summary: 'Czy samo bezpieczeństwo blockchainów wystarczy?',
     category: 'Article',
     tags: ['Świat Web 3'],
-    image: '/blog/previews/quantstamp.png',
+    image: '/blogAssets/previews/quantstamp.png',
   },
 ];
 
@@ -147,7 +146,6 @@ export const BlogPage = () => {
       <div className="my-8">
         <BackButton />
       </div>
-      <Outlet />
 
       <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 text-left">
         {listOfArticles

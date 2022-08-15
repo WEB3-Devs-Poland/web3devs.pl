@@ -51,7 +51,7 @@ export const SinglePost: React.FC = () => {
   return (
     <S.Content>
       <div className="my-8">
-        <BackButton target="/blog" />
+        <BackButton />
       </div>
 
       {isLoading ? <Loading /> : isError ? <>{t('error')}</> : <S.SinglePost>{post}</S.SinglePost>}
