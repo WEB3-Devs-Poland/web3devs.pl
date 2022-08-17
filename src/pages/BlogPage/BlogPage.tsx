@@ -9,7 +9,6 @@ import BackButton from '../../components/BackButton/BackButton';
 import useLocale from '../../translations/hooks';
 import { getArticle, getArticles } from '../../utilities/getArticles';
 import { MetaDataType, parseMetaDataFromArticle } from '../../utilities/parseMetaDataFromArticle';
-import { SinglePost } from './components/SinglePost';
 
 const swiatWeb3BlogPosts = [
   {
