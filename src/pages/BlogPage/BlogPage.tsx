@@ -142,14 +142,12 @@ export const BlogPage = () => {
 
   return (
     <Routes>
-      {/* <Route path=":postId" element={<SinglePost />} /> */}
-
       <Route
         index
         element={
           <>
             <div className="my-8">
-              <BackButton />
+              <BackButton target="/" />
             </div>
 
             <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 text-left">
