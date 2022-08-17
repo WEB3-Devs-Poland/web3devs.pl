@@ -1,7 +1,7 @@
 ---
 title: Zrozum DeFi. 6 najważniejszych pojęć
 author: Sebastian Strzałkowski
-authorLink: https://www.boredfoundersclub.com/member/sebastian-strzalkowski
+authorLink: https://www.linkedin.com/in/sebastianstrzalkowski/
 path: 'zrozum-defi'
 date: 2022-08-10
 category: 'DeFi'

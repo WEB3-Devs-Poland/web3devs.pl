@@ -12,7 +12,9 @@ import {
   RiMicLine as PodcastIcon,
   RiWindow2Line as WebsiteIcon,
   RiYoutubeLine as YoutubeIcon,
+  RiLinkedinLine as LinkedinIcon,
 } from 'react-icons/ri';
+import SStrzalkowski from 'pages/CommunityPage/assets/sebastian-strzalkowski.jpeg';
 
 export const ourCommunityMembers = [
   {
@@ -112,7 +114,6 @@ export const ourCommunityMembers = [
       },
     ],
   },
-
   {
     name: 'Paweł Kowalewski',
     img: PKowalski,
@@ -122,6 +123,18 @@ export const ourCommunityMembers = [
       {
         link: 'https://www.youtube.com/channel/UCRAD6DLx97zw9AOX1Gwj77Q',
         Icon: YoutubeIcon,
+      },
+    ],
+  },
+  {
+    name: 'Sebastian Strzałkowski',
+    img: SStrzalkowski,
+    bio: 'IT Consultant',
+    addBackground: false,
+    social: [
+      {
+        link: 'https://www.linkedin.com/in/sebastianstrzalkowski/',
+        Icon: LinkedinIcon,
       },
     ],
   },

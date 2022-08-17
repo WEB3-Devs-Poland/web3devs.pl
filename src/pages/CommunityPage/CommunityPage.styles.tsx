@@ -58,11 +58,11 @@ export const MemberName = styled.div`
 export const MemberIMG = styled.img<{ $addBackground?: boolean }>`
   margin: auto;
   width: 7.5rem;
+  height: auto;
   border-radius: 50%;
   box-shadow: ${({ theme }) => theme.text}25 0px 7px 29px 0px; //opacity <- last two numbers of color
 
-  background-color: ${({ theme, $addBackground }) =>
-    $addBackground ? theme.white : 'transparent'};lasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-color
+  background-color: ${({ theme, $addBackground }) => ($addBackground ? theme.white : 'transparent')};lasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-colorlasttwonumbersofcolorbackground-color
 
   @media (max-width: ${({ theme }) => theme.maxWidth}px) {
     width: 6rem;
