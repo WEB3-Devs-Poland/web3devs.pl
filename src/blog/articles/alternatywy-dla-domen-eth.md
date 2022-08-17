@@ -44,14 +44,14 @@ Twój rejestrator domeny powinien umożliwiać Ci skonfigurowanie DNSSEC dla swo
 I tu zaczyna się pierwszy i jedyny poważniejszy "schodek", podpis musi być wykonany przy użyciu algorytmu `RSA / Sha256`. Nie każdy rejestrator umożliwia taka głęboką konfiguracje, nie jest tez łatwo odnaleźć dokładniejsze informacje o DNSSEC przed rejestracją.
 
 Bardzo przydatny okazuje się tutaj [Debugger DNSSEC](https://dnssec-debugger.verisignlabs.com) by przekonać się, ze wszystko jest ustawione jak trzeba.
-![DNSSEC debugger](assets/ens-xyz-dns-debugger.jpg)
+![DNSSEC debugger](blog/assets/ens-xyz-dns-debugger.jpg)
 
 
 ### Rekord TXT i adres Ethereum
 
 Teraz jeszcze należy dodać rekord `TXT` do strefy DNS naszej domeny, która wskaże na adres naszego portfela.
 Nazwa rekordu to `_ens.<twoja nazwa>.xyz`, wartość `a=0x12345...`, **uwaga** jest to `a=` nie sam adres.
-![Rekord TXT](assets/ens-xyz-txt-record.jpg)
+![Rekord TXT](blog/assets/ens-xyz-txt-record.jpg)
 
 
 ### Zaklep sobie nazwę w ENS
@@ -62,7 +62,7 @@ Teraz już z górki, zapraszam za mną razem z portfelem na stronę [ENS domains
 ### To nie jest opcja dla anonimowych ;)
 
 Jeśli masz ochotę wysłać mi drobne na kawę teraz nie musisz już przepisywać adresu ;)
-![Transfer na nazwę](assets/ens-xyz-metamask-transfers.jpg)
+![Transfer na nazwę](blog/assets/ens-xyz-metamask-transfers.jpg)
 
 ENS umożliwia Ci powiązać jeszcze więcej osobistych informacji, dlatego bądź rozważny, powiąż tylko taki portfel, który chcesz by był z Tobą kojarzony.
-![ENS i konta Social](assets/ens-xyz-text-records.jpg)
+![ENS i konta Social](blog/assets/ens-xyz-text-records.jpg)

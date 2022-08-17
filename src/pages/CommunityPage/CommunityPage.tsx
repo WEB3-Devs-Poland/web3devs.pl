@@ -5,7 +5,7 @@ import { ourCommunityMembers } from './community.config';
 const CommunityPage = () => (
   <>
     <div className="my-8">
-      <BackButton />
+      <BackButton target="/" />
     </div>
 
     <S.CommunityMembers>

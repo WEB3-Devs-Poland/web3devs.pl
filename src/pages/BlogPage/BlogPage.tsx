@@ -9,7 +9,6 @@ import BackButton from '../../components/BackButton/BackButton';
 import useLocale from '../../translations/hooks';
 import { getArticle, getArticles } from '../../utilities/getArticles';
 import { MetaDataType, parseMetaDataFromArticle } from '../../utilities/parseMetaDataFromArticle';
-import { SinglePost } from './components/SinglePost';
 
 const swiatWeb3BlogPosts = [
   {
@@ -142,14 +141,12 @@ export const BlogPage = () => {
 
   return (
     <Routes>
-      {/* <Route path=":postId" element={<SinglePost />} /> */}
-
       <Route
         index
         element={
           <>
             <div className="my-8">
-              <BackButton />
+              <BackButton target="/" />
             </div>
 
             <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 text-left">

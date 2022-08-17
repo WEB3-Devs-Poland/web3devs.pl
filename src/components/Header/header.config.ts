@@ -25,7 +25,7 @@ export const NavigationLinks = (): NavigationLinksModel[] => {
     {
       isBlank: true,
       title: t('header.jobs'),
-      link: 'https://techtree.dev/users/dev1812/bounties',
+      link: 'https://techtree.dev/user/WEB23/web3',
     },
   ];
 };
