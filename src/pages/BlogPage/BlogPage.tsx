@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { compareDesc } from 'date-fns';
+import { compareDesc, isFuture } from 'date-fns';
 import { useEffect, useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
@@ -151,6 +151,7 @@ export const BlogPage = () => {
 
             <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 text-left">
               {listOfArticles
+                .filter((article) => !isFuture(new Date(article.date)))
                 .sort((article1, article2) =>
                   compareDesc(new Date(article1.date), new Date(article2.date))
                 )
