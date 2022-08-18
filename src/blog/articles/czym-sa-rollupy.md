@@ -3,7 +3,7 @@ title: Czym są rollupy?
 author: Sebastian Strzałkowski
 authorLink: https://www.linkedin.com/in/sebastianstrzalkowski/
 path: 'czym-sa-rollupy'
-date: 2022-08-18
+date: 2022-08-26
 category: 'Privacy'
 tags: ['ZKrollups', 'OptimisticRollups', 'Privacy', 'Rollups', 'Layer2']
 image: '/blog/previews/czym-sa-rollupy.png'
