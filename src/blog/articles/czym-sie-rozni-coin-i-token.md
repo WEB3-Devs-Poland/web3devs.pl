@@ -42,11 +42,11 @@ Tokeny wymienialne są powszechnie stosowane w DeFi (zdecentralizowane finanse).
 
 Tokeny niewymienialne również mają wiele zastosowań poza chwaleniem się na twitterze i spekulacją. Są wykorzystywane jako przedmioty w grach w web3, jako bilety na dane wydarzenia lub przepustka na serwer discord. Ostatnio popularne jako przedmioty w aplikacjach typu move2earn, gdzie posiadanie ich umożliwia zarabianie na aktywności fizycznej, gdzie wypłata jest w tokenie wymienialnym jak np. $GST.
 
-*Podsumowując tytułową grafikę*
+## Podsumowując tytułową grafikę
 
 Coin jest natywny dla swojego blockchainu, podczas gdy token znajduje się wewnątrz coina. Na przykład: ETH jest natywnym coinem sieci Ethereum. Przed wysłaniem tokenu ERC20 zostaje pobrana opłata transakcyjna w ETH, której wysokość jest zależna od aktualnego stanu zajętości sieci.
 
-### Przykłady:
+## Przykłady:
 * Bitcoin ($BTC) – coin
 * Wrapped Bitcoin ($WBTC) – token – ERC20
 * Ethereum ($ETH) – coin
