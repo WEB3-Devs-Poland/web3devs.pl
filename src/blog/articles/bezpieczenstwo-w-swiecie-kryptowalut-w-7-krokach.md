@@ -1,13 +1,13 @@
 ---
 title: Bezpieczeństwo w świecie kryptowalut w 7 krokach 🔐
 author: Mateusz Mączkowski | Monczga.eth
-authorLink: https://twitter.com/monczga, https://www.linkedin.com/in/maczkowski/
+authorLink: https://twitter.com/monczga
 path: 'bezpieczenstwo-w-swiecie-kryptowalut-w-7-krokach'
 date: 2022-08-21
 category: 'Security'
 tags: ['Bezpieczeństwo środków', 'DeFi', 'kryptowaluty', 'blockchain']
 image: '/blog/previews/bezpieczenstwo-w-swiecie-kryptowalut-w-7-krokach.png'
-summary: 'Czym są rollupy? Czym różnią się optymistyczne rollupy od zk rollupów?'
+summary: 'Najważniejsze zasady bezpieczeństwa w świecie kryptowalut. Wielu z nich nie stosują nawet starzy hodlerzy! Nie popełniaj tego błędu i dowiedz się jak zabezpieczyć swoje środki by nie wpadły w niepowołane ręce'
 ---
 
 # Bezpieczeństwo w świecie kryptowalut w 7 krokach 🔐
