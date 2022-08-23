@@ -1,6 +1,6 @@
 ---
 title: Bezpieczeństwo w świecie kryptowalut w 7 krokach 🔐
-author: Mateusz Mączkowski | Monczga.eth
+author: Mateusz Mączkowski
 authorLink: https://twitter.com/monczga
 path: 'bezpieczenstwo-w-swiecie-kryptowalut-w-7-krokach'
 date: 2022-08-21
