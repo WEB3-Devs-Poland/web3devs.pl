@@ -12,8 +12,8 @@
         "backButton": "Home page"
       },
       "inviteToDiscord": {
-        "title": "First Polish community <1/> for <3>web3</3> developers",
-        "subTitle": "We learn, share experiences and build projects together. If you're interested in web3, this place is for you",
+        "title": "First Polish community <1/> for <3>WEB3</3> developers",
+        "subTitle": "We learn, share experiences and build projects together. If you're interested in WEB3, this place is for you",
         "button": "Join us"
       },
       "helpUs": {
@@ -35,7 +35,7 @@
           "buildTogether": "We build projects together"
         }
       },
-      "footer": "©2022 web3 Devs Poland. All rights reserved"
+      "footer": "©2022 WEB3 Devs Poland. All rights reserved"
     }
   },
   "pl": {
@@ -51,8 +51,8 @@
         "backButton": "Strona główna"
       },
       "inviteToDiscord": {
-        "title": "Pierwsza Polska społeczność <1/> dla programistów <3>web3</3>",
-        "subTitle": "Uczymy się, wymieniamy doświadczeniem  oraz tworzymy razem projekty. Jeśli jesteś zainteresowany światem web3, to miejsce jest dla Ciebie",
+        "title": "Pierwsza Polska społeczność <1/> dla programistów <3>WEB3</3>",
+        "subTitle": "Uczymy się, wymieniamy doświadczeniem  oraz tworzymy razem projekty. Jeśli jesteś zainteresowany światem WEB3, to miejsce jest dla Ciebie",
         "button": "Dołącz do nas"
       },
       "helpUs": {
@@ -74,7 +74,7 @@
           "buildTogether": "Budujemy razem projekty"
         }
       },
-      "footer": "©2022 web3 Devs Polska. Wszelkie prawa zastrzeżone"
+      "footer": "©2022 WEB3 Devs Polska. Wszelkie prawa zastrzeżone"
     }
   }
 }

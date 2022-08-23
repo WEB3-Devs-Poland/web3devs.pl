@@ -1,7 +1,7 @@
 # Blog
 
-Repozytorium zawierające wszystkie artykuły znajdujące się na blogu [web3devs.pl](https://web3devs.pl/).
-Blog jest tworzony przez społeczność web3devs. Ma on na celu dzielenie się wiedzą i doświadczeniami członków społeczności.
+Repozytorium zawierające wszystkie artykuły znajdujące się na blogu [WEB3devs.pl](https://WEB3devs.pl/).
+Blog jest tworzony przez społeczność WEB3devs. Ma on na celu dzielenie się wiedzą i doświadczeniami członków społeczności.
 Każdy członek społeczności może dodać artykuł do naszego bloga.
 
 ## Jesteś osobą nietechniczą a chciałbyś zrobić wpis na bloga?
@@ -13,10 +13,10 @@ Nic prostrzego! Przygotuj wpis w dowolnym edytorze tekstu, najlepiej Google Docs
 ## Jak dodać artykuł do bloga?
 *Pierwsze artykuły i zdjęcia są juz umieszczone w odpowiednich folderach, wzoruj się na nich*
 
-1. Pobierz [repozytorium](https://github.com/WEB3-Devs-Poland/web3devs.pl)
+1. Pobierz [repozytorium](https://github.com/WEB3-Devs-Poland/WEB3devs.pl)
 
 ```
-  git clone https://github.com/WEB3-Devs-Poland/web3devs.pl
+  git clone https://github.com/WEB3-Devs-Poland/WEB3devs.pl
 ```
 
 2. Utwórz osobny branch dla swojego wpisu np.

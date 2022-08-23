@@ -50,7 +50,7 @@ Gdy masz wrażenie, że mint NFT jest szczególnie ryzykowny, znacznie bezpieczn
 
 Punkt dotyczący myślę, że znacznej części osób w świecie krypto. Ilekroć korzystamy z produktów defi, czy to przy SWAPowani, dodawaniu środków do poola by pofarmić yield, po prostu wykonujemy jakąkolwiek interakcje z kontraktem. Jako użytkownik defi musimy dać dostęp do naszych kryptowalut, w zdefiniowanej alokacji. Domyślnie są to wszystkie środki. Aplikacja Matemask pozwala już podczas "otwierania" dostępu do naszych środków, zadeklarować wartość jaką dany Smart Contract może operować w naszym imieniu.
 
-Dodatkowo polecam, wręcz stwierdzam, że jest to obowiązek każdego eksploratora projektów web3 opartych o Ethereum Virtual Machine posiadanie wtyczki [Revoke.cash](https://revoke.cash/). Umożliwia ona cofnięcie oraz edycję wszystkich udzielonych dostępów do konta smart kontraktom. Aplikacja jest prosta w obsłudze, ostrzega nas zawsze przed udzieleniem dostępu, przede wszystkim posiada otwarto-źródłowy kod i jest darmowa.
+Dodatkowo polecam, wręcz stwierdzam, że jest to obowiązek każdego eksploratora projektów WEB3 opartych o Ethereum Virtual Machine posiadanie wtyczki [Revoke.cash](https://revoke.cash/). Umożliwia ona cofnięcie oraz edycję wszystkich udzielonych dostępów do konta smart kontraktom. Aplikacja jest prosta w obsłudze, ostrzega nas zawsze przed udzieleniem dostępu, przede wszystkim posiada otwarto-źródłowy kod i jest darmowa.
 
 Nigdy nie dawaj dostępu do całego salda danego kryptoaktywa, żadnemu z kontraktów! Tylko wtedy masz pewność, że wyeliminujesz zagrożenia z tego wektoru ataku, a twoje środki będą bezpieczne, pod warunkiem, że nie dałeś zbyt dużych limitów dostępowych. Użyj wtedy wtyczki podanej wyżej.
 

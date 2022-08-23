@@ -66,11 +66,11 @@ Move 2 Earn! W przeciwieństwie do chociażby Stepn, nie trzeba kupować NFT że
 
 [Link do aplikacji](https://walken.io/)
 
-## 7. Web3 Devs Poland DAO
+## 7. WEB3 Devs Poland DAO
 
-W 2023, gdy Web3 Devs Poland DAO stworzy swojego coina, będzie możliwe zarabianie go! Stay tuned for more (&DYOR).
+W 2023, gdy WEB3 Devs Poland DAO stworzy swojego coina, będzie możliwe zarabianie go! Stay tuned for more (&DYOR).
 
-[Web3 Devs Poland](https://web3devs.pl/)
+[WEB3 Devs Poland](https://WEB3devs.pl/)
 
 **Pamiętaj że:**
 - 2 z 7 linków to linki afiliacyjne, które dają korzyści autorowi.
