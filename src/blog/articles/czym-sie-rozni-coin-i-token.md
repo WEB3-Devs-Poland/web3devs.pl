@@ -40,7 +40,7 @@ Tokeny, w przeciwieństwie do coina, nie posiadają własnego blockchain, więc 
 
 Tokeny wymienialne są powszechnie stosowane w DeFi (zdecentralizowane finanse). Mogą służyć kupowaniu i sprzedawaniu, być łączone w parę i dodane do zwiększenia płynności wymiany innej pary, pożyczane, wykorzystywane jako zastaw do pożyczki innego tokenu, czy stakowane.
 
-Tokeny niewymienialne również mają wiele zastosowań poza chwaleniem się na twitterze i spekulacją. Są wykorzystywane jako przedmioty w grach w web3, jako bilety na dane wydarzenia lub przepustka na serwer discord. Ostatnio popularne jako przedmioty w aplikacjach typu move2earn, gdzie posiadanie ich umożliwia zarabianie na aktywności fizycznej, gdzie wypłata jest w tokenie wymienialnym jak np. $GST.
+Tokeny niewymienialne również mają wiele zastosowań poza chwaleniem się na twitterze i spekulacją. Są wykorzystywane jako przedmioty w grach w WEB3, jako bilety na dane wydarzenia lub przepustka na serwer discord. Ostatnio popularne jako przedmioty w aplikacjach typu move2earn, gdzie posiadanie ich umożliwia zarabianie na aktywności fizycznej, gdzie wypłata jest w tokenie wymienialnym jak np. $GST.
 
 ## Podsumowując tytułową grafikę
 

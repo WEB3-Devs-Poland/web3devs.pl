@@ -7,12 +7,12 @@ date: 2022-05-05
 category: 'Domains'
 tags: ['Domeny', '.eth', 'Ethereum', 'DNSSEC']
 image: '/blog/previews/ens.png'
-summary: 'Gdy myślimy o odpowiedniku usługi DNS w świecie web3 czyli ENS (Ethereum Name Service) pierwsza na myśli przychodzi końcówka .eth.'
+summary: 'Gdy myślimy o odpowiedniku usługi DNS w świecie WEB3 czyli ENS (Ethereum Name Service) pierwsza na myśli przychodzi końcówka .eth.'
 ---
 
 # Alternatywy dla domen .eth
 
-Gdy myślimy o odpowiedniku usługi DNS w świecie web3 czyli ENS (Ethereum Name Service) pierwsza na myśli przychodzi końcówka .eth. Jeśli jesteś użytkownikiem Twitter-a początek 2021 roku możesz kojarzyć z wysypem domen .eth w nick-ach użytkowników tego serwisu.
+Gdy myślimy o odpowiedniku usługi DNS w świecie WEB3 czyli ENS (Ethereum Name Service) pierwsza na myśli przychodzi końcówka .eth. Jeśli jesteś użytkownikiem Twitter-a początek 2021 roku możesz kojarzyć z wysypem domen .eth w nick-ach użytkowników tego serwisu.
 
 Natomiast czy wiesz, ze obecnie (2022r.) ENS wspiera wszystkie "stare" TLD, a więc końcówki domenowe. Jedną z pierwszych dodanych była końcówka `.xyz` również bardzo popularna, której przyjrzymy się w tym artykule. Jednak konfiguracja każdej innej domeny TLD będzie przebiegać  w ten sam sposób.
 
@@ -25,7 +25,7 @@ Natomiast czy wiesz, ze obecnie (2022r.) ENS wspiera wszystkie "stare" TLD, a wi
 
 ## Konfiguracja
 
-Jeśli postanowiłeś powiązać swoją ulubioną domenę z fascynującym światem web3, gratuluję! Czeka cię jednak trochę wyzwań, które ten poradnik ma na celu złagodzić.
+Jeśli postanowiłeś powiązać swoją ulubioną domenę z fascynującym światem WEB3, gratuluję! Czeka cię jednak trochę wyzwań, które ten poradnik ma na celu złagodzić.
 
 ### Rejestracja domeny w DNS
 

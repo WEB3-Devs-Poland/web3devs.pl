@@ -1,7 +1,7 @@
 ---
 title: 'Zakładanie portfela MetaMask'
-author: Paweł Nowosielski
-authorLink: 'https://github.com/pnowosie'
+author: Mateo
+authorLink: 'https://github.com/mateuszhaponiuk'
 path: 'zakladanie-portfela-metamask'
 date: 2022-05-03
 category: 'Configuration'
