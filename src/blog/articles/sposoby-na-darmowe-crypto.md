@@ -39,8 +39,6 @@ Obecnie jedyny sposób żeby zarabiać na tej darmowej grze, to granie w nią w 
 
 ![Gods Unchained](blog/assets/sposoby-na-darmowe-crypto-image-3.png)
 
-Za rejestracje z reflinku i zdobycie trzeciego poziomu jest dodatkowe 10 $GODS.
-
 [Ref link](https://godsunchained.com/account/register?referral=uvBlJsFWrP)
 
 Za rejestracje z ref linku i zdobycie 3 poziomu jest dodatkowe 10 $GODS
@@ -89,4 +87,4 @@ W 2023, gdy Web3 Devs Poland DAO stworzy swojego coina, będzie możliwe zarabia
 [WEB3 Devs Poland](https://WEB3devs.pl/)
 
 **Informacja**
-- 2 z 7 linków to linki afiliacyjne, które dają korzyści autorowi.
+- 2 z 8 linków to linki afiliacyjne, które dają korzyści autorowi.
