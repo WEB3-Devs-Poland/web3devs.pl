@@ -1,7 +1,7 @@
 ---
 title: 'Zakładanie portfela MetaMask'
 author: Mateo
-authorLink: ''
+authorLink: 'https://github.com/mateuszhaponiuk'
 path: 'zakladanie-portfela-metamask'
 date: 2022-05-03
 category: 'Configuration'
