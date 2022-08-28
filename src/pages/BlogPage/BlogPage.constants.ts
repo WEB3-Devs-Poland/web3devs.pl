@@ -1,5 +1,16 @@
 export const swiatWeb3BlogPosts = [
   {
+    title: 'The Sandbox',
+    date: '2022-08-25T17:35:03.794Z',
+    path: 'https://swiatweb3.substack.com/p/the-sandbox',
+    author: 'Świat Web3',
+    authorLink: 'https://swiatweb3.substack.com/',
+    summary: 'A co jakby zdecentralizować Minecraft?',
+    category: 'Article',
+    tags: ['Świat Web 3'],
+    image: '/blog/previews/the-sandbox.png',
+  },
+  {
     title: 'Disco - zdecentralizowana tożsamość',
     date: '2022-08-18T17:35:03.794Z',
     path: 'https://swiatweb3.substack.com/p/disco-zdecentralizowana-tozsamosc',
