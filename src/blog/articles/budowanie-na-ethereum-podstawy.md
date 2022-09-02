@@ -1,6 +1,6 @@
 ---
 title: 'Budowanie na Ethereum: Podstawy'
-author: Adam Borkowski
+author: Adam Borowski
 authorLink: 'https://github.com/adbo'
 path: 'budowanie-na-ethereum-podstawy'
 date: 2022-05-03
