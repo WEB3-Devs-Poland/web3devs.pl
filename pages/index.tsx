@@ -1,6 +1,6 @@
-import { NextPage } from "next";
-import { Navbar } from "../components";
-import { Hero, Team } from "../sections";
+import { NextPage } from 'next';
+import { Navbar } from '../components';
+import { Hero, Partners, Team } from '../sections';
 
 const Home: NextPage = () => {
   return (
@@ -9,6 +9,7 @@ const Home: NextPage = () => {
 
       <main className="pt-32 space-y-32">
         <Hero />
+        <Partners />
         <Team />
       </main>
     </>
