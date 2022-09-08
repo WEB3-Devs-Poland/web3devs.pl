@@ -33,8 +33,11 @@ export const BackButton = styled.div`
 export const SinglePost = styled(Markdown)`
   text-align: left;
   width: 60%;
-  text-align: justify;
   margin: 0 auto;
+
+  @media (max-width: ${({ theme }) => theme.maxWidth}px) {
+    width: 90%
+  }
 
   img {
     width: 70%;
