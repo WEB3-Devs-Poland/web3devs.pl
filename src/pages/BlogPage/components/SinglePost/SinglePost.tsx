@@ -16,11 +16,11 @@ export const SinglePost: React.FC = () => {
   const { t } = useTranslation();
   const { postId } = useParams();
 
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const [ isLoading, setIsLoading ] = useState(false);
+  const [ isError, setIsError ] = useState(false);
 
-  const [post, setPost] = useState('');
-  const [, setMetaData] = useState<MetaDataType>();
+  const [ post, setPost ] = useState('');
+  const [ , setMetaData ] = useState<MetaDataType>();
 
   useEffect(() => {
     setIsLoading(true);
@@ -41,7 +41,7 @@ export const SinglePost: React.FC = () => {
           });
       }
     });
-  }, [postId]);
+  }, [ postId ]);
 
   return (
     <S.Content>
