@@ -75,7 +75,7 @@ export const Team: NextPage = () => {
           <div className="flex flex-col w-72 p-8 text-center space-y-2 m-4 rounded-md shadow-md shadow-slate-600" key={index}>
             <Image src={member.img} width={42} height={42}/>
             <h2 className="font-bold text-xl">{member.username}</h2>
-            <span className="font-semibold text-black bg-white rounded-md">{member.title}</span>
+            <span className="font-bold text-sm p-1 text-black bg-white rounded-md">{member.title}</span>
             {member.links.map((link, index) => (
               <div className="" key={index}>
                 {link.name}
