@@ -20,24 +20,12 @@ import Header from './components/Header';
 import { Socials } from './components/Socials/Socials';
 import { TransactionStatus } from './components/TransactionStatus/TransactionStatus';
 
+// api calls
+import { getSignatureForContract } from '../../api'
 
-const PRIV_KEY = '';
+
 const contractAddress = '0x5b0aDB5a9c152952092446fbDcC2aec595a61cB9';
 
-const signMessageForContract = async (hashedMessage: string) => {
-  try {
-    if (!PRIV_KEY) throw new Error('Something went wrong');
-    const wallet = new ethers.Wallet(PRIV_KEY);
-    const sig = await wallet.signMessage(ethers.utils.arrayify(hashedMessage));
-
-    return {
-      sig,
-    };
-  } catch (error) {
-    console.error(error);
-    return { error };
-  }
-};
 
 const MintPage = () => {
   const { currentTheme, changeTheme } = useContext(ThemeStateContext) as ThemeStateContextType;
@@ -89,11 +77,10 @@ const MintPage = () => {
         imgHashes[0],
         time
       );
-      const { sig, error } = await signMessageForContract(hashedMessage);
 
-      if (error) {
-        throw error;
-      }
+      const { data } = await getSignatureForContract(hashedMessage);
+      const { sig } = data;
+
       const transaction = await contract.multiMint(
         recipientAddress,
         imgHashes,
