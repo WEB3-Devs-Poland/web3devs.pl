@@ -1,3 +1,6 @@
 export interface SignatureResponseInterface {
-  sig: string;
+  whitelisted: boolean;
+  sig?: string;
+  error?: boolean;
+  msg?: string;
 }
