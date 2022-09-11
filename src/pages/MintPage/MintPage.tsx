@@ -78,7 +78,7 @@ const MintPage = () => {
         time
       );
 
-      const { data } = await getSignatureForContract(hashedMessage);
+      const { data } = await getSignatureForContract(hashedMessage, recipientAddress);
       const { sig } = data;
 
       const transaction = await contract.multiMint(
