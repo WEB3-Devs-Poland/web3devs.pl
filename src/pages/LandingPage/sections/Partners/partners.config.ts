@@ -10,6 +10,7 @@ import HashUpDarkTheme from 'pages/LandingPage/assets/partners/hashup/logo-dark-
 import HashUpLightTheme from 'pages/LandingPage/assets/partners/hashup/logo-light-theme.png';
 import UnimindDarkTheme from 'pages/LandingPage/assets/partners/unimind/logo-dark-theme.png';
 import UnimindLightTheme from 'pages/LandingPage/assets/partners/unimind/logo-light-theme.png';
+import MetaProLogo from 'pages/LandingPage/assets/partners/metapro/logo-light-theme.png'
 
 export const partners = [
   {
@@ -58,6 +59,14 @@ export const partners = [
     logo: {
       dark: BvhubDarkTheme,
       light: BvhubLightTheme,
+    },
+  },
+  {
+    name: 'MetaPro',
+    link: 'https://www.metaprowallet.com/',
+    logo: {
+      dark: MetaProLogo,
+      light: MetaProLogo,
     },
   },
 ];
