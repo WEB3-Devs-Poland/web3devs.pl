@@ -1,5 +1,4 @@
-import KAdlerPNG from 'pages/LandingPage/assets/team/kacper-adler.png';
-import Kkokosa from 'pages/LandingPage/assets/team/konrad-kokosa.png';
+import KAdlerPNG from 'pages/LandingPage/assets/team/kacper-adler.jpg';
 import LOlender from 'pages/LandingPage/assets/team/lukasz-olender.png';
 import MCholewkaPNG from 'pages/LandingPage/assets/team/maja-cholewka.png';
 import PPaczoski from 'pages/LandingPage/assets/team/przemyslaw-paczoski.png';
@@ -18,12 +17,12 @@ export const ourTeamMembers = [
     ],
   },
   {
-    name: 'Przemysław Paczoski',
-    role: 'DEV',
-    img: PPaczoski,
+    name: 'Łukasz Olender',
+    role: 'Community / Media',
+    img: LOlender,
     social: [
       {
-        link: 'https://www.linkedin.com/in/ppaczoski/',
+        link: 'https://www.linkedin.com/in/%C5%82ukasz-olender-815012237/',
         Icon: SiLinkedin,
       },
     ],
@@ -40,23 +39,12 @@ export const ourTeamMembers = [
     ],
   },
   {
-    name: 'Łukasz Olender',
-    role: 'Community / Media',
-    img: LOlender,
+    name: 'Przemysław Paczoski',
+    role: 'DEV',
+    img: PPaczoski,
     social: [
       {
-        link: 'https://www.linkedin.com/in/%C5%82ukasz-olender-815012237/',
-        Icon: SiLinkedin,
-      },
-    ],
-  },
-  {
-    name: 'Konrad Kokosa',
-    role: 'DEV / YouTube',
-    img: Kkokosa,
-    social: [
-      {
-        link: 'https://www.linkedin.com/in/kkokosa/',
+        link: 'https://www.linkedin.com/in/ppaczoski/',
         Icon: SiLinkedin,
       },
     ],

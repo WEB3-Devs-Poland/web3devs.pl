@@ -8,9 +8,10 @@ import FirestartersDarkTheme from 'pages/LandingPage/assets/partners/firestarter
 import FirestartersLightTheme from 'pages/LandingPage/assets/partners/firestarters/logo-light-theme.png';
 import HashUpDarkTheme from 'pages/LandingPage/assets/partners/hashup/logo-dark-theme.png';
 import HashUpLightTheme from 'pages/LandingPage/assets/partners/hashup/logo-light-theme.png';
+import MetaProLogoDarkTheme from 'pages/LandingPage/assets/partners/metapro/logo-dark-theme.png';
+import MetaProLogoLightTheme from 'pages/LandingPage/assets/partners/metapro/logo-light-theme.png';
 import UnimindDarkTheme from 'pages/LandingPage/assets/partners/unimind/logo-dark-theme.png';
 import UnimindLightTheme from 'pages/LandingPage/assets/partners/unimind/logo-light-theme.png';
-import MetaProLogo from 'pages/LandingPage/assets/partners/metapro/logo-light-theme.png'
 
 export const partners = [
   {
@@ -65,8 +66,8 @@ export const partners = [
     name: 'MetaPro',
     link: 'https://www.metaprowallet.com/',
     logo: {
-      dark: MetaProLogo,
-      light: MetaProLogo,
+      dark: MetaProLogoDarkTheme,
+      light: MetaProLogoLightTheme,
     },
   },
 ];

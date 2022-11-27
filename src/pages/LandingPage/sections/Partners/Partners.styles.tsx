@@ -43,8 +43,7 @@ export const Wrapper = styled.div`
 
 export const ImgWrapper = styled.div`
   margin: auto;
-  padding: 0 50px;
-  min-height: 100px;
+  padding: 25px 50px;
 `;
 
 export const SponsorIMG = styled.img`
