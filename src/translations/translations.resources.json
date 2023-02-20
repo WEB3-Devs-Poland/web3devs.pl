@@ -6,7 +6,8 @@
       "header": {
         "community": "Community",
         "blog": "Blog",
-        "jobs": "Job boards"
+        "jobs": "Job boards",
+        "privacy-policy": "Privacy policy"
       },
       "community": {
         "backButton": "Home page"
@@ -45,7 +46,8 @@
       "header": {
         "community": "Społeczność",
         "blog": "Blog",
-        "jobs": "Praca"
+        "jobs": "Praca",
+        "privacy-policy": "Polityka prywatności"
       },
       "community": {
         "backButton": "Strona główna"

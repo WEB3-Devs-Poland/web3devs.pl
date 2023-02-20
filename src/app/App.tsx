@@ -8,6 +8,7 @@ import { BlogPage } from '../pages/BlogPage/BlogPage';
 import { SinglePost } from '../pages/BlogPage/components/SinglePost';
 import CommunityPage from '../pages/CommunityPage';
 import LandingPage from '../pages/LandingPage';
+import { PrivacyPolicy } from '../pages/PrivacyPolicy';
 import Providers from './App.Providers';
 
 const App = () => (
@@ -20,6 +21,7 @@ const App = () => (
         <Route path="/*" element={<Outlet />}>
           <Route index element={<LandingPage />} />
           <Route path="community" element={<CommunityPage />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="blog" element={<Outlet />}>
             <Route index element={<BlogPage />} />
             <Route path=":postId" element={<SinglePost />} />
