@@ -14,6 +14,11 @@ export const NavigationLinks = (): NavigationLinksModel[] => {
   return [
     {
       isBlank: false,
+      title: t('header.privacy-policy'),
+      link: '/privacy-policy',
+    },
+    {
+      isBlank: false,
       title: t('header.community'),
       link: '/community',
     },
