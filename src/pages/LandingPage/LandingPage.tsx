@@ -4,16 +4,14 @@ import OurTeam from './sections/OurTeam';
 import Partners from './sections/Partners';
 import WhatWeDo from './sections/WhatWeDo';
 
-const LandingPage = () => {
-  return (
-    <>
-      <InviteToDiscord />
-      <HelpUs />
-      <Partners />
-      <WhatWeDo />
-      <OurTeam />
-    </>
-  );
-};
+const LandingPage = () => (
+  <>
+    <InviteToDiscord />
+    <HelpUs />
+    <Partners />
+    <WhatWeDo />
+    <OurTeam />
+  </>
+);
 
 export default LandingPage;

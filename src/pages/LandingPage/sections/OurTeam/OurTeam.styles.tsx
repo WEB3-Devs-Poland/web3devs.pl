@@ -45,7 +45,7 @@ export const Member = styled.div`
 
   :hover {
     transition: 0.3s;
-    box-shadow: ${({ theme }) => theme.primary}25 0px 7px 29px 0px; //opacity <- last two numbers of color: ;lasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolor
+    box-shadow: ${({ theme }) => theme.primary}25 0px 7px 29px 0px; //opacity <- last two numbers of color: ;lasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolorlasttwonumbersofcolor
   }
 
   @media (max-width: ${({ theme }) => theme.maxWidth}px) {
