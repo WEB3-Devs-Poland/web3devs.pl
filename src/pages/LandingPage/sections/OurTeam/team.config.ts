@@ -1,5 +1,4 @@
 import KAdlerPNG from 'pages/LandingPage/assets/team/kacper-adler.jpg';
-import LOlender from 'pages/LandingPage/assets/team/lukasz-olender.png';
 import MCholewkaPNG from 'pages/LandingPage/assets/team/maja-cholewka.png';
 import PPaczoski from 'pages/LandingPage/assets/team/przemyslaw-paczoski.png';
 import { SiLinkedin } from 'react-icons/si';
@@ -12,17 +11,6 @@ export const ourTeamMembers = [
     social: [
       {
         link: 'https://www.linkedin.com/in/majacholewka/',
-        Icon: SiLinkedin,
-      },
-    ],
-  },
-  {
-    name: 'Łukasz Olender',
-    role: 'Community / Media',
-    img: LOlender,
-    social: [
-      {
-        link: 'https://www.linkedin.com/in/%C5%82ukasz-olender-815012237/',
         Icon: SiLinkedin,
       },
     ],
