@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { IconType } from 'react-icons';
-import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from 'react-icons/si';
+import {
+  SiDiscord, SiGithub, SiTwitter, SiYoutube,
+} from 'react-icons/si';
 
 type NavigationLinksModel = {
   isBlank: boolean;
@@ -27,11 +29,11 @@ export const NavigationLinks = (): NavigationLinksModel[] => {
       title: t('header.blog'),
       link: '/blog',
     },
-    {
-      isBlank: true,
-      title: t('header.jobs'),
-      link: 'https://techtree.dev/user/WEB23/web3',
-    },
+    // {
+    //   isBlank: true,
+    //   title: t('header.jobs'),
+    //   link: 'https://techtree.dev/user/WEB23/web3',
+    // },
   ];
 };
 

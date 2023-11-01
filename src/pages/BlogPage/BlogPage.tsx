@@ -38,7 +38,7 @@ export const BlogPage = () => {
                 .sort((article1, article2) => compareDesc(new Date(article1.date), new Date(article2.date)))
                 .map((article) => (
                   <div
-                    className="flex flex-col p-4 cursor-pointer shadow-sm shadow-gray-300 hover:bg-gray-50"
+                    className="flex flex-col p-4 cursor-pointer shadow-sm shadow-gray-300"
                     onClick={() => (article.path.includes('https://')
                       ? window.open(article.path, '_blank')
                       : navigate(`/blog/${article.path}`))}
